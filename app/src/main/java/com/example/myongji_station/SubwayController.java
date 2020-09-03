@@ -209,6 +209,7 @@ public class SubwayController {
                         if (curLine != station.get(route.get(i).getIndex()).getNumberLine().get(j)) {// 현재 경로가 아닌 경로를
                             // 찾으면
                             curLine = station.get(route.get(i).getIndex()).getNumberLine().get(j);// 현재 경로를 변경.
+                            break;
                         }
                     }
                 }
