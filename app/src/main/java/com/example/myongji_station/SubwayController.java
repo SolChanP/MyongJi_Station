@@ -96,9 +96,9 @@ public class SubwayController {
             check[cur] = true;// 목적지 방문 여부 true 변경.
             for (Subway sub : subway[cur]) {// 목적지가 갈 수 있는 경로를 모두 방문, subway[cur].get(0), subway[cur].get(1) ... 이렇게 모든
                 // 경로를 방문하며.
-                if (dist[sub.getDest()] > dist[cur] + sub.getMoney()) {// ex 1(출발지) -> 2 -> 3, 3까지의 거리가 > 2까지의 거리 + 2에서
+                if (dist[sub.getDest()] > dist[cur] + sub.getTime()) {// ex 1(출발지) -> 2 -> 3, 3까지의 거리가 > 2까지의 거리 + 2에서
                     // 3까지의 거리인 경우,
-                    dist[sub.getDest()] = dist[cur] + sub.getMoney();// 1에서 3까지의 더 짧은 거리를 찾은거임! 따라서 3까지의 거리 dist[3] 갱신!
+                    dist[sub.getDest()] = dist[cur] + sub.getTime();// 1에서 3까지의 더 짧은 거리를 찾은거임! 따라서 3까지의 거리 dist[3] 갱신!
                     pq.add(new Subway(sub.getDest(), dist[sub.getDest()]));// 우선순위 큐에 새로 찾은 정보들 추가.
                     pre[sub.getDest()] = cur;// 경로를 추적하기 위해 저장.
                     // ex 경로가 1 -> 3 -> 2 -> 5일 경우
@@ -129,9 +129,9 @@ public class SubwayController {
             check[cur] = true;// 목적지 방문 여부 true 변경.
             for (Subway sub : subway[cur]) {// 목적지가 갈 수 있는 경로를 모두 방문, subway[cur].get(0), subway[cur].get(1) ... 이렇게 모든
                 // 경로를 방문하며.
-                if (dist[sub.getDest()] > dist[cur] + sub.getTime()) {// ex 1(출발지) -> 2 -> 3, 3까지의 거리가 > 2까지의 거리 + 2에서
+                if (dist[sub.getDest()] > dist[cur] + sub.getMoney()) {// ex 1(출발지) -> 2 -> 3, 3까지의 거리가 > 2까지의 거리 + 2에서
                     // 3까지의 거리인 경우,
-                    dist[sub.getDest()] = dist[cur] + sub.getTime();// 1에서 3까지의 더 짧은 거리를 찾은거임! 따라서 3까지의 거리 dist[3] 갱신!
+                    dist[sub.getDest()] = dist[cur] + sub.getMoney();// 1에서 3까지의 더 짧은 거리를 찾은거임! 따라서 3까지의 거리 dist[3] 갱신!
                     pq.add(new Subway(sub.getDest(), dist[sub.getDest()]));// 우선순위 큐에 새로 찾은 정보들 추가.
                     pre[sub.getDest()] = cur;// 경로를 추적하기 위해 저장.
                     // ex 경로가 1 -> 3 -> 2 -> 5일 경우
