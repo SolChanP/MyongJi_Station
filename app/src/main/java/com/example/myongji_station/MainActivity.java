@@ -2,11 +2,14 @@ package com.example.myongji_station;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+
 import java.io.IOException;
 
 
@@ -21,6 +24,9 @@ public class MainActivity extends AppCompatActivity {
     private EditText start_s;//출발역
     private EditText end_s;//도착역
     private EditText value;//탐색 옵션
+    //역 입력 검색 리스트 구분
+    int REQUEST_START = 1;
+    int REQUEST_END = 2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,7 +44,22 @@ public class MainActivity extends AppCompatActivity {
         start_s = findViewById(R.id.start_s);//출발역
         end_s = findViewById(R.id.end_s);//도착역
         value = findViewById(R.id.value);//탐색옵션
-
+        //출발역 입력창이 눌렸을 때
+        start_s.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                if (startTouch(event)) return true;
+                return false;
+            }
+        });
+        //도착역 입력창이 눌렸을 때
+        end_s.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                if (endTouch(event)) return true;
+                return false;
+            }
+        });
         //길찾기 버튼이 눌렸을 경우,
         find.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -71,6 +92,42 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
-
     }
+    //출발역 입력창이 눌렸을 때 액션 메서드
+    public boolean startTouch(MotionEvent event) {
+        switch (event.getAction()) {
+            case MotionEvent.ACTION_DOWN: {
+                //터치했을 때의 이벤트
+                Intent intent = new Intent(MainActivity.this, SearchStation.class);
+                startActivityForResult(intent, REQUEST_START);//요청 후 결과 돌려받기
+                return true;
+            }
+        }
+        return false;
+    }
+    //도착역 입력창이 눌렸을 때 액션 메서드
+    public boolean endTouch(MotionEvent event) {
+        switch (event.getAction()) {
+            case MotionEvent.ACTION_DOWN: {
+                //터치했을 때의 이벤트
+                Intent intent = new Intent(MainActivity.this, SearchStation.class);
+                startActivityForResult(intent, REQUEST_END);//요청 후 결과 돌려받기
+                return true;
+            }
+        }
+        return false;
+    }
+    //돌려받은 결과 저장하기
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == REQUEST_START)//출발역일 경우,
+            if (resultCode == RESULT_OK) {
+                start_s.setText(data.getStringExtra("Station"));
+            }
+        if (requestCode == REQUEST_END)//도착역일 경우,
+            if (resultCode == RESULT_OK) {
+                end_s.setText(data.getStringExtra("Station"));
+            }
+    }
+
 }
