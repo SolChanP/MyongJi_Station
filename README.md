@@ -14,8 +14,8 @@
 >>DB팀: 김보현, 최병윤   
 >>>DB로 데이터 이동 및 DB api개발   
 
-추가하고 싶은 기능이 있을시 Master가 아닌 branch 생성하고 적용
-
+- 추가하고 싶은 기능이 있을시 Master가 아닌 branch 생성하고 적용
+- Android plaform-29 (android 10.0)Q
 <hr/>       
 
 2020.09.02  
