@@ -178,6 +178,11 @@ public class MainActivity extends Activity {
                 intent = new Intent(getBaseContext(), Setting.class);
                 startActivity(intent);
                 break;
+            case R.id.main_change :
+                String temp = start_s.getText().toString();
+                start_s.setText(end_s.getText().toString());
+                end_s.setText(temp);
+                break;
                 //길찾기 버튼이 눌린 경우
             case R.id.find_btn:
                 if(start_s.getText().toString().equals(""))
@@ -186,8 +191,7 @@ public class MainActivity extends Activity {
                     Toast.makeText(getApplicationContext(), "도착역을 입력하세요", Toast.LENGTH_LONG).show();
                 else
                     this.find_btn_clicked();
-
-
+                break;
         }
     }
     //길찾기 버튼이 눌린 경우

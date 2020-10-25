@@ -26,7 +26,7 @@
 
         <EditText
             android:id="@+id/start_s"
-            android:layout_width="280dp"
+            android:layout_width="240dp"
             android:layout_height="40dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
@@ -37,7 +37,7 @@
 
         <EditText
             android:id="@+id/end_s"
-            android:layout_width="280dp"
+            android:layout_width="240dp"
             android:layout_height="40dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
@@ -56,6 +56,18 @@
             android:layout_marginTop="105dp"
             android:layout_marginEnd="5dp"
             android:text="길찾기" />
+
+
+        <Button
+            android:id="@+id/main_change"
+            android:onClick="OnClick"
+            android:layout_width="35dp"
+            android:layout_height="30dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="140dp"
+            android:layout_marginRight="114dp"
+            android:background="@drawable/change"/>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -91,7 +103,6 @@
                 android:layout_height="wrap_content"
                 android:text="거리" />
         </RadioGroup>
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
