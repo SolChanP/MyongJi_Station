@@ -64,6 +64,19 @@ public class MainActivity extends Activity {
         find = findViewById(R.id.find_btn);//길찾기
         start_s = findViewById(R.id.start_s);//출발역
         end_s = findViewById(R.id.end_s);//도착역
+
+        //네비게이션 드로어 부분
+        drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
+        drawerView = (View) findViewById(R.id.drawerView);
+        drawerLayout.setDrawerListener(listener);
+        Button nav = (Button)findViewById(R.id.nav);
+        nav.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                drawerLayout.openDrawer(drawerView);
+            }
+        });
+        //-------------------------------------------------------------------------------------------------
         //출발역 입력창이 눌렸을 때
         start_s.setOnTouchListener(new View.OnTouchListener() {
             @Override
@@ -80,18 +93,6 @@ public class MainActivity extends Activity {
                 return false;
             }
         });
-        //네비게이션 드로어 부분
-        drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
-        drawerView = (View) findViewById(R.id.drawerView);
-        drawerLayout.setDrawerListener(listener);
-        Button nav = (Button)findViewById(R.id.nav);
-        nav.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                drawerLayout.openDrawer(drawerView);
-            }
-        });
-        //-------------------------------------------------------------------------------------------------
     }
     //출발역 입력창이 눌렸을 때 액션 메서드
     public boolean startTouch(MotionEvent event) {
