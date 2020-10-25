@@ -1,0 +1,528 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Location"
+    android:background="@color/colorBlue">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true"
+        android:textStyle="bold"
+        android:text="현재 열차 위치"
+        android:textSize="35dp" />
+
+    <Button
+        android:id="@+id/re"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="83dp"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/re" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="120dp"
+        android:background="#FDFDFD" />
+
+    <ScrollView
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="120dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+            <!--1호선-->
+            <TextView
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:layout_marginTop="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" 1호선" />
+
+            <TextView
+                android:textSize="25dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="50dp"
+                android:text=" 상행 : "/>
+
+            <TextView
+                android:id="@+id/line1_up"
+                android:textSize="25dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="50dp"
+                android:layout_marginLeft="70dp"
+                android:text=" ex101"/>
+
+            <TextView
+                android:textSize="25dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="50dp"
+                android:layout_marginLeft="200dp"
+                android:text=" 하행 : "/>
+
+            <TextView
+                android:id="@+id/line1_down"
+                android:textSize="25dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="50dp"
+                android:layout_marginLeft="270dp"
+                android:text=" ex112"/>
+            <!--2호선 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="90dp"
+                android:background="#FDFDFD" />
+
+            <TextView
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:layout_marginTop="90dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" 2호선" />
+
+            <TextView
+                android:textSize="25dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="140dp"
+                android:text=" 상행 : "/>
+
+            <TextView
+                android:id="@+id/line2_up"
+                android:textSize="25dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="140dp"
+                android:layout_marginLeft="70dp"
+                android:text=" ex101"/>
+
+            <TextView
+                android:textSize="25dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="140dp"
+                android:layout_marginLeft="200dp"
+                android:text=" 하행 : "/>
+
+            <TextView
+                android:id="@+id/line2_down"
+                android:textSize="25dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="140dp"
+                android:layout_marginLeft="270dp"
+                android:text=" ex112"/>
+            <!--3호선-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="180dp"
+                android:background="#FDFDFD" />
+            <TextView
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:layout_marginTop="180dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" 3호선" />
+
+            <TextView
+                android:textSize="25dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="230dp"
+                android:text=" 상행 : "/>
+
+            <TextView
+                android:id="@+id/line3_up"
+                android:textSize="25dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="230dp"
+                android:layout_marginLeft="70dp"
+                android:text=" ex101"/>
+
+            <TextView
+                android:textSize="25dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="230dp"
+                android:layout_marginLeft="200dp"
+                android:text=" 하행 : "/>
+
+            <TextView
+                android:id="@+id/line3_down"
+                android:textSize="25dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="230dp"
+                android:layout_marginLeft="270dp"
+                android:text=" ex112"/>
+            <!--4호선-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="270dp"
+                android:background="#FDFDFD" />
+            <TextView
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:layout_marginTop="270dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" 4호선" />
+
+            <TextView
+                android:textSize="25dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="320dp"
+                android:text=" 상행 : "/>
+
+            <TextView
+                android:id="@+id/line4_up"
+                android:textSize="25dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="320dp"
+                android:layout_marginLeft="70dp"
+                android:text=" ex101"/>
+
+            <TextView
+                android:textSize="25dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="320dp"
+                android:layout_marginLeft="200dp"
+                android:text=" 하행 : "/>
+
+            <TextView
+                android:id="@+id/line4_down"
+                android:textSize="25dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="320dp"
+                android:layout_marginLeft="270dp"
+                android:text=" ex112"/>
+            <!--5호선-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="360dp"
+                android:background="#FDFDFD" />
+            <TextView
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:layout_marginTop="360dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" 5호선" />
+
+            <TextView
+                android:textSize="25dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="410dp"
+                android:text=" 상행 : "/>
+
+            <TextView
+                android:id="@+id/line5_up"
+                android:textSize="25dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="410dp"
+                android:layout_marginLeft="70dp"
+                android:text=" ex101"/>
+
+            <TextView
+                android:textSize="25dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="410dp"
+                android:layout_marginLeft="200dp"
+                android:text=" 하행 : "/>
+
+            <TextView
+                android:id="@+id/line5_down"
+                android:textSize="25dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="410dp"
+                android:layout_marginLeft="270dp"
+                android:text=" ex112"/>
+            <!--6호선-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="450dp"
+                android:background="#FDFDFD" />
+            <TextView
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:layout_marginTop="450dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" 6호선" />
+
+            <TextView
+                android:textSize="25dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="500dp"
+                android:text=" 상행 : "/>
+
+            <TextView
+                android:id="@+id/line6_up"
+                android:textSize="25dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="500dp"
+                android:layout_marginLeft="70dp"
+                android:text=" ex101"/>
+
+            <TextView
+                android:textSize="25dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="500dp"
+                android:layout_marginLeft="200dp"
+                android:text=" 하행 : "/>
+
+            <TextView
+                android:id="@+id/line6_down"
+                android:textSize="25dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="500dp"
+                android:layout_marginLeft="270dp"
+                android:text=" ex112"/>
+            <!--7호선-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="540dp"
+                android:background="#FDFDFD" />
+            <TextView
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:layout_marginTop="540dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" 7호선" />
+
+            <TextView
+                android:textSize="25dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="590dp"
+                android:text=" 상행 : "/>
+
+            <TextView
+                android:id="@+id/line7_up"
+                android:textSize="25dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="590dp"
+                android:layout_marginLeft="70dp"
+                android:text=" ex101"/>
+
+            <TextView
+                android:textSize="25dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="590dp"
+                android:layout_marginLeft="200dp"
+                android:text=" 하행 : "/>
+
+            <TextView
+                android:id="@+id/line7_down"
+                android:textSize="25dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="590dp"
+                android:layout_marginLeft="270dp"
+                android:text=" ex112"/>
+            <!--8호선-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="630dp"
+                android:background="#FDFDFD" />
+            <TextView
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:layout_marginTop="630dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" 8호선" />
+
+            <TextView
+                android:textSize="25dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="680dp"
+                android:text=" 상행 : "/>
+
+            <TextView
+                android:id="@+id/line8_up"
+                android:textSize="25dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="680dp"
+                android:layout_marginLeft="70dp"
+                android:text=" ex101"/>
+
+            <TextView
+                android:textSize="25dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="680dp"
+                android:layout_marginLeft="200dp"
+                android:text=" 하행 : "/>
+
+            <TextView
+                android:id="@+id/line8_down"
+                android:textSize="25dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="680dp"
+                android:layout_marginLeft="270dp"
+                android:text=" ex112"/>
+            <!--9호선-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="720dp"
+                android:background="#FDFDFD" />
+            <TextView
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:layout_marginTop="720dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" 9호선" />
+
+            <TextView
+                android:textSize="25dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="760dp"
+                android:text=" 상행 : "/>
+
+            <TextView
+                android:id="@+id/line9_up"
+                android:textSize="25dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="760dp"
+                android:layout_marginLeft="70dp"
+                android:text=" ex101"/>
+
+            <TextView
+                android:textSize="25dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="760dp"
+                android:layout_marginLeft="200dp"
+                android:text=" 하행 : "/>
+
+            <TextView
+                android:id="@+id/line9_down"
+                android:textSize="25dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="760dp"
+                android:layout_marginLeft="270dp"
+                android:text=" ex112"/>
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>
