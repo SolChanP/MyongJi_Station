@@ -19,6 +19,7 @@
 
     <Button
         android:id="@+id/fa_add"
+        android:onClick="OnClick"
         android:layout_width="60dp"
         android:layout_height="40dp"
         android:layout_alignParentTop="true"
@@ -29,6 +30,7 @@
 
     <Button
         android:id="@+id/fa_delete"
+        android:onClick="OnClick"
         android:layout_width="60dp"
         android:layout_height="40dp"
         android:layout_alignParentTop="true"

@@ -18,6 +18,7 @@
 
     <Button
         android:id="@+id/re"
+        android:onClick="OnClick"
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:layout_alignParentTop="true"
