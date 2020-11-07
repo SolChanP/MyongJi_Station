@@ -11,7 +11,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -19,8 +18,6 @@ import android.widget.Toast;
 import com.github.chrisbanes.photoview.PhotoView;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Set;
 
 public class MainActivity extends Activity {
     //컨트롤러 및 빌더 선언
@@ -205,19 +202,19 @@ public class MainActivity extends Activity {
         switch (rg.getCheckedRadioButtonId()){
             case R.id.radio_time:// 시간 우선 탐색 시작.
                 controller.findTime(start_s.getText().toString(), end_s.getText().toString());
-                intent.putExtra("result", controller.getAll());
+                intent.putExtra("result", controller.getResultData());
                 startActivity(intent);
                 controller = null;//컨트롤러 객체 값 null로 초기화
                 break;
             case R.id.radio_money:// 비용 우선 탐색 시작.
                 controller.findMoney(start_s.getText().toString(), end_s.getText().toString());
-                intent.putExtra("result", controller.getAll());
+                intent.putExtra("result", controller.getResultData());
                 startActivity(intent);
                 controller = null;//컨트롤러 객체 값 null로 초기화
                 break;
             case R.id.radio_meter:// 거리 우선 탐색 시작.
                 controller.findMeter(start_s.getText().toString(), end_s.getText().toString());
-                intent.putExtra("result", controller.getAll());
+                intent.putExtra("result", controller.getResultData());
                 startActivity(intent);
                 controller = null;//컨트롤러 객체 값 null로 초기화
                 break;

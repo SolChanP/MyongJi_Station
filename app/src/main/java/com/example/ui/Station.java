@@ -1,8 +1,9 @@
 package com.example.ui;
+import java.io.Serializable;
 import java.util.ArrayList;
 
 //역의 정보를 저장하는 클래스.
-public class Station {// 역의 이름과 호선정보,,,, 환승 구별을 위해 호선 정보가 필요.
+public class Station implements Serializable {// 역의 이름과 호선정보,,,, 환승 구별을 위해 호선 정보가 필요.
     private String name;// 역 이름
     private ArrayList<Integer> numberLine;// 호선 정보
     // 환승 로직

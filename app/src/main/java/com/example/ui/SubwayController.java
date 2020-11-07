@@ -24,6 +24,7 @@ public class SubwayController {
     private int pre[];// 경로를 추적하기 위한 배열변수, 해당역의 이전 역을 추적(저장).
     private int routeCnt;// 경로를 추적하기 위한 배열변수2, 경로하는 역의 수를 저장.
     private int curLine;// 환승역을 구분하기 위한 현재 타고있는 호선의 번호.
+
     // 생성자.
     public SubwayController(SubwayBuild data) {
         this.subway = data.getSubway();// 경로 데이터 얕은 복사.
@@ -33,6 +34,7 @@ public class SubwayController {
         pre = new int[subCnt + 1];
         Arrays.fill(dist, INF);// dist의 모든 배열값을 INF로 설정, INF -> 정수 배열의 최대값
     }
+
     //초기화 메서드
     public void SubwayController() {//프로그램이 종료되는 것이 아니기 때문에
         //새로운 길찾기시 서브 제공 데이터 값 초기화 필요
@@ -41,7 +43,6 @@ public class SubwayController {
         this.allMeter = 0;//누적 거리 초기화
         this.routeCnt = 0;//누적 경로하는 역 초기화
     }
-
 
 
     // 최단 거리 경로 구하는 메서드. 핵심!!!
@@ -219,66 +220,43 @@ public class SubwayController {
     }
 
     // 정보 출력 메서드.
-    public String getAll() {
-        int i = 0;// 경로 출력을 위한 증감변수.
-        String test = "경로 : ";
+    public ResultData getResultData() {
+        ResultData result = new ResultData();
+       /* int i = 0;// 경로 출력을 위한 증감변수.
+        String t_route = "";
         int count = 0; // 환승 횟수
-        // 설정된 기능값에 따라 출력 결과가 다름.
+        for (i = 0; i < route.size() - 1; i++) {
+            t_route += findSubName(route.get(i).getIndex(), station) + "역";
+            if (route.get(i).isTransfer() == true) {
+                t_route += " 환승 ";
+                count++;
+            }
+            t_route += " -> ";
+        }
+        t_route += findSubName(route.get(i).getIndex(), station) + "역";
+        result.setRoute(t_route);
+        result.setRoute_cnt(routeCnt);
+        result.setCount(count);*/
+        result.setRoute(route);
+        result.setStation(station);
         switch (value) {
-            case 1:// 거리 우선 탐색.
-                test += findSubName(route.get(0).getIndex(), station) + " -> ";
-                for (i = 1; i < route.size() - 1; i++) {
-                    test += findSubName(route.get(i).getIndex(), station);
-                    if (route.get(i).isTransfer() == true) {
-                        test += " 환승 ";
-                        count++;
-                    }
-                    test += " -> ";
-                }
-                test += findSubName(route.get(i).getIndex(), station);
-                test += "\n\n" + routeCnt + "개 역을 방문합니다. \n\n";
-                test += "최단 거리   :  약" + (double) dist[end] / 1000 + "Km\n\n";
-                test += "총 소요시간 :  약" + allTime / 60 + "분     ";
-                test += "총 소요비용 : " + allMoney + "원 \n\n";
-                test += "총 환승횟수 : " + count + "회\n";
-                return test;
-            case 2:// 시간 우선 탐색.
-                test += findSubName(route.get(0).getIndex(), station) + " -> ";
-                for (i = 1; i < route.size() - 1; i++) {
-                    test += findSubName(route.get(i).getIndex(), station);
-                    if (route.get(i).isTransfer() == true) {
-                        test += " 환승 ";
-                        count++;
-                    }
-                    test += " -> ";
-                }
-                test += findSubName(route.get(i).getIndex(), station);
-                test += "\n\n" + routeCnt + "개 역을 방문합니다. \n\n";
-                test += "최단 소요시간  : 약 " + dist[end] / 60 + "분\n\n";
-                test += "총 거리 : 약" + (double) allMeter / 1000 + "Km          ";
-                test += "총 소요비용 : " + allMoney + "원\n\n";
-                test += "총 환승횟수 : " + count + "회\n";
-                return test;
-            case 3:// 비용 우선 탐색.
-                test += findSubName(route.get(0).getIndex(), station) + " -> ";
-                for (i = 1; i < route.size() - 1; i++) {
-                    test += findSubName(route.get(i).getIndex(), station);
-                    if (route.get(i).isTransfer() == true) {
-                        test += " 환승 ";
-                        count++;
-                    }
-                    test += " -> ";
-                }
-                test += findSubName(route.get(i).getIndex(), station);
-                test += "\n\n" + routeCnt + "개 역을 방문합니다. \n\n";
-                test += "최단 비용    : " + dist[end] + "원  \n\n";
-                test += "총 소요시간 : 약" + allTime / 60 + "분     ";
-                test += "총 소요거리 : 약" + (double) allMeter / 1000 + "Km \n\n";
-                test += "총 환승횟수 : " + count + "회\n";
-                return test;
-            default:// 오류 메세지 출력.
-                test = "길찾기 결과 데이터가 없습니다. \n프로그램을 종료합니다.";
-                return test;
+            case 1: //거리 우선 탐색
+                result.setTime(allTime);
+                result.setMeter(dist[end]);
+                result.setMoney(allMoney);
+                return result;
+            case 2: //시간 우선 탐색
+                result.setTime(dist[end]);
+                result.setMeter(allMeter);
+                result.setMoney(allMoney);
+                return result;
+            case 3: //비용 우선 탐색
+                result.setTime(allTime);
+                result.setMeter(allMeter);
+                result.setMoney(dist[end]);
+                return result;
+            default:
+                return result;
         }
     }
 

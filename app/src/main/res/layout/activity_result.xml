@@ -19,29 +19,81 @@
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="120dp"
+        android:layout_marginTop="100dp"
         android:background="#FDFDFD" />
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="120dp">
+        android:orientation="vertical"
+        android:layout_marginTop="100dp">
         <TextView
-            android:id="@+id/result"
+            android:id="@+id/route"
             android:textSize="17dp"
             android:layout_width="match_parent"
-            android:layout_height="250dp"
+            android:layout_height="100dp"
             android:layout_alignParentTop="true"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
             android:layout_marginRight="10dp"
-            android:text="경로 출력 될 곳임" />
+            android:lineSpacingExtra="5dp"
+            android:text="" />
+        <TextView
+            android:id="@+id/route_cnt"
+            android:textSize="17dp"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:text="" />
+        <TextView
+            android:id="@+id/time"
+            android:textSize="17dp"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:text="" />
+        <TextView
+            android:id="@+id/money"
+            android:textSize="17dp"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:text="" />
+        <TextView
+            android:id="@+id/meter"
+            android:textSize="17dp"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:text="" />
+        <TextView
+            android:id="@+id/count"
+            android:textSize="17dp"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:text="" />
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="380dp"
+        android:layout_marginTop="420dp"
         android:background="#FDFDFD" />
 
 

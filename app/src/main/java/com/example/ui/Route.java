@@ -1,6 +1,8 @@
 package com.example.ui;
 
-public class Route {
+import java.io.Serializable;
+
+public class Route implements Serializable {
     private int index;// 역의 인덱스 번호를 저장.
     private boolean isTransfer = false;// 경로지 간 해당 역에서 환승 여부 저장.
     //생성자(index).
