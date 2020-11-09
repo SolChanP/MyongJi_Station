@@ -1,9 +1,10 @@
-package com.example.ui;
+package com.example.ui.Nav;
 
 import android.app.Activity;
 import android.os.Bundle;
 import android.widget.ImageView;
 
+import com.example.ui.R;
 import com.github.chrisbanes.photoview.PhotoView;
 
 public class Map extends Activity {

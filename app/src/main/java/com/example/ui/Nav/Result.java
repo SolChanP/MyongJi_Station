@@ -1,10 +1,15 @@
-package com.example.ui;
+package com.example.ui.Nav;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.TextView;
+
+import com.example.ui.R;
+import com.example.ui.ResultData;
+import com.example.ui.Route;
+import com.example.ui.Station;
 
 import java.util.ArrayList;
 
@@ -45,6 +50,7 @@ public class Result extends AppCompatActivity {
         station.addAll(result.getStation());
 
         this.showData();
+
 
     }
     public void showData(){

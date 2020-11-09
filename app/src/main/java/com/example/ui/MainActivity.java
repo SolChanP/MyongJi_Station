@@ -15,13 +15,18 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.ui.Nav.Favorites.Favorites;
+import com.example.ui.Nav.Help;
+import com.example.ui.Nav.Location.Location;
+import com.example.ui.Nav.Map;
+import com.example.ui.Nav.Result;
+import com.example.ui.Nav.Setting;
 import com.github.chrisbanes.photoview.PhotoView;
 
 import java.io.IOException;
 
 public class MainActivity extends Activity {
-    //컨트롤러 및 빌더 선언
-    private SubwayBuild subBuild;// 데이터 생성 객체.
+    //컨트롤러 선언
     private SubwayController controller;// 컨트롤러 선언.
     //XML데이터 변수 선언
     private Button find;//길찾기
@@ -50,12 +55,7 @@ public class MainActivity extends Activity {
         //노선도 초기 풀 스크린
         photoView.setScaleType(ImageView.ScaleType.CENTER_CROP);
         //----------------------------------------------------------------------------------------------------------------
-        //데이터 생성
-        try {
-            subBuild = new SubwayBuild(this);// 데이터 생성 요청.
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+
         //XML데이터 생성
         rg = (RadioGroup)findViewById(R.id.radio_group);
         find = findViewById(R.id.find_btn);//길찾기
@@ -163,6 +163,7 @@ public class MainActivity extends Activity {
             case R.id.nav_fa :
             case R.id.nav_fa_layout :
                 intent = new Intent(getBaseContext(), Favorites.class);
+              //  intent.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);//기록X, 즐찾 -> 결과 -> 즐찾 이러면 에러, 해결하기 쉬운 방법임
                 startActivity(intent);
                 break;
             case R.id.nav_help :
@@ -198,7 +199,11 @@ public class MainActivity extends Activity {
         //클릭시 컨트롤러를 생성하는 이유는
         //클릭 외부에서 생성시 컨트롤러 내에서 메모리 누수현상이
         // 나타나는 데 그것을 해결하는 가장 간단한 방법이기 때문
-        controller = new SubwayController(subBuild);// 입력된 정보를 바탕으로 컨트롤러 생성.
+        try {
+            controller = new SubwayController(this);// 입력된 정보를 바탕으로 컨트롤러 생성.
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         switch (rg.getCheckedRadioButtonId()){
             case R.id.radio_time:// 시간 우선 탐색 시작.
                 controller.findTime(start_s.getText().toString(), end_s.getText().toString());

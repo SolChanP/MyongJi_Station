@@ -1,4 +1,7 @@
 package com.example.ui;
+import android.content.Context;
+
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.PriorityQueue;
@@ -12,6 +15,7 @@ import java.util.Stack;
 public class SubwayController {
     private int INF = Integer.MAX_VALUE;// 최대 정수를 표현하기 위한 변수.
     // 데이터.
+    private SubwayBuild subBuild;// 데이터 생성 객체.
     private ArrayList<Station> station;// 역의 이름과 호선 정보를 이용하기 위한 변수, 역시 얕은복사 이용.
     private ArrayList<Subway>[] subway;// 역의 경로 정보를 이용하기 위한 변수, 데이터 변경이 없기 때문에 얕은 복사 이용.
     private int value;// 기능의 종류 판단 변수, 우선 순위 설정(거리 = 1, 시간 = 2, 비용 = 3)
@@ -26,10 +30,12 @@ public class SubwayController {
     private int curLine;// 환승역을 구분하기 위한 현재 타고있는 호선의 번호.
 
     // 생성자.
-    public SubwayController(SubwayBuild data) {
-        this.subway = data.getSubway();// 경로 데이터 얕은 복사.
-        this.station = data.getStation();// 역 데이터 얕은 복사.
-        this.subCnt = data.getSubCnt();// 역의 수 저장.
+    public SubwayController(Context context) throws IOException {
+        //데이터 생성
+        subBuild = new SubwayBuild(context);// 데이터 생성 요청.
+        this.subway = subBuild.getSubway();// 경로 데이터 얕은 복사.
+        this.station = subBuild.getStation();// 역 데이터 얕은 복사.
+        this.subCnt = subBuild.getSubCnt();// 역의 수 저장.
         this.dist = new int[subCnt + 1];
         pre = new int[subCnt + 1];
         Arrays.fill(dist, INF);// dist의 모든 배열값을 INF로 설정, INF -> 정수 배열의 최대값
@@ -222,21 +228,6 @@ public class SubwayController {
     // 정보 출력 메서드.
     public ResultData getResultData() {
         ResultData result = new ResultData();
-       /* int i = 0;// 경로 출력을 위한 증감변수.
-        String t_route = "";
-        int count = 0; // 환승 횟수
-        for (i = 0; i < route.size() - 1; i++) {
-            t_route += findSubName(route.get(i).getIndex(), station) + "역";
-            if (route.get(i).isTransfer() == true) {
-                t_route += " 환승 ";
-                count++;
-            }
-            t_route += " -> ";
-        }
-        t_route += findSubName(route.get(i).getIndex(), station) + "역";
-        result.setRoute(t_route);
-        result.setRoute_cnt(routeCnt);
-        result.setCount(count);*/
         result.setRoute(route);
         result.setStation(station);
         switch (value) {
@@ -244,16 +235,19 @@ public class SubwayController {
                 result.setTime(allTime);
                 result.setMeter(dist[end]);
                 result.setMoney(allMoney);
+                result.setValue("거리");
                 return result;
             case 2: //시간 우선 탐색
                 result.setTime(dist[end]);
                 result.setMeter(allMeter);
                 result.setMoney(allMoney);
+                result.setValue("시간");
                 return result;
             case 3: //비용 우선 탐색
                 result.setTime(allTime);
                 result.setMeter(allMeter);
                 result.setMoney(dist[end]);
+                result.setValue("비용");
                 return result;
             default:
                 return result;

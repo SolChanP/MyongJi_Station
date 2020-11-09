@@ -9,12 +9,14 @@ public class ResultData implements Serializable {
     private int time;
     private int money;
     private int meter;
+    private String value;//탐색옵션
     public ResultData(){
         this.route = new ArrayList<Route>();
         this.station = new ArrayList<Station>();
         time = 0;
         meter = 0;
         money = 0;
+        value = "";
     }
     public ArrayList<Route> getRoute() {
         return route;
@@ -28,6 +30,14 @@ public class ResultData implements Serializable {
     }
     public void setStation(ArrayList<Station> station) {
         this.station.addAll(station);
+    }
+
+    public void setValue(String value) {
+        this.value = value;
+    }
+
+    public String getValue() {
+        return value;
     }
 
     public void setTime(int time) {

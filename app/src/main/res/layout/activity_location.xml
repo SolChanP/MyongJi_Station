@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Location"
+    tools:context=".Nav.Location.Location"
     android:background="@color/colorBlue">
     <TextView
         android:layout_width="wrap_content"
@@ -15,16 +15,6 @@
         android:textStyle="bold"
         android:text="현재 열차 위치"
         android:textSize="35dp" />
-
-    <Button
-        android:id="@+id/re"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginTop="83dp"
-        android:layout_marginRight="5dp"
-        android:background="@drawable/re" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -43,30 +33,41 @@
             android:layout_height="50dp"
             android:text="열차 정보"
             android:textSize="25dp"
-            android:layout_marginTop="8dp"/>
+            android:layout_marginTop="15dp"/>
         <TextView
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:text="현재 역"
             android:textSize="25dp"
-            android:layout_marginLeft="50dp"
-            android:layout_marginTop="8dp"/>
+            android:layout_marginLeft="45dp"
+            android:layout_marginTop="15dp"/>
         <TextView
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:text="다음역?? "
             android:textSize="25dp"
-            android:layout_marginLeft="50dp"
-            android:layout_marginTop="8dp"/>
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="15dp"/>
     </LinearLayout>
-    <androidx.recyclerview.widget.RecyclerView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="6"
+        android:layout_height="1dp"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="170dp"
-        android:padding="5dp"
-        android:id="@+id/listView_main_list" />
+        android:layout_marginTop="185dp"
+        android:background="#FDFDFD" />
+    <LinearLayout
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="190dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ListView
+            android:id="@+id/loc_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="#ffffff"
+            android:dividerHeight="1dp">
+        </ListView>
+    </LinearLayout>
 
 
 

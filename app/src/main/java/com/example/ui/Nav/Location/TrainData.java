@@ -1,4 +1,4 @@
-package com.example.ui;
+package com.example.ui.Nav.Location;
 
 public class TrainData {
     private String line;

@@ -1,10 +1,12 @@
-package com.example.ui;
+package com.example.ui.Nav;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+
+import com.example.ui.R;
 
 public class Help extends AppCompatActivity {
 

@@ -1,15 +1,17 @@
-package com.example.ui;
+package com.example.ui.Nav.Location;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.AsyncTask;
 import android.os.Bundle;
+
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
-import android.widget.TextView;
+import android.widget.ListView;
+
+import com.example.ui.R;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -21,49 +23,49 @@ import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
-import java.util.ArrayList;
 import java.util.Timer;
+import java.util.TimerTask;
 
+public class Location extends AppCompatActivity implements AdapterView.OnItemClickListener {
 
-public class Location extends AppCompatActivity {
-
-    private static String IP_ADDRESS = "www.travelit.me";
+    private static String IP_ADDRESS = "solac.shop";
     private static String TAG = "phptest";
-
-    private TextView mTextViewResult;
-    private ArrayList<TrainData> mArrayList;
     private TrainAdapter mAdapter;
-    private RecyclerView mRecyclerView;
+    private ListView listView;
     private String mJsonString;
+
+    private Timer m_timer;
+    private TimerTask m_task;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_location);
-        mRecyclerView = (RecyclerView) findViewById(R.id.listView_main_list);
-        mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-        mArrayList = new ArrayList<>();
+        listView = (ListView) findViewById(R.id.loc_list);
 
-        mAdapter = new TrainAdapter(this, mArrayList);
-        mRecyclerView.setAdapter(mAdapter);
+        mAdapter = new TrainAdapter();
+        listView.setAdapter(mAdapter);
+        listView.setOnItemClickListener(this);
 
-        //첫 화면 띄우기 위함.
-        mArrayList.clear();
-        mAdapter.notifyDataSetChanged();
+        m_timer = new Timer();
+        m_task = new TimerTask() {
+            @Override
+            public void run() {
+                doUpdate();
+            }
+        };
+        m_timer.schedule(m_task, 1000, 1000);
+    }
+    @Override
+    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+    }
+
+    public void doUpdate(){
         GetData task = new GetData();
         task.execute("http://" + IP_ADDRESS + "/getjson.php", "");
-
-        Button button_all = (Button) findViewById(R.id.re);
-        button_all.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                mArrayList.clear();
-                mAdapter.notifyDataSetChanged();
-                GetData task = new GetData();
-                task.execute("http://" + IP_ADDRESS + "/getjson.php", "");
-            }
-        });
-
     }
 
 
@@ -74,16 +76,17 @@ public class Location extends AppCompatActivity {
         protected void onPreExecute() {
             super.onPreExecute();
         }
-
+        //데이터 다 가져오면 작동하는 메서드.
         @Override
         protected void onPostExecute(String result) {
             super.onPostExecute(result);
 
             if (result == null) {
             } else {
-
+                mAdapter.clearItem();
                 mJsonString = result;
                 showResult();
+                mAdapter.notifyDataSetChanged();
             }
         }
 
@@ -163,8 +166,7 @@ public class Location extends AppCompatActivity {
                 personalData.setCur_station(cur_station);
                 personalData.setRem_next_time(rem_next_time);
 
-                mArrayList.add(personalData);
-                mAdapter.notifyDataSetChanged();
+                mAdapter.addItem(personalData);
             }
         } catch (JSONException e) {
             Log.d(TAG, "showResult : ", e);

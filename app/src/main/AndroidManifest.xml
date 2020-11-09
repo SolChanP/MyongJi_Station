@@ -12,11 +12,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Result"></activity>
-        <activity android:name=".Setting" />
-        <activity android:name=".Help" />
-        <activity android:name=".Favorites" />
-        <activity android:name=".Location" />
+        <activity android:name=".Nav.Result"></activity>
+        <activity android:name=".Nav.Setting" />
+        <activity android:name=".Nav.Help" />
+        <activity android:name=".Nav.Favorites.Favorites" />
+        <activity android:name=".Nav.Location.Location" />
         <activity
             android:name=".LoadingActivity"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
@@ -27,7 +27,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".MainActivity" />
-        <activity android:name=".Map" />
+        <activity android:name=".Nav.Map" />
         <activity android:name=".SearchAdapter" />
         <activity android:name=".SearchStation" />
     </application>
