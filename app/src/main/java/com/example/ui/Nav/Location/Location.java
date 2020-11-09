@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.example.ui.R;
 
@@ -48,7 +49,7 @@ public class Location extends AppCompatActivity implements AdapterView.OnItemCli
         mAdapter = new TrainAdapter();
         listView.setAdapter(mAdapter);
         listView.setOnItemClickListener(this);
-
+        Toast.makeText(getApplicationContext(), "데이터 불러오는 중...", Toast.LENGTH_SHORT).show();
         m_timer = new Timer();
         m_task = new TimerTask() {
             @Override
@@ -57,6 +58,8 @@ public class Location extends AppCompatActivity implements AdapterView.OnItemCli
             }
         };
         m_timer.schedule(m_task, 1000, 1000);
+
+
     }
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -87,6 +90,7 @@ public class Location extends AppCompatActivity implements AdapterView.OnItemCli
                 mJsonString = result;
                 showResult();
                 mAdapter.notifyDataSetChanged();
+                Toast.makeText(getApplicationContext(), "데이터 불러오기 성공!", Toast.LENGTH_SHORT).show();
             }
         }
 

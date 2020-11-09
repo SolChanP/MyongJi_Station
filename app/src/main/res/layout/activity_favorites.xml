@@ -52,6 +52,7 @@
         android:orientation="horizontal">
         <EditText
             android:id="@+id/fa_nickname"
+            android:onClick="OnClick"
             android:layout_width="80dp"
             android:layout_height="40dp"
             android:layout_marginTop="20dp"
@@ -79,6 +80,7 @@
             android:hint="도착역"/>
         <EditText
             android:id="@+id/fa_value"
+            android:onClick="OnClick"
             android:layout_width="80dp"
             android:layout_height="40dp"
             android:layout_marginTop="20dp"

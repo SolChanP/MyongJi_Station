@@ -1,4 +1,5 @@
 package com.example.ui.Nav.Favorites;
+
 import android.app.AlertDialog;
 import android.content.Context;
 
@@ -107,6 +108,7 @@ public class Favorites extends AppCompatActivity implements AdapterView.OnItemCl
             }
         });
     }
+
     @Override
     protected void onResume() {
         super.onResume();
@@ -134,6 +136,7 @@ public class Favorites extends AppCompatActivity implements AdapterView.OnItemCl
         alert.setPositiveButton("삭제",
                 new DialogInterface.OnClickListener() {
                     FavoritesData data = (FavoritesData) adapter.getItem(position);
+
                     public void onClick(DialogInterface dialog, int which) {
                         sqlDB = myDBHelper.getWritableDatabase();
                         sqlDB.execSQL("DELETE FROM groupTBL WHERE  nickName = '" + data.getNickname() + "';");
@@ -152,7 +155,8 @@ public class Favorites extends AppCompatActivity implements AdapterView.OnItemCl
                 });
         alert.show();
     }
-    public void findRoute(FavoritesData data){
+
+    public void findRoute(FavoritesData data) {
         Intent intent = new Intent(Favorites.this, Result.class);
         //컨트롤러 생성
         //클릭시 컨트롤러를 생성하는 이유는
@@ -163,7 +167,7 @@ public class Favorites extends AppCompatActivity implements AdapterView.OnItemCl
         } catch (IOException e) {
             e.printStackTrace();
         }
-        switch (data.getValue()){
+        switch (data.getValue()) {
             case "시간":// 시간 우선 탐색 시작.
                 controller.findTime(data.getStart().toString(), data.getEnd().toString());
                 intent.putExtra("result", controller.getResultData());
@@ -194,31 +198,31 @@ public class Favorites extends AppCompatActivity implements AdapterView.OnItemCl
         switch (v.getId()) {
             // 리스트에 추가 버튼이 클릭되었을때의 처리
             case R.id.btnInsert:
-                if(nickName.getText().toString().equals("") || start.getText().toString().equals("")
-                || des.getText().toString().equals("") || value.getText().toString().equals("")){
+                if (nickName.getText().toString().equals("") || start.getText().toString().equals("")
+                        || des.getText().toString().equals("") || value.getText().toString().equals("")) {
                     Toast.makeText(getApplicationContext(), "모두 입력해주세요^^", Toast.LENGTH_LONG).show();
-                }
-                else{
-                    if(value.getText().toString().equals("시간") || value.getText().toString().equals("거리")
+                } else {
+                    if (value.getText().toString().equals("시간") || value.getText().toString().equals("거리")
                             || value.getText().toString().equals("비용")) {
                         this.insertData();
                         this.updateData();
-                        Toast.makeText(getApplicationContext(), "입력 성공", Toast.LENGTH_SHORT).show();
-                    }
-                    else {
+                        Toast.makeText(getApplicationContext(), "등록 성공!'", Toast.LENGTH_LONG).show();
                         Toast.makeText(getApplicationContext(), "탐색옵션 예시 : '시간' or' 비용' or' '거리'", Toast.LENGTH_LONG).show();
                     }
                 }
                 break;
             case R.id.btnSelect:
+            case R.id.fa_nickname:
+            case R.id.fa_value:
                 this.updateData();
                 break;
             default:
                 break;
         }
     }
+
     //데이터 입력
-    public void insertData(){
+    public boolean insertData() {
         sqlDB = myDBHelper.getWritableDatabase();
         sqlDB.execSQL("INSERT INTO groupTBL VALUES ( '" + nickName.getText().toString() + "' , " + start.getText().toString() + ", " +
                 des.getText().toString() + ", '" + value.getText().toString() + "');");
@@ -230,9 +234,11 @@ public class Favorites extends AppCompatActivity implements AdapterView.OnItemCl
         value.setText("");
         // 데이터가 추가된 위치(리스트뷰의 마지막)으로 포커스를 이동시킨다.
         listView.setSelection(adapter.getCount() - 1);
+        return true;
     }
+
     //데이터 조회
-    public void updateData(){
+    public void updateData() {
         adapter.clearItem();
         sqlDB = myDBHelper.getReadableDatabase();
         Cursor cursor;
@@ -245,7 +251,6 @@ public class Favorites extends AppCompatActivity implements AdapterView.OnItemCl
                     cursor.getString(2) + " " + cursor.getString(3));
         }
         adapter.notifyDataSetChanged();
-        Toast.makeText(getApplicationContext(), "조회 성공", Toast.LENGTH_SHORT).show();
     }
 
     //출발역 입력창이 눌렸을 때 액션 메서드
@@ -255,11 +260,13 @@ public class Favorites extends AppCompatActivity implements AdapterView.OnItemCl
                 //터치했을 때의 이벤트
                 Intent intent = new Intent(Favorites.this, SearchStation.class);
                 startActivityForResult(intent, REQUEST_START);//요청 후 결과 돌려받기
+                this.updateData();
                 return true;
             }
         }
         return false;
     }
+
     //도착역 입력창이 눌렸을 때 액션 메서드
     public boolean endTouch(MotionEvent event) {
         switch (event.getAction()) {
@@ -267,11 +274,13 @@ public class Favorites extends AppCompatActivity implements AdapterView.OnItemCl
                 //터치했을 때의 이벤트
                 Intent intent = new Intent(Favorites.this, SearchStation.class);
                 startActivityForResult(intent, REQUEST_END);//요청 후 결과 돌려받기
+                this.updateData();
                 return true;
             }
         }
         return false;
     }
+
     //돌려받은 결과 저장하기
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
