@@ -90,7 +90,6 @@ public class Location extends AppCompatActivity implements AdapterView.OnItemCli
                 mJsonString = result;
                 showResult();
                 mAdapter.notifyDataSetChanged();
-                Toast.makeText(getApplicationContext(), "데이터 불러오기 성공!", Toast.LENGTH_SHORT).show();
             }
         }
 
