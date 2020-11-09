@@ -206,9 +206,9 @@ public class Favorites extends AppCompatActivity implements AdapterView.OnItemCl
                             || value.getText().toString().equals("비용")) {
                         this.insertData();
                         this.updateData();
-                        Toast.makeText(getApplicationContext(), "등록 성공!'", Toast.LENGTH_LONG).show();
-                        Toast.makeText(getApplicationContext(), "탐색옵션 예시 : '시간' or' 비용' or' '거리'", Toast.LENGTH_LONG).show();
                     }
+                    else
+                        Toast.makeText(getApplicationContext(), "탐색옵션 예시 : '시간' or' 비용' or' '거리'", Toast.LENGTH_LONG).show();
                 }
                 break;
             case R.id.btnSelect:
