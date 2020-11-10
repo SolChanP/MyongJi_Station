@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Nav.Live.LiveResult"
+    android:background="@color/colorBlue">
+    <TextView
+        android:id="@+id/live_line"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true"
+        android:textStyle="bold"
+        android:text="게시글"
+        android:textSize="35dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="100dp"
+        android:background="#FDFDFD" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_alignParentTop="true"
+        android:gravity="center"
+        android:layout_marginTop="100dp">
+        <TextView
+            android:id="@+id/live_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="제목"
+            android:textSize="25dp"/>
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="180dp"
+        android:background="#FDFDFD" />
+    <TextView
+        android:id="@+id/live_dir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="190dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="10dp"
+        android:text="열차정보"
+        android:textSize="25dp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="240dp"
+        android:background="#FDFDFD" />
+    <ScrollView
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="240dp"
+        android:layout_width="fill_parent"
+        android:layout_height="380dp">
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="380dp">
+            <TextView
+                android:id="@+id/live_data"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="29dp"
+                android:layout_marginTop="20dp"
+                android:text="내용"/>
+        </RelativeLayout>
+    </ScrollView>
+
+
+
+
+</RelativeLayout>

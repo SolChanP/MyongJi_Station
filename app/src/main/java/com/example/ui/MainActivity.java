@@ -17,6 +17,7 @@ import android.widget.Toast;
 
 import com.example.ui.Nav.Favorites.Favorites;
 import com.example.ui.Nav.Help;
+import com.example.ui.Nav.Live.Live;
 import com.example.ui.Nav.Location.Location;
 import com.example.ui.Nav.Map;
 import com.example.ui.Nav.Result;
@@ -163,7 +164,11 @@ public class MainActivity extends Activity {
             case R.id.nav_fa :
             case R.id.nav_fa_layout :
                 intent = new Intent(getBaseContext(), Favorites.class);
-              //  intent.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);//기록X, 즐찾 -> 결과 -> 즐찾 이러면 에러, 해결하기 쉬운 방법임
+                startActivity(intent);
+                break;
+            case R.id.nav_live :
+            case R.id.nav_live_layout :
+                intent = new Intent(getBaseContext(), Live.class);
                 startActivity(intent);
                 break;
             case R.id.nav_help :

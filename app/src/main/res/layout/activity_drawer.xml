@@ -70,6 +70,26 @@
             android:textSize="25dp" />
 
     </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/nav_live_layout"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="320dp"
+        android:gravity="center"
+        android:onClick="OnClick">
+
+        <TextView
+            android:id="@+id/nav_live"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:onClick="OnClick"
+            android:text="실시간 게시판"
+            android:textColor="#ffffff"
+            android:textSize="25dp" />
+
+    </RelativeLayout>
 
     <RelativeLayout
         android:id="@+id/nav_fa_layout"
@@ -77,7 +97,7 @@
         android:layout_height="70dp"
         android:layout_alignParentTop="true"
         android:layout_marginStart="5dp"
-        android:layout_marginTop="320dp"
+        android:layout_marginTop="390dp"
         android:gravity="center"
         android:onClick="OnClick">
 
@@ -98,7 +118,7 @@
         android:layout_width="match_parent"
         android:layout_height="70dp"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="390dp"
+        android:layout_marginTop="460dp"
         android:gravity="center"
         android:onClick="OnClick">
 
@@ -119,7 +139,7 @@
         android:layout_width="match_parent"
         android:layout_height="70dp"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="460dp"
+        android:layout_marginTop="530dp"
         android:gravity="center"
         android:onClick="OnClick">
 

@@ -14,6 +14,7 @@ import android.text.Html;
 import android.view.MotionEvent;
 import android.view.View;
 
+import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
@@ -78,6 +79,7 @@ public class Favorites extends AppCompatActivity implements AdapterView.OnItemCl
 
 
         listView = (ListView) findViewById(R.id.fa_list);
+        listView.setDescendantFocusability(ViewGroup.FOCUS_AFTER_DESCENDANTS);
         // 위젯 레퍼런스 끝
         ///////////////////////////////////////////////////////////
         //어댑터 생성
@@ -212,8 +214,8 @@ public class Favorites extends AppCompatActivity implements AdapterView.OnItemCl
                 }
                 break;
             case R.id.btnSelect:
-            case R.id.fa_nickname:
-            case R.id.fa_value:
+            //case R.id.fa_nickname:
+            //case R.id.fa_value:
                 this.updateData();
                 break;
             default:
@@ -260,7 +262,8 @@ public class Favorites extends AppCompatActivity implements AdapterView.OnItemCl
                 //터치했을 때의 이벤트
                 Intent intent = new Intent(Favorites.this, SearchStation.class);
                 startActivityForResult(intent, REQUEST_START);//요청 후 결과 돌려받기
-                this.updateData();
+                adapter.notifyDataSetChanged();
+                updateData();
                 return true;
             }
         }
@@ -274,7 +277,7 @@ public class Favorites extends AppCompatActivity implements AdapterView.OnItemCl
                 //터치했을 때의 이벤트
                 Intent intent = new Intent(Favorites.this, SearchStation.class);
                 startActivityForResult(intent, REQUEST_END);//요청 후 결과 돌려받기
-                this.updateData();
+                updateData();
                 return true;
             }
         }
@@ -292,6 +295,7 @@ public class Favorites extends AppCompatActivity implements AdapterView.OnItemCl
             if (resultCode == RESULT_OK) {
                 des.setText(data.getStringExtra("Station"));
             }
+
     }
 
     public class myDBHelper extends SQLiteOpenHelper {

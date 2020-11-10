@@ -61,6 +61,16 @@
             android:background="@drawable/edittext"
             android:hint="별명"/>
         <EditText
+            android:id="@+id/fa_value"
+            android:onClick="OnClick"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/edittext"
+            android:gravity="center"
+            android:hint="탐색옵션"/>
+        <EditText
             android:id="@+id/fa_start"
             android:layout_width="80dp"
             android:layout_height="40dp"
@@ -78,16 +88,6 @@
             android:gravity="center"
             android:background="@drawable/edittext"
             android:hint="도착역"/>
-        <EditText
-            android:id="@+id/fa_value"
-            android:onClick="OnClick"
-            android:layout_width="80dp"
-            android:layout_height="40dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginLeft="5dp"
-            android:background="@drawable/edittext"
-            android:gravity="center"
-            android:hint="탐색옵션"/>
     </LinearLayout>
 
     <LinearLayout

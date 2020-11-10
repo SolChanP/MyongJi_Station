@@ -31,9 +31,10 @@ public class Location extends AppCompatActivity implements AdapterView.OnItemCli
 
     private static String IP_ADDRESS = "solac.shop";
     private static String TAG = "phptest";
+    private String mJsonString;
     private TrainAdapter mAdapter;
     private ListView listView;
-    private String mJsonString;
+
 
     private Timer m_timer;
     private TimerTask m_task;

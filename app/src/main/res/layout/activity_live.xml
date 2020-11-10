@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Nav.Live.Live"
+    android:background="@color/colorBlue">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:text="실시간 게시판"
+        android:textSize="35dp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/live_add"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="10dp"
+        android:onClick="OnClick"
+        android:text="등록" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="100dp"
+        android:background="#FDFDFD"/>
+
+
+    <ScrollView
+        android:layout_width="95dp"
+        android:layout_height="fill_parent"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="105dp">
+
+        <LinearLayout
+            android:layout_width="95dp"
+            android:layout_height="fill_parent"
+            android:layout_alignParentTop="true"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/live_line1"
+                android:layout_width="95dp"
+                android:layout_height="70dp"
+                android:onClick="OnClick"
+                android:text="1호선"
+                android:textSize="20dp" />
+
+            <Button
+                android:id="@+id/live_line2"
+                android:layout_width="95dp"
+                android:layout_height="70dp"
+                android:onClick="OnClick"
+                android:text="2호선"
+                android:textSize="20dp" />
+
+            <Button
+                android:onClick="OnClick"
+                android:id="@+id/live_line3"
+                android:layout_width="95dp"
+                android:layout_height="70dp"
+                android:text="3호선"
+                android:textSize="20dp" />
+
+            <Button
+                android:onClick="OnClick"
+                android:id="@+id/live_line4"
+                android:layout_width="95dp"
+                android:layout_height="70dp"
+                android:text="4호선"
+                android:textSize="20dp" />
+
+            <Button
+                android:onClick="OnClick"
+                android:id="@+id/live_line5"
+                android:layout_width="95dp"
+                android:layout_height="70dp"
+                android:text="5호선"
+                android:textSize="20dp" />
+
+            <Button
+                android:onClick="OnClick"
+                android:id="@+id/live_line6"
+                android:layout_width="95dp"
+                android:layout_height="70dp"
+                android:text="6호선"
+                android:textSize="20dp" />
+
+            <Button
+                android:onClick="OnClick"
+                android:id="@+id/live_line7"
+                android:layout_width="95dp"
+                android:layout_height="70dp"
+                android:text="7호선"
+                android:textSize="20dp" />
+
+            <Button
+                android:onClick="OnClick"
+                android:id="@+id/live_line8"
+                android:layout_width="95dp"
+                android:layout_height="70dp"
+                android:text="8호선"
+                android:textSize="20dp" />
+
+            <Button
+                android:onClick="OnClick"
+                android:id="@+id/live_line9"
+                android:layout_width="95dp"
+                android:layout_height="70dp"
+                android:text="9호선"
+                android:textSize="20dp" />
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <!--버튼이랑 리스트 구분 선-->
+    <LinearLayout
+        android:layout_width="1dp"
+        android:layout_height="fill_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="100dp"
+        android:background="#FDFDFD" />
+
+    <LinearLayout
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="105dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="105dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ListView
+            android:id="@+id/live_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="#FDFDFD"
+            android:dividerHeight="1dp">
+        </ListView>
+    </LinearLayout>
+
+
+</RelativeLayout>
