@@ -10,6 +10,8 @@ import android.widget.TextView;
 import com.example.ui.R;
 
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 
 public class LiveAdapter extends BaseAdapter {
     public ArrayList<LiveData> list = new ArrayList<LiveData>();
@@ -64,5 +66,9 @@ public class LiveAdapter extends BaseAdapter {
 
     public void clearItem(){
         list.clear();
+    }
+
+    public void reverse(){
+        Collections.reverse(list);
     }
 }

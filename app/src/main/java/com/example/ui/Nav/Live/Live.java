@@ -150,6 +150,7 @@ public class Live extends AppCompatActivity implements AdapterView.OnItemClickLi
     @Override
     protected void onResume() {
         super.onResume();
+        adapterT.reverse();
         listView.setAdapter(adapterT);
         // ArrayList에 더미 데이터 입력
         defaultData();
@@ -405,7 +406,6 @@ public class Live extends AppCompatActivity implements AdapterView.OnItemClickLi
                 String title = item.getString(TAG_title);
 
                 LiveData personalData = new LiveData(line, train, data, title);
-                System.out.println(line+ " " + train + " " + data + " "+ title);
 
                 adapterT.addItem(personalData);
             }
