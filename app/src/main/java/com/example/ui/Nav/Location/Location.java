@@ -29,7 +29,7 @@ import java.util.TimerTask;
 
 public class Location extends AppCompatActivity implements AdapterView.OnItemClickListener {
 
-    private static String IP_ADDRESS = "solac.shop";
+    private static String IP_ADDRESS = "www.travelit.me";
     private static String TAG = "phptest";
     private String mJsonString;
     private TrainAdapter mAdapter;

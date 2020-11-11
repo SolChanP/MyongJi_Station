@@ -35,7 +35,7 @@ public class Live extends AppCompatActivity implements AdapterView.OnItemClickLi
     private LiveAdapter adapter, adapter1, adapter2 ,adapter3, adapter4,adapter5, adapter6, adapter7,adapter8, adapter9, adapterT;
     private  int REQUEST_DATA = 1;
 
-    private static String IP_ADDRESS = "solac.shop";
+    private static String IP_ADDRESS = "www.travelit.me";
     private static String TAG = "phptest";
     private String mJsonString;
 
