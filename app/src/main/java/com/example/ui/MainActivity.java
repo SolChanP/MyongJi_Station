@@ -20,7 +20,6 @@ import com.example.ui.Nav.Help;
 import com.example.ui.Nav.Live.Live;
 import com.example.ui.Nav.Location.Location;
 import com.example.ui.Nav.Map;
-import com.example.ui.Nav.Result;
 import com.example.ui.Nav.Setting;
 import com.github.chrisbanes.photoview.PhotoView;
 

@@ -1,10 +1,10 @@
-package com.example.ui.Nav;
-
-import androidx.appcompat.app.AppCompatActivity;
+package com.example.ui.Nav.Favorites;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.ui.R;
 import com.example.ui.ResultData;
@@ -46,11 +46,13 @@ public class Result extends AppCompatActivity {
         Intent intent = getIntent();
         result = (ResultData) intent.getSerializableExtra("result");
 
+        //즐겨찾기 새로고침
+        ((Favorites)Favorites.CONTEXT).onResume();
+
         routeData.addAll(result.getRoute());
         station.addAll(result.getStation());
 
         this.showData();
-
 
     }
     public void showData(){

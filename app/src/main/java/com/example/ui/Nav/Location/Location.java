@@ -2,16 +2,17 @@ package com.example.ui.Nav.Location;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.example.ui.Nav.Location.TrainMap.Line1;
 import com.example.ui.R;
 
 import org.json.JSONArray;
@@ -29,7 +30,7 @@ import java.util.TimerTask;
 
 public class Location extends AppCompatActivity implements AdapterView.OnItemClickListener {
 
-    private static String IP_ADDRESS = "www.travelit.me";
+    private static String IP_ADDRESS = "www.solac.shop";
     private static String TAG = "phptest";
     private String mJsonString;
     private TrainAdapter mAdapter;
@@ -64,7 +65,16 @@ public class Location extends AppCompatActivity implements AdapterView.OnItemCli
     }
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-
+        TrainData data = (TrainData) mAdapter.getItem(position);
+        Intent intent;
+        switch (data.getLine()){
+            case "1호선 상행":
+            case "1호선 하행":
+                intent = new Intent(Location.this, Line1.class);
+                intent.putExtra("result", data);
+                startActivity(intent);
+                break;
+        }
     }
 
     public void doUpdate(){
@@ -150,6 +160,7 @@ public class Location extends AppCompatActivity implements AdapterView.OnItemCli
         String TAG_line = "line";
         String TAG_cur_station = "cur_station";
         String TAG_rem_next_time = "rem_next_time";
+        String TAG_next_station = "next_station";
 
 
         try {
@@ -162,12 +173,14 @@ public class Location extends AppCompatActivity implements AdapterView.OnItemCli
 
                 String line = item.getString(TAG_line);
                 String cur_station = item.getString(TAG_cur_station);
+                String next_station = item.getString(TAG_next_station);
                 String rem_next_time = item.getString(TAG_rem_next_time);
 
                 TrainData personalData = new TrainData();
 
                 personalData.setLine(line);
                 personalData.setCur_station(cur_station);
+                personalData.setNext_station(next_station);
                 personalData.setRem_next_time(rem_next_time);
 
                 mAdapter.addItem(personalData);

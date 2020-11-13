@@ -12,10 +12,11 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".Nav.Live.Live"></activity>
-        <activity android:name=".Nav.Live.LiveResult"></activity>
-        <activity android:name=".Nav.Live.LiveInput"></activity>
-        <activity android:name=".Nav.Result" />
+        <activity android:name=".Result"/>
+        <activity android:name=".Nav.Location.TrainMap.Line1"/>
+        <activity android:name=".Nav.Live.Live" />
+        <activity android:name=".Nav.Live.LiveResult" />
+        <activity android:name=".Nav.Live.LiveInput" />
         <activity android:name=".Nav.Setting" />
         <activity android:name=".Nav.Help" />
         <activity android:name=".Nav.Favorites.Favorites" />

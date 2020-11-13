@@ -23,15 +23,16 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.ui.MainActivity;
-import com.example.ui.Nav.Result;
 import com.example.ui.R;
+import com.example.ui.Result;
 import com.example.ui.SearchStation;
 import com.example.ui.SubwayController;
 
 import java.io.IOException;
 
 public class Favorites extends AppCompatActivity implements AdapterView.OnItemClickListener {
+
+    public static Context CONTEXT;
 
     // 추가될 아이템 내용을 입력받는 EditText
     private EditText nickName;//즐겨찾기 명칭
@@ -65,6 +66,7 @@ public class Favorites extends AppCompatActivity implements AdapterView.OnItemCl
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_favorites);
 
+        CONTEXT = this;
         //////////////////////////////////////////////////////////////
         // 위젯 레퍼런스 시작
         nickName = (EditText) findViewById(R.id.fa_nickname);
@@ -112,12 +114,13 @@ public class Favorites extends AppCompatActivity implements AdapterView.OnItemCl
     }
 
     @Override
-    protected void onResume() {
+    public void onResume() {
         super.onResume();
         // ArrayList 초기화
         adapter.clearItem();
         // ArrayList에 더미 데이터 입력
-        defaultData();
+        updateData();
+        adapter.notifyDataSetChanged();
     }
 
     private void defaultData() {
@@ -174,21 +177,21 @@ public class Favorites extends AppCompatActivity implements AdapterView.OnItemCl
                 controller.findTime(data.getStart().toString(), data.getEnd().toString());
                 intent.putExtra("result", controller.getResultData());
                 startActivity(intent);
-                finish();
+              //  finish();
                 controller = null;//컨트롤러 객체 값 null로 초기화
                 break;
             case "비용":// 비용 우선 탐색 시작.
                 controller.findMoney(data.getStart().toString(), data.getEnd().toString());
                 intent.putExtra("result", controller.getResultData());
                 startActivity(intent);
-                finish();
+               // finish();
                 controller = null;//컨트롤러 객체 값 null로 초기화
                 break;
             case "거리":// 거리 우선 탐색 시작.
                 controller.findMeter(data.getStart().toString(), data.getEnd().toString());
                 intent.putExtra("result", controller.getResultData());
                 startActivity(intent);
-                finish();
+               // finish();
                 controller = null;//컨트롤러 객체 값 null로 초기화
                 break;
             default:

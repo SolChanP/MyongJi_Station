@@ -1,9 +1,20 @@
 package com.example.ui.Nav.Location;
 
-public class TrainData {
+import java.io.Serializable;
+
+public class TrainData implements Serializable {
     private String line;
     private String cur_station;
     private String rem_next_time;
+    private String next_station;
+
+    public void setNext_station(String next_station) {
+        this.next_station = next_station;
+    }
+
+    public String getNext_station() {
+        return next_station;
+    }
 
     public String getLine() {
         return line;
@@ -14,8 +25,7 @@ public class TrainData {
     }
 
     public String getRem_next_time() {
-       // return "약 " + Integer.toString(Integer.parseInt(rem_next_time) / 60) + "분"; -> 분 으로 표시
-        return "약" + rem_next_time + "초";
+        return "약 " + Integer.toString(Integer.parseInt(rem_next_time) / 60) + "분" + " " + Integer.toString(Integer.parseInt(rem_next_time) % 60) + "초";
     }
 
     public void setLine(String line) {

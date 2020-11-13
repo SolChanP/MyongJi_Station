@@ -36,17 +36,17 @@
         android:background="#FDFDFD"/>
 
 
-    <ScrollView
-        android:layout_width="95dp"
-        android:layout_height="fill_parent"
+    <HorizontalScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="70dp"
         android:layout_alignParentTop="true"
         android:layout_marginTop="105dp">
 
         <LinearLayout
-            android:layout_width="95dp"
-            android:layout_height="fill_parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
-            android:orientation="vertical">
+            android:orientation="horizontal">
 
             <Button
                 android:id="@+id/live_line1"
@@ -123,23 +123,21 @@
 
         </LinearLayout>
 
-    </ScrollView>
+    </HorizontalScrollView>
 
     <!--버튼이랑 리스트 구분 선-->
     <LinearLayout
-        android:layout_width="1dp"
-        android:layout_height="fill_parent"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginLeft="100dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="180dp"
         android:background="#FDFDFD" />
 
     <LinearLayout
         android:layout_alignParentTop="true"
-        android:layout_marginTop="105dp"
-        android:layout_alignParentLeft="true"
-        android:layout_marginLeft="105dp"
+        android:layout_marginTop="185dp"
+        android:layout_marginLeft="5dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
         <ListView

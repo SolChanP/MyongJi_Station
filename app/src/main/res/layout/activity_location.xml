@@ -13,7 +13,7 @@
         android:layout_marginTop="30dp"
         android:layout_centerHorizontal="true"
         android:textStyle="bold"
-        android:text="현재 열차 위치"
+        android:text="실시간 열차 위치"
         android:textSize="35dp" />
 
     <LinearLayout
@@ -25,29 +25,39 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:orientation="horizontal"
-        android:layout_height="50dp"
+        android:layout_height="60dp"
         android:layout_alignParentTop="true"
         android:layout_marginTop="120dp">
         <TextView
-            android:layout_width="100dp"
+            android:layout_width="80dp"
             android:layout_height="50dp"
             android:text="열차 정보"
-            android:textSize="25dp"
-            android:layout_marginTop="15dp"/>
+            android:textSize="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp"/>
+
         <TextView
-            android:layout_width="100dp"
+            android:layout_width="80dp"
             android:layout_height="50dp"
-            android:text="현재 역"
-            android:textSize="25dp"
-            android:layout_marginLeft="45dp"
-            android:layout_marginTop="15dp"/>
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:text="현재역"
+            android:textSize="20dp" />
+
         <TextView
-            android:layout_width="100dp"
+            android:layout_width="80dp"
             android:layout_height="50dp"
-            android:text="다음역?? "
-            android:textSize="25dp"
-            android:layout_marginLeft="40dp"
-            android:layout_marginTop="15dp"/>
+            android:text="다음역"
+            android:textSize="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"/>
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:text="남은시간"
+            android:textSize="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"/>
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"

@@ -65,7 +65,7 @@
             android:layout_height="wrap_content"
 
             android:onClick="OnClick"
-            android:text="현재 열차 위치"
+            android:text="실시간 열차 위치"
             android:textColor="#ffffff"
             android:textSize="25dp" />
 

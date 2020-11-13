@@ -12,30 +12,30 @@
         android:orientation="horizontal">
         <TextView
             android:id="@+id/list_line"
-            android:layout_width="120dp"
-            android:layout_height="50dp"
-            android:layout_margin="5dp"
-            android:textSize="20dp"
-            android:textStyle="bold"
-            android:padding="5dp" />
+            android:layout_width="80dp"
+            android:layout_height="70dp"
+            android:gravity="center"
+            android:textSize="18dp" />
         <TextView
             android:id="@+id/list_cur_station"
-            android:layout_width="120dp"
-            android:layout_height="50dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginLeft="10dp"
-            android:textSize="20dp"
-            android:textStyle="bold"
-            android:padding="5dp" />
+            android:layout_width="80dp"
+            android:layout_height="70dp"
+            android:textSize="18dp"
+            android:gravity="center"
+            android:layout_marginLeft="20dp" />
         <TextView
-            android:id="@+id/list_rem_next_time"
-            android:layout_width="120dp"
-            android:layout_height="50dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginLeft="10dp"
-            android:textSize="20dp"
-            android:textStyle="bold"
-            android:padding="5dp" />
+            android:id="@+id/list_next_station"
+            android:layout_width="80dp"
+            android:layout_height="70dp"
+            android:textSize="18dp"
+            android:gravity="center"
+            android:layout_marginLeft="20dp" />
+        <TextView
+            android:id="@+id/list_rem_time"
+            android:layout_width="100dp"
+            android:layout_height="70dp"
+            android:textSize="18dp"
+            android:layout_marginLeft="20dp" />
     </LinearLayout>
 
 
