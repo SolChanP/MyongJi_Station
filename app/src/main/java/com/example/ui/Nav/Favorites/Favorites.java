@@ -76,7 +76,6 @@ public class Favorites extends AppCompatActivity implements AdapterView.OnItemCl
 
 
         btnInsert = (Button) findViewById(R.id.btnInsert);
-        btnSelect = (Button) findViewById(R.id.btnSelect);
         alert = new AlertDialog.Builder(Favorites.this);
 
 
@@ -92,8 +91,6 @@ public class Favorites extends AppCompatActivity implements AdapterView.OnItemCl
         listView.setOnItemClickListener(this);
 
         myDBHelper = new myDBHelper(this);
-
-        Toast.makeText(getApplicationContext(), "조회버튼을 누르세요^^", Toast.LENGTH_SHORT).show();
 
         //출발역 입력창이 눌렸을 때
         start.setOnTouchListener(new View.OnTouchListener() {
@@ -215,11 +212,6 @@ public class Favorites extends AppCompatActivity implements AdapterView.OnItemCl
                     else
                         Toast.makeText(getApplicationContext(), "탐색옵션 예시 : '시간' or' 비용' or' '거리'", Toast.LENGTH_LONG).show();
                 }
-                break;
-            case R.id.btnSelect:
-            //case R.id.fa_nickname:
-            //case R.id.fa_value:
-                this.updateData();
                 break;
             default:
                 break;

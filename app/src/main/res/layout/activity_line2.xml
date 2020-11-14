@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBlue"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/nav_location_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true"
+        android:textStyle="bold"
+        android:text="현재 열차 위치"
+        android:textSize="35dp" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="120dp"
+        android:background="#FDFDFD" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="170dp"
+        android:background="#FDFDFD" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="120dp">
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="15dp"
+            android:text="현재역"
+            android:textSize="20dp" />
+
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:text="다음역"
+            android:textSize="20dp"
+            android:layout_marginLeft="55dp"
+            android:layout_marginTop="15dp"/>
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:text="남은시간"
+            android:textSize="20dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="15dp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="175dp">
+        <TextView
+            android:id="@+id/line1_cur"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="15dp"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/line1_next"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:textSize="20dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="15dp"/>
+        <TextView
+            android:id="@+id/line1_rem"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:textSize="20dp"
+            android:layout_marginLeft="45dp"
+            android:layout_marginTop="15dp"/>
+    </LinearLayout>
+
+
+    <!--수정할 곳!!!!!!-->
+    <RelativeLayout
+        android:layout_marginTop="300dp"
+        android:layout_width="match_parent"
+        android:layout_height="350dp">
+
+
+
+        <ImageView
+
+            android:id="@+id/imageView2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/station_rec_green" />
+    </RelativeLayout>
+    <!--여기 까지 ^^ -->
+
+
+</RelativeLayout>

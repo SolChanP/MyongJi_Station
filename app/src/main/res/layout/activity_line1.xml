@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/colorBlue"
     tools:context=".MainActivity">
+
     <TextView
         android:id="@+id/nav_location_title"
         android:layout_width="wrap_content"
@@ -88,7 +89,7 @@
     </LinearLayout>
 
 
-
+    <!--수정할 곳!!!!!!-->
     <RelativeLayout
         android:layout_marginTop="300dp"
         android:layout_width="match_parent"
@@ -379,6 +380,7 @@
             android:layout_marginTop="20dp"
             android:src="@drawable/station_rec_green" />
     </RelativeLayout>
+    <!--여기 까지 ^^ -->
 
 
 </RelativeLayout>

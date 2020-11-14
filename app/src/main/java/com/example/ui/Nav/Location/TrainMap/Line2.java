@@ -3,7 +3,6 @@ package com.example.ui.Nav.Location.TrainMap;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.TextView;
@@ -11,9 +10,11 @@ import android.widget.TextView;
 import com.example.ui.Nav.Location.TrainData;
 import com.example.ui.R;
 
-public class Line1 extends AppCompatActivity {
+public class Line2  extends AppCompatActivity {
     private TextView title, cur, next, rem;
+    //여기..
     private Button line1[] = new Button[23];
+    //여기..
     private Integer[] Rid_button = {
             R.id.station101, R.id.station102, R.id.station103, R.id.station104, R.id.station105, R.id.station106, R.id.station107, R.id.station108,
             R.id.station109, R.id.station110, R.id.station111, R.id.station112, R.id.station113, R.id.station114, R.id.station115, R.id.station116
@@ -47,7 +48,6 @@ public class Line1 extends AppCompatActivity {
 
 
     }
-    //수정할 곳!!!!!!!!!!!!!!!!!!!!!!
     public void makeBtn(){
         for(int i = 0 ; i < line1.length; i++){
             line1[i] = (Button) findViewById(Rid_button[i]);

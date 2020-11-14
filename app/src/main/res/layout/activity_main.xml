@@ -19,7 +19,7 @@
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_marginStart="12dp"
-            android:layout_marginTop="25dp"
+            android:layout_marginTop="45dp"
             android:background="@drawable/hbg"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"/>
@@ -30,8 +30,8 @@
             android:layout_height="40dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
-            android:layout_marginTop="109dp"
-            android:layout_marginStart="10dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginStart="70dp"
             android:background="@drawable/edittext"
             android:hint="출발역" />
 
@@ -41,33 +41,34 @@
             android:layout_height="40dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
-            android:layout_marginTop="158dp"
-            android:layout_marginStart="10dp"
+            android:layout_marginTop="65dp"
+            android:layout_marginStart="70dp"
             android:background="@drawable/edittext"
             android:hint="도착역" />
 
+
         <Button
             android:id="@+id/find_btn"
-            android:onClick="OnClick"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
-            android:layout_marginTop="105dp"
-            android:layout_marginEnd="5dp"
-            android:text="길찾기" />
-
+            android:layout_marginTop="56dp"
+            android:layout_marginEnd="6dp"
+            android:background="@drawable/pngegg"
+            android:onClick="OnClick"
+            android:text="" />
 
         <Button
             android:id="@+id/main_change"
-            android:onClick="OnClick"
             android:layout_width="35dp"
             android:layout_height="30dp"
             android:layout_alignParentTop="true"
             android:layout_alignParentRight="true"
-            android:layout_marginTop="140dp"
-            android:layout_marginRight="114dp"
-            android:background="@drawable/change"/>
+            android:layout_marginTop="58dp"
+            android:layout_marginRight="53dp"
+            android:background="@drawable/change"
+            android:onClick="OnClick" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -81,8 +82,8 @@
             android:layout_height="40dp"
             android:layout_alignParentTop="true"
             android:layout_alignParentLeft="true"
-            android:layout_marginTop="200dp"
-            android:layout_marginLeft="8dp"
+            android:layout_marginTop="120dp"
+            android:layout_marginLeft="70dp"
             android:orientation="horizontal">
 
             <RadioButton
@@ -106,7 +107,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="240dp">
+            android:layout_marginTop="180dp">
             <com.github.chrisbanes.photoview.PhotoView
                 android:layout_margin="4dp"
                 android:id="@+id/main_map"
