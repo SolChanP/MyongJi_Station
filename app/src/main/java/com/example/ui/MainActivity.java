@@ -254,12 +254,18 @@ public class MainActivity extends Activity {
         Button btn = findViewById(v.getId());
         if(start_s.getText().toString().equals("") && end_s.getText().toString().equals("")){
             start_s.setText(btn.getText().toString());
+            Toast.makeText(getApplicationContext(), "출발역이 설정 되었습니다!.", Toast.LENGTH_LONG).show();
         }
         else if(!start_s.getText().toString().equals("") && end_s.getText().toString().equals("")){
             end_s.setText(btn.getText().toString());
+            Toast.makeText(getApplicationContext(), "도착역이 설정 되었습니다!.", Toast.LENGTH_LONG).show();
         }
         else if(start_s.getText().toString().equals("") && !end_s.getText().toString().equals("")){
             start_s.setText(btn.getText().toString());
+            Toast.makeText(getApplicationContext(), "출발역이 설정 되었습니다!.", Toast.LENGTH_LONG).show();
+        }
+        else{
+            Toast.makeText(getApplicationContext(), "입력필드가 모두 채워있습니다!", Toast.LENGTH_LONG).show();
         }
 
     }
