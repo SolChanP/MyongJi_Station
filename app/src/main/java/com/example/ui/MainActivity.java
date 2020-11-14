@@ -10,8 +10,10 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.HorizontalScrollView;
 import android.widget.ImageView;
 import android.widget.RadioGroup;
+import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -44,23 +46,27 @@ public class MainActivity extends Activity {
     //라디오 그룹
     private RadioGroup rg;
 
+    //스크롤 뷰
+    private HorizontalScrollView scroll;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        //--------------노선도 레이아웃 완성 시 삭제 예정-----------------------------------------------------------
-        //노선도 줌인 줌아웃
-        PhotoView photoView = findViewById(R.id.main_map);
-        photoView.setImageResource(R.drawable.map);
-        //노선도 초기 풀 스크린
-        photoView.setScaleType(ImageView.ScaleType.CENTER_CROP);
-        //----------------------------------------------------------------------------------------------------------------
 
         //XML데이터 생성
         rg = (RadioGroup)findViewById(R.id.radio_group);
         find = findViewById(R.id.find_btn);//길찾기
         start_s = findViewById(R.id.start_s);//출발역
         end_s = findViewById(R.id.end_s);//도착역
+
+        //스크롤 뷰, 초기위치 설정
+        scroll = findViewById(R.id.scroll);
+        scroll.post(new Runnable() {
+            public void run() {
+                scroll.smoothScrollTo(300, 0);
+            }
+        });
 
         //네비게이션 드로어 부분
         drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -243,4 +249,18 @@ public class MainActivity extends Activity {
         }
     }
     //-------------------------------------------------------------------------------------------------
+
+    public void OnStationClick(View v){
+        Button btn = findViewById(v.getId());
+        if(start_s.getText().toString().equals("") && end_s.getText().toString().equals("")){
+            start_s.setText(btn.getText().toString());
+        }
+        else if(!start_s.getText().toString().equals("") && end_s.getText().toString().equals("")){
+            end_s.setText(btn.getText().toString());
+        }
+        else if(start_s.getText().toString().equals("") && !end_s.getText().toString().equals("")){
+            start_s.setText(btn.getText().toString());
+        }
+
+    }
 }

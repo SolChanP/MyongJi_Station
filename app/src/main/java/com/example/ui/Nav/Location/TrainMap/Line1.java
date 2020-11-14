@@ -43,11 +43,7 @@ public class Line1 extends AppCompatActivity {
         cur.setText(result.getCur_station() + "역");
         next.setText(result.getNext_station() + "역");
         rem.setText(result.getRem_next_time());
-
-
-
     }
-    //수정할 곳!!!!!!!!!!!!!!!!!!!!!!
     public void makeBtn(){
         for(int i = 0 ; i < line1.length; i++){
             line1[i] = (Button) findViewById(Rid_button[i]);

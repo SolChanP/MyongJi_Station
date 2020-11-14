@@ -32,7 +32,6 @@ import java.io.IOException;
 
 public class Favorites extends AppCompatActivity implements AdapterView.OnItemClickListener {
 
-    public static Context CONTEXT;
 
     // 추가될 아이템 내용을 입력받는 EditText
     private EditText nickName;//즐겨찾기 명칭
@@ -66,7 +65,6 @@ public class Favorites extends AppCompatActivity implements AdapterView.OnItemCl
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_favorites);
 
-        CONTEXT = this;
         //////////////////////////////////////////////////////////////
         // 위젯 레퍼런스 시작
         nickName = (EditText) findViewById(R.id.fa_nickname);
