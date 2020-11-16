@@ -52,7 +52,7 @@ public class Result extends AppCompatActivity {
             //7호선, 7
             R.id.station701, R.id.station702, R.id.station703, R.id.station704, R.id.station705, R.id.station706, R.id.station707,
             //8호선, 5
-            R.id.station802, R.id.station803, R.id.station804, R.id.station805, R.id.station806,
+            R.id.station801, R.id.station802, R.id.station803, R.id.station804, R.id.station805, R.id.station806,
             //9호선, 3
             R.id.station901, R.id.station902, R.id.station903, R.id.station904
     };
