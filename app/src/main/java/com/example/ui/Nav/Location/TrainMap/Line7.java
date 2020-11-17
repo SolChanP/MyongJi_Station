@@ -15,8 +15,8 @@ public class Line7 extends AppCompatActivity {
     private TextView title, cur, next, rem;
     private Button line7[] = new Button[13];
     private Integer[] Rid_button = {
-            R.id.station202, R.id.station303, R.id.station503, R.id.station601, R.id.station701, R.id.station702, R.id.station703, R.id.station704,
-            R.id.station705, R.id.station706, R.id.station416, R.id.station707, R.id.station614
+            R.id.station202_7, R.id.station303_7, R.id.station503_7, R.id.station601_7, R.id.station701, R.id.station702_7, R.id.station703, R.id.station704,
+            R.id.station705_7, R.id.station706, R.id.station416_7, R.id.station707, R.id.station614_7
     };
     private TrainData result;
     @Override

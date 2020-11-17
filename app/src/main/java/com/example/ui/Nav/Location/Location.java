@@ -13,9 +13,10 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 import com.example.ui.Nav.Location.TrainMap.Line1;
+import com.example.ui.Nav.Location.TrainMap.Line2;
+import com.example.ui.Nav.Location.TrainMap.Line3;
+import com.example.ui.Nav.Location.TrainMap.Line4;
 import com.example.ui.Nav.Location.TrainMap.Line7;
-import com.example.ui.Nav.Location.TrainMap.Line8;
-import com.example.ui.Nav.Location.TrainMap.Line9;
 import com.example.ui.R;
 
 import org.json.JSONArray;
@@ -77,21 +78,27 @@ public class Location extends AppCompatActivity implements AdapterView.OnItemCli
                 intent.putExtra("result", data);
                 startActivity(intent);
                 break;
+            case "2호선 상행":
+            case "2호선 하행":
+                intent = new Intent(Location.this, Line2.class);
+                intent.putExtra("result", data);
+                startActivity(intent);
+                break;
+            case "3호선 상행":
+            case "3호선 하행":
+                intent = new Intent(Location.this, Line3.class);
+                intent.putExtra("result", data);
+                startActivity(intent);
+                break;
+            case "4호선 상행":
+            case "4호선 하행":
+                intent = new Intent(Location.this, Line4.class);
+                intent.putExtra("result", data);
+                startActivity(intent);
+                break;
             case "7호선 상행":
             case "7호선 하행":
                 intent = new Intent(Location.this, Line7.class);
-                intent.putExtra("result", data);
-                startActivity(intent);
-                break;
-            case "8호선 상행":
-            case "8호선 하행":
-                intent = new Intent(Location.this, Line8.class);
-                intent.putExtra("result", data);
-                startActivity(intent);
-                break;
-            case "9호선 상행":
-            case "9호선 하행":
-                intent = new Intent(Location.this, Line9.class);
                 intent.putExtra("result", data);
                 startActivity(intent);
                 break;

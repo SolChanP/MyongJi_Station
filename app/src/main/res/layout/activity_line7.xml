@@ -96,7 +96,7 @@
         android:layout_marginTop="300dp">
 
         <Button
-            android:id="@+id/station202"
+            android:id="@+id/station202_7"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_marginStart="45dp"
@@ -106,7 +106,7 @@
             android:textSize="15dp" />
 
         <Button
-            android:id="@+id/station303"
+            android:id="@+id/station303_7"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_marginStart="190dp"
@@ -116,7 +116,7 @@
             android:textSize="15dp" />
 
         <Button
-            android:id="@+id/station503"
+            android:id="@+id/station503_7"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_marginStart="335dp"
@@ -126,7 +126,7 @@
             android:textSize="15dp" />
 
         <Button
-            android:id="@+id/station601"
+            android:id="@+id/station601_7"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_marginStart="335dp"
@@ -146,7 +146,7 @@
             android:textSize="15dp" />
 
         <Button
-            android:id="@+id/station702"
+            android:id="@+id/station702_7"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_marginStart="240dp"
@@ -176,7 +176,7 @@
             android:textSize="15dp" />
 
         <Button
-            android:id="@+id/station705"
+            android:id="@+id/station705_7"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_marginStart="45dp"
@@ -196,7 +196,7 @@
             android:textSize="15dp" />
 
         <Button
-            android:id="@+id/station416"
+            android:id="@+id/station416_7"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_marginStart="150dp"
@@ -216,7 +216,7 @@
             android:textSize="15dp" />
 
         <Button
-            android:id="@+id/station614"
+            android:id="@+id/station614_7"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_marginStart="335dp"
