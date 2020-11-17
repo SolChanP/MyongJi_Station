@@ -13,6 +13,7 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 import com.example.ui.Nav.Location.TrainMap.Line1;
+import com.example.ui.Nav.Location.TrainMap.Line7;
 import com.example.ui.Nav.Location.TrainMap.Line8;
 import com.example.ui.Nav.Location.TrainMap.Line9;
 import com.example.ui.R;
@@ -73,6 +74,12 @@ public class Location extends AppCompatActivity implements AdapterView.OnItemCli
             case "1호선 상행":
             case "1호선 하행":
                 intent = new Intent(Location.this, Line1.class);
+                intent.putExtra("result", data);
+                startActivity(intent);
+                break;
+            case "7호선 상행":
+            case "7호선 하행":
+                intent = new Intent(Location.this, Line7.class);
                 intent.putExtra("result", data);
                 startActivity(intent);
                 break;
