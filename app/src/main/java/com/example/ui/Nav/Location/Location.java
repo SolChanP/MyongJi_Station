@@ -16,7 +16,11 @@ import com.example.ui.Nav.Location.TrainMap.Line1;
 import com.example.ui.Nav.Location.TrainMap.Line2;
 import com.example.ui.Nav.Location.TrainMap.Line3;
 import com.example.ui.Nav.Location.TrainMap.Line4;
+import com.example.ui.Nav.Location.TrainMap.Line5;
+import com.example.ui.Nav.Location.TrainMap.Line6;
 import com.example.ui.Nav.Location.TrainMap.Line7;
+import com.example.ui.Nav.Location.TrainMap.Line8;
+import com.example.ui.Nav.Location.TrainMap.Line9;
 import com.example.ui.R;
 
 import org.json.JSONArray;
@@ -96,9 +100,33 @@ public class Location extends AppCompatActivity implements AdapterView.OnItemCli
                 intent.putExtra("result", data);
                 startActivity(intent);
                 break;
+            case "5호선 상행":
+            case "5호선 하행":
+                intent = new Intent(Location.this, Line5.class);
+                intent.putExtra("result", data);
+                startActivity(intent);
+                break;
+            case "6호선 상행":
+            case "6호선 하행":
+                intent = new Intent(Location.this, Line6.class);
+                intent.putExtra("result", data);
+                startActivity(intent);
+                break;
             case "7호선 상행":
             case "7호선 하행":
                 intent = new Intent(Location.this, Line7.class);
+                intent.putExtra("result", data);
+                startActivity(intent);
+                break;
+            case "8호선 상행":
+            case "8호선 하행":
+                intent = new Intent(Location.this, Line8.class);
+                intent.putExtra("result", data);
+                startActivity(intent);
+                break;
+            case "9호선 상행":
+            case "9호선 하행":
+                intent = new Intent(Location.this, Line9.class);
                 intent.putExtra("result", data);
                 startActivity(intent);
                 break;

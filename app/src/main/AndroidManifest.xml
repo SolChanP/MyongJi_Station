@@ -17,7 +17,11 @@
         <activity android:name=".Nav.Location.TrainMap.Line2" />
         <activity android:name=".Nav.Location.TrainMap.Line3" />
         <activity android:name=".Nav.Location.TrainMap.Line4" />
+        <activity android:name=".Nav.Location.TrainMap.Line5" />
+        <activity android:name=".Nav.Location.TrainMap.Line6" />
         <activity android:name=".Nav.Location.TrainMap.Line7" />
+        <activity android:name=".Nav.Location.TrainMap.Line8" />
+        <activity android:name=".Nav.Location.TrainMap.Line9" />
         <activity android:name=".Nav.Live.Live" />
         <activity android:name=".Nav.Live.LiveResult" />
         <activity android:name=".Nav.Live.LiveInput" />
