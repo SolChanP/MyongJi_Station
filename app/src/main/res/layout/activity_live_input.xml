@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Nav.Live.LiveInput"
+    android:background="@color/colorBlue">
+    <TextView
+        android:id="@+id/live_line"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true"
+        android:textStyle="bold"
+        android:text="게시글"
+        android:textSize="35dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="100dp"
+        android:background="#FDFDFD" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_alignParentTop="true"
+        android:gravity="center"
+        android:layout_marginTop="100dp">
+        <EditText
+            android:id="@+id/live_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="제목을 입력하세요"
+            android:background="@drawable/edittext"
+            android:textSize="25dp"/>
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="180dp"
+        android:background="#FDFDFD" />
+    <EditText
+        android:id="@+id/live_dir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="190dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="10dp"
+        android:hint="상행 or 하행"
+        android:background="@drawable/edittext"
+        android:textSize="25dp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="240dp"
+        android:background="#FDFDFD" />
+    <ScrollView
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="240dp"
+        android:layout_width="fill_parent"
+        android:layout_height="380dp">
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="380dp">
+            <EditText
+                android:id="@+id/live_data"
+                android:layout_width="350dp"
+                android:layout_height="350dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="29dp"
+                android:layout_marginTop="20dp"
+                android:hint="내용을 입력하세요"
+                android:background="@drawable/edittext"
+                android:gravity="start"/>
+        </RelativeLayout>
+    </ScrollView>
+
+    <Button
+        android:onClick="OnClick"
+        android:id="@+id/live_line_add"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="336dp"
+        android:layout_marginTop="673dp"
+        android:text="등록" />
+
+
+</RelativeLayout>

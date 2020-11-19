@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.myongji_station">
+    package="com.example.ui">
+
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -8,16 +10,39 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".SearchAdapter"></activity>
-        <activity android:name=".SearchStation" />
-        <activity android:name=".MainActivity">
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".Result" />
+        <activity android:name=".Nav.Location.TrainMap.Line1" />
+        <activity android:name=".Nav.Location.TrainMap.Line2" />
+        <activity android:name=".Nav.Location.TrainMap.Line3" />
+        <activity android:name=".Nav.Location.TrainMap.Line4" />
+        <activity android:name=".Nav.Location.TrainMap.Line5" />
+        <activity android:name=".Nav.Location.TrainMap.Line6" />
+        <activity android:name=".Nav.Location.TrainMap.Line7" />
+        <activity android:name=".Nav.Location.TrainMap.Line8" />
+        <activity android:name=".Nav.Location.TrainMap.Line9" />
+        <activity android:name=".Nav.Live.Live" />
+        <activity android:name=".Nav.Live.LiveResult"/>
+        <activity android:name=".Nav.Live.LiveInput" />
+        <activity android:name=".Nav.Setting" />
+        <activity android:name=".Nav.Help" />
+        <activity android:name=".Nav.Favorites.Favorites" />
+        <activity android:name=".Nav.Location.Location" />
+        <activity
+            android:name=".LoadingActivity"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".MainActivity" />
+        <activity android:name=".Nav.Map" />
+        <activity android:name=".SearchAdapter" />
+        <activity android:name=".SearchStation" />
+
     </application>
 
 </manifest>

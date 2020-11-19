@@ -1,2 +1,2 @@
-rootProject.name='MyongJi_Station'
+rootProject.name='UI'
 include ':app'
