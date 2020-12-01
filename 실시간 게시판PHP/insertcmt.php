@@ -14,28 +14,24 @@
 
         // 안드로이드 코드의 postParameters 변수에 적어준 이름을 가지고 값을 전달 받습니다.
 
-        $line=$_POST['line'];
-        $train=$_POST['train'];
-$data=$_POST['data'];
-$title=$_POST['title'];
+        $num=$_POST['num'];
+        $cmtData=$_POST['cmtData'];
 
         if(!isset($errMSG)) // 모두 입력 되었다ㅕㄴ
         {
             try{
-                $stmt = $con->prepare('INSERT INTO board(line, train, data, title) VALUES(:line, :train, :data, :title)');
-                $stmt->bindParam(':line', $line);
-                $stmt->bindParam(':train', $train);
-$stmt->bindParam(':data', $data);
-$stmt->bindParam(':title', $title);
+                $stmt = $con->prepare('INSERT INTO comment(num, cmtData) VALUES(:num, :cmtData)');
+                $stmt->bindParam(':num', $num);
+                $stmt->bindParam(':cmtData', $cmtData);
 
 
                 if($stmt->execute())
                 {
-                    $successMSG = "새로운 게시글을 추가하였습니다.";
+                    $successMSG = "새로운 댓글을 추가하였습니다.";
                 }
                 else
                 {
-                    $errMSG = "게시글 추가 에러";
+                    $errMSG = "댓글 추가 에러";
                 }
 
             } catch(PDOException $e) {
