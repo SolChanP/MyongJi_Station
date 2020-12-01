@@ -10,6 +10,9 @@ import android.widget.HorizontalScrollView;
 import android.widget.TextView;
 
 
+import com.example.ui.Nav.Live.Live;
+import com.example.ui.Nav.Location.Location;
+
 import java.util.ArrayList;
 
 
@@ -146,6 +149,12 @@ public class Result extends AppCompatActivity {
             if(i == 0){
 
             }
+        }
+    }
+    public void onClick(View v){
+        if(v.getId() == R.id.result_locate){
+            Intent intent = new Intent(getBaseContext(), Location.class);
+            startActivity(intent);
         }
     }
     public void OnStationClick(View v){

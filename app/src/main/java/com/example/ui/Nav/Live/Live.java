@@ -12,6 +12,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.ui.R;
@@ -35,7 +36,9 @@ public class Live extends AppCompatActivity implements AdapterView.OnItemClickLi
     private LiveAdapter adapter, adapter1, adapter2 ,adapter3, adapter4,adapter5, adapter6, adapter7,adapter8, adapter9, adapterT;
     private  int REQUEST_DATA = 1;
 
-    private static String IP_ADDRESS = "www.travelit.me";
+    private TextView curLine;
+
+    private static String IP_ADDRESS = "www.solac.shop";
     private static String TAG = "phptest";
     private String mJsonString;
 
@@ -55,6 +58,8 @@ public class Live extends AppCompatActivity implements AdapterView.OnItemClickLi
         // 리스트뷰에 아이템클릭리스너를 등록한다.
         listView.setOnItemClickListener(this);
 
+        curLine = (TextView)findViewById(R.id.live_cur);
+
         Toast.makeText(getApplicationContext(), "원하는 게시판 항목을 터치하세요!", Toast.LENGTH_SHORT).show();
 
 
@@ -64,56 +69,47 @@ public class Live extends AppCompatActivity implements AdapterView.OnItemClickLi
         switch(v.getId()){
             case R.id.live_line1:
                 adapterT = adapter1;
-                listView.setAdapter(adapterT);
-                listView.setOnItemClickListener(this);
+                setListView();
                 doUpdate(1);
                 break;
             case R.id.live_line2:
                 adapterT = adapter2;
-                listView.setAdapter(adapterT);
-                listView.setOnItemClickListener(this);
+                setListView();
                 doUpdate(2);
                 break;
             case R.id.live_line3:
                 adapterT = adapter3;
-                listView.setAdapter(adapterT);
-                listView.setOnItemClickListener(this);
+                setListView();
                 doUpdate(3);
                 break;
             case R.id.live_line4:
                 adapterT = adapter4;
-                listView.setAdapter(adapterT);
-                listView.setOnItemClickListener(this);
+                setListView();
                 doUpdate(4);
                 break;
             case R.id.live_line5:
                 adapterT = adapter5;
-                listView.setAdapter(adapterT);
-                listView.setOnItemClickListener(this);
+                setListView();
                 doUpdate(5);
                 break;
             case R.id.live_line6:
                 adapterT = adapter6;
-                listView.setAdapter(adapterT);
-                listView.setOnItemClickListener(this);
+                setListView();
                 doUpdate(6);
                 break;
             case R.id.live_line7:
                 adapterT = adapter7;
-                listView.setAdapter(adapterT);
-                listView.setOnItemClickListener(this);
+                setListView();
                 doUpdate(7);
                 break;
             case R.id.live_line8:
                 adapterT = adapter8;
-                listView.setAdapter(adapterT);
-                listView.setOnItemClickListener(this);
+                setListView();
                 doUpdate(8);
                 break;
             case R.id.live_line9:
                 adapterT = adapter9;
-                listView.setAdapter(adapterT);
-                listView.setOnItemClickListener(this);
+                setListView();
                 doUpdate(9);
                 break;
             case R.id.live_add:
@@ -128,6 +124,11 @@ public class Live extends AppCompatActivity implements AdapterView.OnItemClickLi
                 }
         }
     }
+    private void setListView(){
+        listView.setAdapter(adapterT);
+        listView.setOnItemClickListener(this);
+        curLine.setText("현재 게시판 : " + adapterT.getLine() + "호선");
+    };
     //등록 화면에서 데이터 받은 상황
     protected void onActivityResult(int requestCode, int resultCode, Intent dAta) {
         super.onActivityResult(requestCode, resultCode, dAta);

@@ -39,7 +39,7 @@ public class LiveResult extends AppCompatActivity implements AdapterView.OnItemC
     // 어댑터
     private LiveCmtAdapter adapter;
 
-    private static String IP_ADDRESS = "www.travelit.me";
+    private static String IP_ADDRESS = "www.solac.shop";
     private static String TAG = "phptest";
     private String mJsonString;
 

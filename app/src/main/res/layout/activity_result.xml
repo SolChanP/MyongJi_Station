@@ -92,6 +92,17 @@
             android:layout_marginTop="180dp"
             android:text=""
             android:textSize="17dp" />
+
+        <Button
+            android:onClick="onClick"
+            android:id="@+id/result_locate"
+            android:layout_width="105dp"
+            android:layout_height="30dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="260dp"
+            android:layout_marginTop="180dp"
+            android:text="열차 위치 보기"
+            android:textSize="10dp" />
     </RelativeLayout>
 
     <LinearLayout

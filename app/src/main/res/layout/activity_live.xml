@@ -28,6 +28,19 @@
         android:onClick="OnClick"
         android:text="등록" />
 
+    <TextView
+        android:id="@+id/live_cur"
+        android:layout_width="wrap_content"
+        android:gravity="center_vertical"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="90dp"
+        android:onClick="OnClick"
+        android:textSize="17dp"
+        android:textStyle="bold"
+        android:text="현재 게시판 : 선택 X" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="1dp"
@@ -40,7 +53,7 @@
         android:layout_width="fill_parent"
         android:layout_height="70dp"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="105dp">
+        android:layout_marginTop="135dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -131,12 +144,12 @@
         android:layout_height="1dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="180dp"
+        android:layout_marginTop="210dp"
         android:background="#FDFDFD" />
 
     <LinearLayout
         android:layout_alignParentTop="true"
-        android:layout_marginTop="185dp"
+        android:layout_marginTop="215dp"
         android:layout_marginLeft="5dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
