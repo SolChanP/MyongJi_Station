@@ -175,9 +175,6 @@ public class SubwayController {
         for (int i = 0; i < route.size() - 1; i++) {
             for (int j = 0; j < subway[route.get(i).getIndex()].size(); j++) {// 소요 시간과 소요 비용을 구하기 위한 방법!!!!!!!!
                 if (subway[route.get(i).getIndex()].get(j).getDest() == route.get(i + 1).getIndex()) {
-                    // ex busList[5].get(0 ~).end => 5의 모든 간선을 돌며 도착지가 저장된 경로와 같으면 그 거리를 저장.
-                    // 저장된 다음 경로는 route.get(i + 1)/ route.get(i+1)은 저장된 경로
-                    // i번째 다음 경로이다.
                     allTime += subway[route.get(i).getIndex()].get(j).getTime();// 최단 데이터가 아닌 누적 데이터 저장 하는거임.
                     allMoney += subway[route.get(i).getIndex()].get(j).getMoney();//
                     allMeter += subway[route.get(i).getIndex()].get(j).getWeight();//

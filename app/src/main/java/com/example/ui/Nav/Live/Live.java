@@ -35,9 +35,9 @@ public class Live extends AppCompatActivity implements AdapterView.OnItemClickLi
     // 어댑터
     private LiveAdapter adapter, adapter1, adapter2 ,adapter3, adapter4,adapter5, adapter6, adapter7,adapter8, adapter9, adapterT;
     private  int REQUEST_DATA = 1;
-
+    //현재 라인 텍스트뷰
     private TextView curLine;
-
+    //서버 주소
     private static String IP_ADDRESS = "www.solac.shop";
     private static String TAG = "phptest";
     private String mJsonString;
@@ -61,12 +61,12 @@ public class Live extends AppCompatActivity implements AdapterView.OnItemClickLi
         curLine = (TextView)findViewById(R.id.live_cur);
 
         Toast.makeText(getApplicationContext(), "원하는 게시판 항목을 터치하세요!", Toast.LENGTH_SHORT).show();
-
-
-
     }
+
+    //클릭 리스너
     public void OnClick(View v){
         switch(v.getId()){
+            // 1 ~ 9 호선별 게시판 클릭
             case R.id.live_line1:
                 adapterT = adapter1;
                 setListView();
@@ -112,6 +112,7 @@ public class Live extends AppCompatActivity implements AdapterView.OnItemClickLi
                 setListView();
                 doUpdate(9);
                 break;
+            //게시글 추가
             case R.id.live_add:
                 if(adapterT.getLine().equals("0")){
                     Toast.makeText(getApplicationContext(), "게시판을 선택하세요!", Toast.LENGTH_LONG).show();
@@ -124,6 +125,7 @@ public class Live extends AppCompatActivity implements AdapterView.OnItemClickLi
                 }
         }
     }
+    //listView 세팅.
     private void setListView(){
         listView.setAdapter(adapterT);
         listView.setOnItemClickListener(this);
@@ -230,7 +232,7 @@ public class Live extends AppCompatActivity implements AdapterView.OnItemClickLi
                 break;
         }
     }
-    //PHP로 데이터 넣기
+    //PHP 데이터 넣기
     class InsertData extends AsyncTask<String, Void, String> {
         ProgressDialog progressDialog;
         @Override

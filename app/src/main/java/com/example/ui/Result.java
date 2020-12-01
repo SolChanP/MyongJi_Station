@@ -134,6 +134,7 @@ public class Result extends AppCompatActivity {
             btn[i] = (Button) findViewById(Rid_button[i]);
         }
     }
+    //경로 시각화 메서드
     public void showRoute(){
         for(int i = 0; i < routeData.size(); i++){
             for(int j = 0; j < btn.length; j++) {

@@ -3,11 +3,11 @@ package com.example.ui.Nav.Live;
 import java.io.Serializable;
 
 public class LiveData implements Serializable {
-    private String title;
-    private String line;
-    private String dir;
-    private String data;
-    private String num;
+    private String title;//게시글 제목
+    private String line;//게시글 호선
+    private String dir;//게시글 방향
+    private String data;//게시글 내용
+    private String num;//게시글 번호
 
     public LiveData(String line, String dir, String data, String title, String num) {
         this.line = line;

@@ -13,8 +13,8 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 public class LiveCmtAdapter extends BaseAdapter {
-    public ArrayList<String> list = new ArrayList<String>();
-    private String num;
+    public ArrayList<String> list = new ArrayList<String>();//댓글 저장
+    private String num;//해당 게시글 번호
 
     public LiveCmtAdapter(String num){
         this.num = num;

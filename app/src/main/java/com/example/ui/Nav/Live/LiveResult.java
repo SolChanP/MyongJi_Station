@@ -38,7 +38,7 @@ public class LiveResult extends AppCompatActivity implements AdapterView.OnItemC
     private ListView listView;
     // 어댑터
     private LiveCmtAdapter adapter;
-
+    //서버 주소
     private static String IP_ADDRESS = "www.solac.shop";
     private static String TAG = "phptest";
     private String mJsonString;

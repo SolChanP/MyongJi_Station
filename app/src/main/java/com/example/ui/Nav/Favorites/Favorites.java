@@ -155,7 +155,7 @@ public class Favorites extends AppCompatActivity implements AdapterView.OnItemCl
                 });
         alert.show();
     }
-
+    //길찾기
     public void findRoute(FavoritesData data) {
         Intent intent = new Intent(Favorites.this, Result.class);
         //컨트롤러 생성
@@ -193,7 +193,7 @@ public class Favorites extends AppCompatActivity implements AdapterView.OnItemCl
                 Toast.makeText(getApplicationContext(), "데이터에 문제가 있어 보입니다", Toast.LENGTH_LONG).show();
         }
     }
-
+    //클릭 리스너
     public void OnClick(View v) {
         switch (v.getId()) {
             // 리스트에 추가 버튼이 클릭되었을때의 처리
@@ -295,7 +295,7 @@ public class Favorites extends AppCompatActivity implements AdapterView.OnItemCl
         public myDBHelper(Context context) {
             super(context, "groupDB", null, 1);
         }
-
+        //DB생성
         @Override
         public void onCreate(SQLiteDatabase db) {
             db.execSQL("CREATE TABLE groupTBL ( nickName CHAR(20) PRIMARY KEY, start CHAR(20)," +

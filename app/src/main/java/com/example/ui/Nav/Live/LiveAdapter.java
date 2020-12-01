@@ -14,8 +14,8 @@ import java.util.Collection;
 import java.util.Collections;
 
 public class LiveAdapter extends BaseAdapter {
-    public ArrayList<LiveData> list = new ArrayList<LiveData>();
-    private String line;
+    public ArrayList<LiveData> list = new ArrayList<LiveData>();//게시글 저장
+    private String line;//현재 라인
 
     public LiveAdapter(String line){
         this.line = line;

@@ -4,11 +4,11 @@ import java.io.Serializable;
 import java.util.ArrayList;
 
 public class ResultData implements Serializable {
-    private ArrayList<Route> route;
-    private ArrayList<Station> station;
-    private int time;
-    private int money;
-    private int meter;
+    private ArrayList<Route> route;//경로 데이터
+    private ArrayList<Station> station;//역 데이터
+    private int time;//시간
+    private int money;//비용
+    private int meter;//거리
     private String value;//탐색옵션
     public ResultData(){
         this.route = new ArrayList<Route>();

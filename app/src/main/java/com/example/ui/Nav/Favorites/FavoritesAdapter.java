@@ -11,6 +11,7 @@ import com.example.ui.R;
 import java.util.ArrayList;
 
 public class FavoritesAdapter extends BaseAdapter {
+    //즐겨찾기 저장 리스트.
     public ArrayList<FavoritesData> list = new ArrayList<FavoritesData>();
 
     @Override
