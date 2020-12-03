@@ -5,24 +5,21 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Nav.Live.LiveResult"
-    android:background="@color/colorBlue">
+    android:background="@color/colorGray">
+
     <TextView
         android:id="@+id/live_line"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="30dp"
-        android:layout_centerHorizontal="true"
-        android:textStyle="bold"
+        android:layout_marginLeft="44dp"
+        android:layout_marginTop="40dp"
         android:text="게시글"
-        android:textSize="35dp" />
+        android:textColor="#000"
+        android:textSize="25dp"
+        android:textStyle="bold" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="100dp"
-        android:background="#FDFDFD" />
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="70dp"
@@ -34,7 +31,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="제목"
-            android:textSize="25dp"/>
+            android:textColor="#000"
+            android:textSize="35dp"/>
     </RelativeLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -113,17 +111,13 @@
         android:layout_marginBottom="3dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
         <ListView
             android:id="@+id/live_cmt_list"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginTop="10dp"
             android:divider="#FDFDFD"
-            android:dividerHeight="1dp">
-        </ListView>
+            android:dividerHeight="1dp"></ListView>
     </LinearLayout>
-
-
-
-
 </RelativeLayout>

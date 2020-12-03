@@ -25,7 +25,6 @@
         <activity android:name=".Nav.Live.Live" />
         <activity android:name=".Nav.Live.LiveResult"/>
         <activity android:name=".Nav.Live.LiveInput" />
-        <activity android:name=".Nav.Setting" />
         <activity android:name=".Nav.Help" />
         <activity android:name=".Nav.Favorites.Favorites" />
         <activity android:name=".Nav.Location.Location" />

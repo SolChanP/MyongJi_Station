@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorBlue"
+    android:background="@color/colorGray"
     tools:context=".MainActivity">
 
     <TextView
@@ -16,6 +16,7 @@
         android:layout_centerHorizontal="true"
         android:textStyle="bold"
         android:text="현재 열차 위치"
+        android:textColor="#000"
         android:textSize="35dp" />
     <LinearLayout
         android:layout_width="match_parent"
@@ -40,6 +41,7 @@
             android:layout_height="50dp"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="15dp"
+            android:textColor="#000"
             android:text="현재역"
             android:textSize="20dp" />
 
@@ -47,6 +49,7 @@
             android:layout_width="80dp"
             android:layout_height="50dp"
             android:text="다음역"
+            android:textColor="#000"
             android:textSize="20dp"
             android:layout_marginLeft="55dp"
             android:layout_marginTop="15dp"/>
@@ -55,6 +58,7 @@
             android:layout_height="50dp"
             android:text="남은시간"
             android:textSize="20dp"
+            android:textColor="#000"
             android:layout_marginLeft="50dp"
             android:layout_marginTop="15dp"/>
     </LinearLayout>

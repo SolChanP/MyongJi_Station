@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Nav.Live.LiveInput"
-    android:background="@color/colorBlue">
+    android:background="@color/colorGray">
     <TextView
         android:id="@+id/live_line"
         android:layout_width="wrap_content"
@@ -15,6 +15,7 @@
         android:layout_centerHorizontal="true"
         android:textStyle="bold"
         android:text="게시글"
+        android:textColor="#000"
         android:textSize="35dp" />
 
     <LinearLayout
@@ -43,17 +44,19 @@
         android:layout_alignParentTop="true"
         android:layout_marginTop="180dp"
         android:background="#FDFDFD" />
+
     <EditText
         android:id="@+id/live_dir"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="190dp"
         android:layout_alignParentLeft="true"
-        android:layout_marginLeft="10dp"
-        android:hint="상행 or 하행"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="140dp"
+        android:layout_marginTop="190dp"
         android:background="@drawable/edittext"
-        android:textSize="25dp"/>
+        android:hint="상행 or 하행"
+        android:textSize="25dp" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="1dp"
@@ -83,14 +86,14 @@
     </ScrollView>
 
     <Button
-        android:onClick="OnClick"
         android:id="@+id/live_line_add"
         android:layout_width="60dp"
         android:layout_height="40dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="336dp"
-        android:layout_marginTop="673dp"
+        android:layout_marginStart="175dp"
+        android:layout_marginTop="636dp"
+        android:onClick="OnClick"
         android:text="등록" />
 
 

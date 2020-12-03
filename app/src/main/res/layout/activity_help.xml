@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Nav.Help"
-    android:background="@color/colorBlue">
+    android:background="#F3F3FC">
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -14,7 +14,7 @@
         android:layout_centerHorizontal="true"
         android:gravity="center"
         android:textStyle="bold"
-        android:text="고객센터"
+        android:text="민원 넣기"
         android:textSize="35dp" />
     <LinearLayout
         android:layout_alignParentTop="true"
@@ -22,62 +22,5 @@
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="#FDFDFD"/>
-
-    <RelativeLayout
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="120dp"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_centerHorizontal="true">
-        <Button
-            android:id="@+id/help_notice"
-            android:onClick="OnClick"
-            android:text="공지사항"
-            android:textSize="27dp"
-            android:textColor="#FBFAFA"
-            android:textStyle="bold"
-            android:layout_centerHorizontal="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginTop="60dp"
-            android:layout_width="250dp"
-            android:layout_height="60dp"/>
-        <Button
-            android:id="@+id/help_complaints"
-            android:onClick="OnClick"
-            android:text="역사 민원"
-            android:textSize="27dp"
-            android:textColor="#FBFAFA"
-            android:textStyle="bold"
-            android:layout_centerHorizontal="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginTop="160dp"
-            android:layout_width="250dp"
-            android:layout_height="60dp"/>
-        <Button
-            android:id="@+id/help_qna"
-            android:onClick="OnClick"
-            android:text="자주 묻는 질문"
-            android:textSize="27dp"
-            android:textColor="#FBFAFA"
-            android:textStyle="bold"
-            android:layout_centerHorizontal="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginTop="260dp"
-            android:layout_width="250dp"
-            android:layout_height="60dp"/>
-        <Button
-            android:id="@+id/help_fqa"
-            android:onClick="OnClick"
-            android:text="FAQ"
-            android:textSize="27dp"
-            android:textColor="#FBFAFA"
-            android:textStyle="bold"
-            android:layout_centerHorizontal="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginTop="360dp"
-            android:layout_width="250dp"
-            android:layout_height="60dp"/>
-
-    </RelativeLayout>
 
 </RelativeLayout>

@@ -11,9 +11,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.HorizontalScrollView;
-import android.widget.ImageView;
 import android.widget.RadioGroup;
-import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -22,8 +20,6 @@ import com.example.ui.Nav.Help;
 import com.example.ui.Nav.Live.Live;
 import com.example.ui.Nav.Location.Location;
 import com.example.ui.Nav.Map;
-import com.example.ui.Nav.Setting;
-import com.github.chrisbanes.photoview.PhotoView;
 
 import java.io.IOException;
 
@@ -179,11 +175,6 @@ public class MainActivity extends Activity {
             case R.id.nav_help :
             case R.id.nav_help_layout :
                 intent = new Intent(getBaseContext(), Help.class);
-                startActivity(intent);
-                break;
-            case R.id.nav_setting :
-            case R.id.nav_setting_layout :
-                intent = new Intent(getBaseContext(), Setting.class);
                 startActivity(intent);
                 break;
             case R.id.main_change :

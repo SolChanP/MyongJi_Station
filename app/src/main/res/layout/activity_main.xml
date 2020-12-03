@@ -7,1656 +7,1768 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:id="@+id/drawer_layout"
+    android:background="#F3F3F3"
     tools:context=".MainActivity">
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/colorBlue"
         tools:context=".MainActivity">
 
-        <Button
-            android:id="@+id/nav"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_marginStart="12dp"
-            android:layout_marginTop="45dp"
-            android:background="@drawable/hbg"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
-
-        <EditText
-            android:id="@+id/start_s"
-            android:layout_width="240dp"
-            android:layout_height="40dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginTop="25dp"
-            android:layout_marginStart="70dp"
-            android:background="@drawable/edittext"
-            android:hint="출발역" />
-
-        <EditText
-            android:id="@+id/end_s"
-            android:layout_width="240dp"
-            android:layout_height="40dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginTop="65dp"
-            android:layout_marginStart="70dp"
-            android:background="@drawable/edittext"
-            android:hint="도착역" />
-
-
-        <Button
-            android:id="@+id/find_btn"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginTop="56dp"
-            android:layout_marginEnd="6dp"
-            android:background="@drawable/pngegg"
-            android:onClick="OnClick"
-            android:text="" />
-
-        <Button
-            android:id="@+id/main_change"
-            android:layout_width="35dp"
-            android:layout_height="30dp"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentRight="true"
-            android:layout_marginTop="58dp"
-            android:layout_marginRight="53dp"
-            android:background="@drawable/change"
-            android:onClick="OnClick" />
-
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_alignParentTop="true"
-            android:layout_marginTop="240dp"
-            android:background="#FDFDFD" />
-        <RadioGroup
-            android:id="@+id/radio_group"
-            android:layout_width="wrap_content"
-            android:layout_height="40dp"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentLeft="true"
-            android:layout_marginTop="120dp"
-            android:layout_marginLeft="70dp"
-            android:orientation="horizontal">
+            android:layout_height="140dp"
+            android:background="@color/colorGray">
 
-            <RadioButton
-                android:id="@+id/radio_time"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="시간" />
+            <Button
+                android:id="@+id/nav"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="45dp"
+                android:background="@drawable/hbg"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-            <RadioButton
-                android:id="@+id/radio_money"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:text="비용" />
+            <EditText
+                android:id="@+id/start_s"
+                android:gravity="center"
+                android:layout_width="110dp"
+                android:layout_height="40dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="71dp"
+                android:layout_marginTop="45dp"
+                android:background="@drawable/edittext"
+                android:hint="출발역" />
 
-            <RadioButton
-                android:id="@+id/radio_meter"
+            <EditText
+                android:id="@+id/end_s"
+                android:gravity="center"
+                android:layout_width="110dp"
+                android:layout_height="40dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="190dp"
+                android:layout_marginTop="45dp"
+                android:background="@drawable/edittext"
+                android:hint="도착역" />
+
+
+            <Button
+                android:id="@+id/find_btn"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="48dp"
+                android:layout_marginEnd="6dp"
+                android:background="@drawable/pngegg"
+                android:onClick="OnClick"
+                android:text="" />
+
+            <Button
+                android:id="@+id/main_change"
+                android:layout_width="35dp"
+                android:layout_height="30dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="48dp"
+                android:layout_marginRight="53dp"
+                android:background="@drawable/change"
+                android:onClick="OnClick" />
+
+            <RadioGroup
+                android:id="@+id/radio_group"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="거리" />
-        </RadioGroup>
+                android:layout_height="40dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="70dp"
+                android:layout_marginTop="90dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="탐색옵션 : " />
+
+                <RadioButton
+                    android:id="@+id/radio_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="시간" />
+
+                <RadioButton
+                    android:id="@+id/radio_money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="비용" />
+
+                <RadioButton
+                    android:id="@+id/radio_meter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="거리" />
+            </RadioGroup>
+
+        </RelativeLayout>
+
         <HorizontalScrollView
             android:id="@+id/scroll"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_marginTop="180dp">
+
             <ScrollView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
-            <RelativeLayout
-                android:layout_width="800dp"
-                android:layout_height="match_parent">
-                <!--1호선 라인-->
-                <!--1호선 버튼 -->
 
-                <Button
-                    android:id="@+id/station101"
-                    android:onClick="OnStationClick"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginLeft="67dp"
-                    android:layout_marginTop="250dp"
-                    android:background="@drawable/stationbutton_trans"
-                    android:text="101"
-                    android:textSize="15dp" />
+                <RelativeLayout
+                    android:layout_width="800dp"
+                    android:layout_height="match_parent">
+                    <!--1호선 라인-->
+                    <!--1호선 버튼 -->
 
-                <Button
-                    android:id="@+id/station102"
-                    android:onClick="OnStationClick"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginLeft="67dp"
-                    android:layout_marginTop="300dp"
-                    android:background="@drawable/stationbutton"
-                    android:text="102"
-                    android:textSize="15dp" />
+                    <Button
+                        android:id="@+id/station101"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="67dp"
+                        android:layout_marginTop="250dp"
+                        android:background="@drawable/stationbutton_trans"
+                        android:onClick="OnStationClick"
+                        android:text="101"
+                        android:textSize="15dp" />
 
-                <Button
-                    android:id="@+id/station103"
-                    android:onClick="OnStationClick"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginLeft="67dp"
-                    android:layout_marginTop="350dp"
-                    android:background="@drawable/stationbutton"
-                    android:text="103"
-                    android:textSize="15dp" />
+                    <Button
+                        android:id="@+id/station102"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="67dp"
+                        android:layout_marginTop="300dp"
+                        android:background="@drawable/stationbutton"
+                        android:onClick="OnStationClick"
+                        android:text="102"
+                        android:textSize="15dp" />
 
-                <Button
-                    android:id="@+id/station104"
-                    android:onClick="OnStationClick"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginLeft="67dp"
-                    android:layout_marginTop="390dp"
-                    android:background="@drawable/stationbutton_trans"
-                    android:text="104"
-                    android:textSize="15dp" />
-                <Button
-                    android:id="@+id/station105"
-                    android:onClick="OnStationClick"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginLeft="67dp"
-                    android:layout_marginTop="430dp"
-                    android:background="@drawable/stationbutton"
-                    android:text="105"
-                    android:textSize="15dp" />
-                <Button
-                    android:id="@+id/station106"
-                    android:onClick="OnStationClick"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginLeft="67dp"
-                    android:layout_marginTop="470dp"
-                    android:background="@drawable/stationbutton"
-                    android:text="106"
-                    android:textSize="15dp" />
+                    <Button
+                        android:id="@+id/station103"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="67dp"
+                        android:layout_marginTop="350dp"
+                        android:background="@drawable/stationbutton"
+                        android:onClick="OnStationClick"
+                        android:text="103"
+                        android:textSize="15dp" />
 
-                <Button
-                    android:id="@+id/station107"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginLeft="147dp"
-                    android:layout_marginTop="470dp"
-                    android:background="@drawable/stationbutton_trans"
-                    android:onClick="OnStationClick"
-                    android:text="107"
-                    android:textSize="15dp" />
+                    <Button
+                        android:id="@+id/station104"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="67dp"
+                        android:layout_marginTop="390dp"
+                        android:background="@drawable/stationbutton_trans"
+                        android:onClick="OnStationClick"
+                        android:text="104"
+                        android:textSize="15dp" />
 
-                <Button
-                    android:id="@+id/station108"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginLeft="184dp"
-                    android:layout_marginTop="470dp"
-                    android:background="@drawable/stationbutton"
-                    android:onClick="OnStationClick"
-                    android:text="108"
-                    android:textSize="15dp" />
+                    <Button
+                        android:id="@+id/station105"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="67dp"
+                        android:layout_marginTop="430dp"
+                        android:background="@drawable/stationbutton"
+                        android:onClick="OnStationClick"
+                        android:text="105"
+                        android:textSize="15dp" />
 
-                <Button
-                    android:id="@+id/station109"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginLeft="225dp"
-                    android:layout_marginTop="470dp"
-                    android:background="@drawable/stationbutton_trans"
-                    android:onClick="OnStationClick"
-                    android:text="109"
-                    android:textSize="15dp" />
+                    <Button
+                        android:id="@+id/station106"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="67dp"
+                        android:layout_marginTop="470dp"
+                        android:background="@drawable/stationbutton"
+                        android:onClick="OnStationClick"
+                        android:text="106"
+                        android:textSize="15dp" />
 
-                <Button
-                    android:id="@+id/station110"
-                    android:onClick="OnStationClick"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginLeft="270dp"
-                    android:layout_marginTop="470dp"
-                    android:background="@drawable/stationbutton"
-                    android:text="110"
-                    android:textSize="15dp" />
-                <Button
-                    android:id="@+id/station111"
-                    android:onClick="OnStationClick"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginLeft="320dp"
-                    android:layout_marginTop="470dp"
-                    android:background="@drawable/stationbutton"
-                    android:text="111"
-                    android:textSize="15dp" />
-                <Button
-                    android:id="@+id/station112"
-                    android:onClick="OnStationClick"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginLeft="370dp"
-                    android:layout_marginTop="470dp"
-                    android:background="@drawable/stationbutton_trans"
-                    android:text="112"
-                    android:textSize="15dp" />
-                <Button
-                    android:id="@+id/station113"
-                    android:onClick="OnStationClick"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginLeft="460dp"
-                    android:layout_marginTop="470dp"
-                    android:background="@drawable/stationbutton_trans"
-                    android:text="113"
-                    android:textSize="15dp" />
+                    <Button
+                        android:id="@+id/station107"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="147dp"
+                        android:layout_marginTop="470dp"
+                        android:background="@drawable/stationbutton_trans"
+                        android:onClick="OnStationClick"
+                        android:text="107"
+                        android:textSize="15dp" />
 
-                <Button
-                    android:id="@+id/station114"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginLeft="460dp"
-                    android:layout_marginTop="430dp"
-                    android:background="@drawable/stationbutton"
-                    android:onClick="OnStationClick"
-                    android:text="114"
-                    android:textSize="15dp" />
+                    <Button
+                        android:id="@+id/station108"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="184dp"
+                        android:layout_marginTop="470dp"
+                        android:background="@drawable/stationbutton"
+                        android:onClick="OnStationClick"
+                        android:text="108"
+                        android:textSize="15dp" />
 
-                <Button
-                    android:id="@+id/station115"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginLeft="460dp"
-                    android:layout_marginTop="390dp"
-                    android:background="@drawable/stationbutton_trans"
-                    android:onClick="OnStationClick"
-                    android:text="115"
-                    android:textSize="15dp" />
-                <Button
-                    android:id="@+id/station116"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginLeft="460dp"
-                    android:layout_marginTop="340dp"
-                    android:background="@drawable/stationbutton_trans"
-                    android:onClick="OnStationClick"
-                    android:text="116"
-                    android:textSize="15dp" />
-                <Button
-                    android:id="@+id/station117"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginLeft="460dp"
-                    android:layout_marginTop="290dp"
-                    android:background="@drawable/stationbutton"
-                    android:onClick="OnStationClick"
-                    android:text="117"
-                    android:textSize="15dp" />
+                    <Button
+                        android:id="@+id/station109"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="225dp"
+                        android:layout_marginTop="470dp"
+                        android:background="@drawable/stationbutton_trans"
+                        android:onClick="OnStationClick"
+                        android:text="109"
+                        android:textSize="15dp" />
 
-                <Button
-                    android:id="@+id/station118"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginLeft="460dp"
-                    android:layout_marginTop="251dp"
-                    android:background="@drawable/stationbutton_trans"
-                    android:onClick="OnStationClick"
-                    android:text="118"
-                    android:textSize="15dp" />
-                <Button
-                    android:id="@+id/station119"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginLeft="370dp"
-                    android:layout_marginTop="251dp"
-                    android:background="@drawable/stationbutton_trans"
-                    android:onClick="OnStationClick"
-                    android:text="119"
-                    android:textSize="15dp" />
-                <Button
-                    android:id="@+id/station120"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginLeft="320dp"
-                    android:layout_marginTop="251dp"
-                    android:background="@drawable/stationbutton"
-                    android:onClick="OnStationClick"
-                    android:text="120"
-                    android:textSize="15dp" />
-                <Button
-                    android:id="@+id/station121"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginLeft="270dp"
-                    android:layout_marginTop="251dp"
-                    android:background="@drawable/stationbutton_trans"
-                    android:onClick="OnStationClick"
-                    android:text="121"
-                    android:textSize="15dp" />
+                    <Button
+                        android:id="@+id/station110"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="270dp"
+                        android:layout_marginTop="470dp"
+                        android:background="@drawable/stationbutton"
+                        android:onClick="OnStationClick"
+                        android:text="110"
+                        android:textSize="15dp" />
 
-                <Button
-                    android:id="@+id/station122"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginLeft="225dp"
-                    android:layout_marginTop="251dp"
-                    android:background="@drawable/stationbutton_trans"
-                    android:onClick="OnStationClick"
-                    android:text="122"
-                    android:textSize="15dp" />
+                    <Button
+                        android:id="@+id/station111"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="320dp"
+                        android:layout_marginTop="470dp"
+                        android:background="@drawable/stationbutton"
+                        android:onClick="OnStationClick"
+                        android:text="111"
+                        android:textSize="15dp" />
 
-                <Button
-                    android:id="@+id/station123"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginLeft="147dp"
-                    android:layout_marginTop="251dp"
-                    android:background="@drawable/stationbutton_trans"
-                    android:onClick="OnStationClick"
-                    android:text="123"
-                    android:textSize="15dp" />
+                    <Button
+                        android:id="@+id/station112"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="370dp"
+                        android:layout_marginTop="470dp"
+                        android:background="@drawable/stationbutton_trans"
+                        android:onClick="OnStationClick"
+                        android:text="112"
+                        android:textSize="15dp" />
 
-                <View
-                    android:id="@+id/view1_1"
-                    android:layout_width="5dp"
-                    android:layout_height="220dp"
-                    android:layout_alignParentStart="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginStart="80dp"
-                    android:layout_marginTop="265dp"
-                    android:background="#04B431" />
-                <View
-                    android:id="@+id/view1_2"
-                    android:layout_width="400dp"
-                    android:layout_height="5dp"
-                    android:layout_alignParentStart="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginStart="80dp"
-                    android:layout_marginTop="265dp"
-                    android:background="#04B431" />
+                    <Button
+                        android:id="@+id/station113"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="460dp"
+                        android:layout_marginTop="470dp"
+                        android:background="@drawable/stationbutton_trans"
+                        android:onClick="OnStationClick"
+                        android:text="113"
+                        android:textSize="15dp" />
 
-                <View
-                    android:id="@+id/view1_3"
-                    android:layout_width="5dp"
-                    android:layout_height="220dp"
-                    android:layout_alignParentStart="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginStart="472dp"
-                    android:layout_marginTop="266dp"
-                    android:background="#04B431" />
+                    <Button
+                        android:id="@+id/station114"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="460dp"
+                        android:layout_marginTop="430dp"
+                        android:background="@drawable/stationbutton"
+                        android:onClick="OnStationClick"
+                        android:text="114"
+                        android:textSize="15dp" />
 
-                <View
-                    android:id="@+id/view1_4"
-                    android:layout_width="400dp"
-                    android:layout_height="5dp"
-                    android:layout_alignParentStart="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginStart="80dp"
-                    android:layout_marginTop="485dp"
-                    android:background="#04B431" />
-                <!--//////////////1호선 끝////////////////////////////////-->
-                <!--2호선-->
-                <View
-                    android:id="@+id/view2_1"
-                    android:layout_width="5dp"
-                    android:layout_height="210dp"
-                    android:layout_alignParentStart="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginStart="80dp"
-                    android:layout_marginTop="39dp"
-                    android:background="#002060" />
+                    <Button
+                        android:id="@+id/station115"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="460dp"
+                        android:layout_marginTop="390dp"
+                        android:background="@drawable/stationbutton_trans"
+                        android:onClick="OnStationClick"
+                        android:text="115"
+                        android:textSize="15dp" />
 
-                <View
-                    android:id="@+id/view2_2"
-                    android:layout_width="600dp"
-                    android:layout_height="5dp"
-                    android:layout_alignParentStart="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginStart="97dp"
-                    android:layout_marginTop="42dp"
-                    android:background="#002060" />
+                    <Button
+                        android:id="@+id/station116"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="460dp"
+                        android:layout_marginTop="340dp"
+                        android:background="@drawable/stationbutton_trans"
+                        android:onClick="OnStationClick"
+                        android:text="116"
+                        android:textSize="15dp" />
 
-                <Button
-                    android:id="@+id/station201"
-                    android:onClick="OnStationClick"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginLeft="67dp"
-                    android:layout_marginTop="210dp"
-                    android:background="@drawable/stationbutton"
-                    android:text="201"
-                    android:textSize="15dp" />
-                <Button
-                    android:id="@+id/station202"
-                    android:onClick="OnStationClick"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginLeft="67dp"
-                    android:layout_marginTop="160dp"
-                    android:background="@drawable/stationbutton"
-                    android:text="202"
-                    android:textSize="15dp" />
-                <Button
-                    android:id="@+id/station203"
-                    android:onClick="OnStationClick"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginLeft="67dp"
-                    android:layout_marginTop="120dp"
-                    android:background="@drawable/stationbutton"
-                    android:text="203"
-                    android:textSize="15dp" />
-                <Button
-                    android:id="@+id/station204"
-                    android:onClick="OnStationClick"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginLeft="67dp"
-                    android:layout_marginTop="70dp"
-                    android:background="@drawable/stationbutton"
-                    android:text="204"
-                    android:textSize="15dp" />
-                <Button
-                    android:id="@+id/station205"
-                    android:onClick="OnStationClick"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginLeft="67dp"
-                    android:layout_marginTop="30dp"
-                    android:background="@drawable/stationbutton"
-                    android:text="205"
-                    android:textSize="15dp" />
-                <Button
-                    android:id="@+id/station206"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginLeft="106dp"
-                    android:layout_marginTop="30dp"
-                    android:background="@drawable/stationbutton"
-                    android:onClick="OnStationClick"
-                    android:text="206"
-                    android:textSize="15dp" />
+                    <Button
+                        android:id="@+id/station117"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="460dp"
+                        android:layout_marginTop="290dp"
+                        android:background="@drawable/stationbutton"
+                        android:onClick="OnStationClick"
+                        android:text="117"
+                        android:textSize="15dp" />
 
-                <Button
-                    android:id="@+id/station207"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginLeft="146dp"
-                    android:layout_marginTop="30dp"
-                    android:background="@drawable/stationbutton_trans"
-                    android:onClick="OnStationClick"
-                    android:text="207"
-                    android:textSize="15dp" />
-                <Button
-                    android:id="@+id/station208"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginLeft="185dp"
-                    android:layout_marginTop="30dp"
-                    android:background="@drawable/stationbutton"
-                    android:onClick="OnStationClick"
-                    android:text="208"
-                    android:textSize="15dp" />
+                    <Button
+                        android:id="@+id/station118"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="460dp"
+                        android:layout_marginTop="251dp"
+                        android:background="@drawable/stationbutton_trans"
+                        android:onClick="OnStationClick"
+                        android:text="118"
+                        android:textSize="15dp" />
 
-                <Button
-                    android:id="@+id/station209"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginLeft="225dp"
-                    android:layout_marginTop="30dp"
-                    android:background="@drawable/stationbutton_trans"
-                    android:onClick="OnStationClick"
-                    android:text="209"
-                    android:textSize="15dp" />
-                <Button
-                    android:id="@+id/station210"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginLeft="290dp"
-                    android:layout_marginTop="30dp"
-                    android:background="@drawable/stationbutton"
-                    android:onClick="OnStationClick"
-                    android:text="210"
-                    android:textSize="15dp" />
-                <Button
-                    android:id="@+id/station211"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginLeft="370dp"
-                    android:layout_marginTop="30dp"
-                    android:background="@drawable/stationbutton_trans"
-                    android:onClick="OnStationClick"
-                    android:text="211"
-                    android:textSize="15dp" />
-                <Button
-                    android:id="@+id/station212"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginLeft="420dp"
-                    android:layout_marginTop="30dp"
-                    android:background="@drawable/stationbutton"
-                    android:onClick="OnStationClick"
-                    android:text="212"
-                    android:textSize="15dp" />
-                <Button
-                    android:id="@+id/station213"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginLeft="470dp"
-                    android:layout_marginTop="30dp"
-                    android:background="@drawable/stationbutton"
-                    android:onClick="OnStationClick"
-                    android:text="213"
-                    android:textSize="15dp" />
-                <Button
-                    android:id="@+id/station214"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginLeft="540dp"
-                    android:layout_marginTop="30dp"
-                    android:background="@drawable/stationbutton_trans"
-                    android:onClick="OnStationClick"
-                    android:text="214"
-                    android:textSize="15dp" />
-                <Button
-                    android:id="@+id/station215"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginLeft="590dp"
-                    android:layout_marginTop="30dp"
-                    android:background="@drawable/stationbutton"
-                    android:onClick="OnStationClick"
-                    android:text="215"
-                    android:textSize="15dp" />
-                <Button
-                    android:id="@+id/station216"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginLeft="640dp"
-                    android:layout_marginTop="30dp"
-                    android:background="@drawable/stationbutton_trans"
-                    android:onClick="OnStationClick"
-                    android:text="216"
-                    android:textSize="15dp" />
-                <Button
-                    android:id="@+id/station217"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginLeft="690dp"
-                    android:layout_marginTop="30dp"
-                    android:background="@drawable/stationbutton"
-                    android:onClick="OnStationClick"
-                    android:text="217"
-                    android:textSize="15dp" />
+                    <Button
+                        android:id="@+id/station119"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="370dp"
+                        android:layout_marginTop="251dp"
+                        android:background="@drawable/stationbutton_trans"
+                        android:onClick="OnStationClick"
+                        android:text="119"
+                        android:textSize="15dp" />
 
-                <!--3호선 -->
-                <View
-                    android:id="@+id/view3"
-                    android:layout_width="5dp"
-                    android:layout_height="420dp"
-                    android:layout_alignParentStart="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginStart="159dp"
-                    android:layout_marginTop="52dp"
-                    android:background="#953735" />
-                <Button
-                    android:id="@+id/station301"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginLeft="147dp"
-                    android:layout_marginTop="75dp"
-                    android:background="@drawable/stationbutton"
-                    android:onClick="OnStationClick"
-                    android:text="301"
-                    android:textSize="15dp" />
-                <Button
-                    android:id="@+id/station302"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginLeft="147dp"
-                    android:layout_marginTop="120dp"
-                    android:background="@drawable/stationbutton"
-                    android:onClick="OnStationClick"
-                    android:text="302"
-                    android:textSize="15dp" />
-                <Button
-                    android:id="@+id/station303"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginLeft="147dp"
-                    android:layout_marginTop="160dp"
-                    android:background="@drawable/stationbutton_trans"
-                    android:onClick="OnStationClick"
-                    android:text="303"
-                    android:textSize="15dp" />
-                <Button
-                    android:id="@+id/station304"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginLeft="147dp"
-                    android:layout_marginTop="205dp"
-                    android:background="@drawable/stationbutton"
-                    android:onClick="OnStationClick"
-                    android:text="304"
-                    android:textSize="15dp" />
-                <Button
-                    android:id="@+id/station305"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginLeft="147dp"
-                    android:layout_marginTop="315dp"
-                    android:background="@drawable/stationbutton"
-                    android:onClick="OnStationClick"
-                    android:text="305"
-                    android:textSize="15dp" />
-                <Button
-                    android:id="@+id/station306"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginLeft="147dp"
-                    android:layout_marginTop="355dp"
-                    android:background="@drawable/stationbutton"
-                    android:onClick="OnStationClick"
-                    android:text="306"
-                    android:textSize="15dp" />
-                <Button
-                    android:id="@+id/station307"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginLeft="147dp"
-                    android:layout_marginTop="390dp"
-                    android:background="@drawable/stationbutton_trans"
-                    android:onClick="OnStationClick"
-                    android:text="307"
-                    android:textSize="15dp" />
-                <Button
-                    android:id="@+id/station308"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginLeft="147dp"
-                    android:layout_marginTop="430dp"
-                    android:background="@drawable/stationbutton_trans"
-                    android:onClick="OnStationClick"
-                    android:text="308"
-                    android:textSize="15dp" />
+                    <Button
+                        android:id="@+id/station120"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="320dp"
+                        android:layout_marginTop="251dp"
+                        android:background="@drawable/stationbutton"
+                        android:onClick="OnStationClick"
+                        android:text="120"
+                        android:textSize="15dp" />
 
-                <!--4호선 -->
+                    <Button
+                        android:id="@+id/station121"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="270dp"
+                        android:layout_marginTop="251dp"
+                        android:background="@drawable/stationbutton_trans"
+                        android:onClick="OnStationClick"
+                        android:text="121"
+                        android:textSize="15dp" />
+
+                    <Button
+                        android:id="@+id/station122"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="225dp"
+                        android:layout_marginTop="251dp"
+                        android:background="@drawable/stationbutton_trans"
+                        android:onClick="OnStationClick"
+                        android:text="122"
+                        android:textSize="15dp" />
+
+                    <Button
+                        android:id="@+id/station123"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="147dp"
+                        android:layout_marginTop="251dp"
+                        android:background="@drawable/stationbutton_trans"
+                        android:onClick="OnStationClick"
+                        android:text="123"
+                        android:textSize="15dp" />
+
+                    <View
+                        android:id="@+id/view1_1"
+                        android:layout_width="5dp"
+                        android:layout_height="220dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginStart="80dp"
+                        android:layout_marginTop="265dp"
+                        android:background="#04B431" />
+
+                    <View
+                        android:id="@+id/view1_2"
+                        android:layout_width="400dp"
+                        android:layout_height="5dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginStart="80dp"
+                        android:layout_marginTop="265dp"
+                        android:background="#04B431" />
+
+                    <View
+                        android:id="@+id/view1_3"
+                        android:layout_width="5dp"
+                        android:layout_height="220dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginStart="472dp"
+                        android:layout_marginTop="266dp"
+                        android:background="#04B431" />
+
+                    <View
+                        android:id="@+id/view1_4"
+                        android:layout_width="400dp"
+                        android:layout_height="5dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginStart="80dp"
+                        android:layout_marginTop="485dp"
+                        android:background="#04B431" />
+                    <!--//////////////1호선 끝////////////////////////////////-->
+                    <!--2호선-->
+                    <View
+                        android:id="@+id/view2_1"
+                        android:layout_width="5dp"
+                        android:layout_height="210dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginStart="80dp"
+                        android:layout_marginTop="39dp"
+                        android:background="#002060" />
+
+                    <View
+                        android:id="@+id/view2_2"
+                        android:layout_width="600dp"
+                        android:layout_height="5dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginStart="97dp"
+                        android:layout_marginTop="42dp"
+                        android:background="#002060" />
+
+                    <Button
+                        android:id="@+id/station201"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="67dp"
+                        android:layout_marginTop="210dp"
+                        android:background="@drawable/stationbutton"
+                        android:onClick="OnStationClick"
+                        android:text="201"
+                        android:textSize="15dp" />
+
+                    <Button
+                        android:id="@+id/station202"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="67dp"
+                        android:layout_marginTop="160dp"
+                        android:background="@drawable/stationbutton"
+                        android:onClick="OnStationClick"
+                        android:text="202"
+                        android:textSize="15dp" />
+
+                    <Button
+                        android:id="@+id/station203"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="67dp"
+                        android:layout_marginTop="120dp"
+                        android:background="@drawable/stationbutton"
+                        android:onClick="OnStationClick"
+                        android:text="203"
+                        android:textSize="15dp" />
+
+                    <Button
+                        android:id="@+id/station204"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="67dp"
+                        android:layout_marginTop="70dp"
+                        android:background="@drawable/stationbutton"
+                        android:onClick="OnStationClick"
+                        android:text="204"
+                        android:textSize="15dp" />
+
+                    <Button
+                        android:id="@+id/station205"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="67dp"
+                        android:layout_marginTop="30dp"
+                        android:background="@drawable/stationbutton"
+                        android:onClick="OnStationClick"
+                        android:text="205"
+                        android:textSize="15dp" />
+
+                    <Button
+                        android:id="@+id/station206"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="106dp"
+                        android:layout_marginTop="30dp"
+                        android:background="@drawable/stationbutton"
+                        android:onClick="OnStationClick"
+                        android:text="206"
+                        android:textSize="15dp" />
+
+                    <Button
+                        android:id="@+id/station207"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="146dp"
+                        android:layout_marginTop="30dp"
+                        android:background="@drawable/stationbutton_trans"
+                        android:onClick="OnStationClick"
+                        android:text="207"
+                        android:textSize="15dp" />
+
+                    <Button
+                        android:id="@+id/station208"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="185dp"
+                        android:layout_marginTop="30dp"
+                        android:background="@drawable/stationbutton"
+                        android:onClick="OnStationClick"
+                        android:text="208"
+                        android:textSize="15dp" />
+
+                    <Button
+                        android:id="@+id/station209"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="225dp"
+                        android:layout_marginTop="30dp"
+                        android:background="@drawable/stationbutton_trans"
+                        android:onClick="OnStationClick"
+                        android:text="209"
+                        android:textSize="15dp" />
+
+                    <Button
+                        android:id="@+id/station210"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="290dp"
+                        android:layout_marginTop="30dp"
+                        android:background="@drawable/stationbutton"
+                        android:onClick="OnStationClick"
+                        android:text="210"
+                        android:textSize="15dp" />
+
+                    <Button
+                        android:id="@+id/station211"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="370dp"
+                        android:layout_marginTop="30dp"
+                        android:background="@drawable/stationbutton_trans"
+                        android:onClick="OnStationClick"
+                        android:text="211"
+                        android:textSize="15dp" />
+
+                    <Button
+                        android:id="@+id/station212"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="420dp"
+                        android:layout_marginTop="30dp"
+                        android:background="@drawable/stationbutton"
+                        android:onClick="OnStationClick"
+                        android:text="212"
+                        android:textSize="15dp" />
+
+                    <Button
+                        android:id="@+id/station213"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="470dp"
+                        android:layout_marginTop="30dp"
+                        android:background="@drawable/stationbutton"
+                        android:onClick="OnStationClick"
+                        android:text="213"
+                        android:textSize="15dp" />
+
+                    <Button
+                        android:id="@+id/station214"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="540dp"
+                        android:layout_marginTop="30dp"
+                        android:background="@drawable/stationbutton_trans"
+                        android:onClick="OnStationClick"
+                        android:text="214"
+                        android:textSize="15dp" />
+
+                    <Button
+                        android:id="@+id/station215"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="590dp"
+                        android:layout_marginTop="30dp"
+                        android:background="@drawable/stationbutton"
+                        android:onClick="OnStationClick"
+                        android:text="215"
+                        android:textSize="15dp" />
+
+                    <Button
+                        android:id="@+id/station216"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="640dp"
+                        android:layout_marginTop="30dp"
+                        android:background="@drawable/stationbutton_trans"
+                        android:onClick="OnStationClick"
+                        android:text="216"
+                        android:textSize="15dp" />
+
+                    <Button
+                        android:id="@+id/station217"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="690dp"
+                        android:layout_marginTop="30dp"
+                        android:background="@drawable/stationbutton"
+                        android:onClick="OnStationClick"
+                        android:text="217"
+                        android:textSize="15dp" />
+
+                    <!--3호선 -->
+                    <View
+                        android:id="@+id/view3"
+                        android:layout_width="5dp"
+                        android:layout_height="420dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginStart="159dp"
+                        android:layout_marginTop="52dp"
+                        android:background="#953735" />
+
+                    <Button
+                        android:id="@+id/station301"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="147dp"
+                        android:layout_marginTop="75dp"
+                        android:background="@drawable/stationbutton"
+                        android:onClick="OnStationClick"
+                        android:text="301"
+                        android:textSize="15dp" />
+
+                    <Button
+                        android:id="@+id/station302"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="147dp"
+                        android:layout_marginTop="120dp"
+                        android:background="@drawable/stationbutton"
+                        android:onClick="OnStationClick"
+                        android:text="302"
+                        android:textSize="15dp" />
+
+                    <Button
+                        android:id="@+id/station303"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="147dp"
+                        android:layout_marginTop="160dp"
+                        android:background="@drawable/stationbutton_trans"
+                        android:onClick="OnStationClick"
+                        android:text="303"
+                        android:textSize="15dp" />
+
+                    <Button
+                        android:id="@+id/station304"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="147dp"
+                        android:layout_marginTop="205dp"
+                        android:background="@drawable/stationbutton"
+                        android:onClick="OnStationClick"
+                        android:text="304"
+                        android:textSize="15dp" />
+
+                    <Button
+                        android:id="@+id/station305"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="147dp"
+                        android:layout_marginTop="315dp"
+                        android:background="@drawable/stationbutton"
+                        android:onClick="OnStationClick"
+                        android:text="305"
+                        android:textSize="15dp" />
+
+                    <Button
+                        android:id="@+id/station306"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="147dp"
+                        android:layout_marginTop="355dp"
+                        android:background="@drawable/stationbutton"
+                        android:onClick="OnStationClick"
+                        android:text="306"
+                        android:textSize="15dp" />
+
+                    <Button
+                        android:id="@+id/station307"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="147dp"
+                        android:layout_marginTop="390dp"
+                        android:background="@drawable/stationbutton_trans"
+                        android:onClick="OnStationClick"
+                        android:text="307"
+                        android:textSize="15dp" />
+
+                    <Button
+                        android:id="@+id/station308"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="147dp"
+                        android:layout_marginTop="430dp"
+                        android:background="@drawable/stationbutton_trans"
+                        android:onClick="OnStationClick"
+                        android:text="308"
+                        android:textSize="15dp" />
+
+                    <!--4호선 -->
                     <!--가로라인  -->
-                <View
-                    android:id="@+id/view4_1"
-                    android:layout_width="560dp"
-                    android:layout_height="5dp"
-                    android:layout_alignParentStart="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginStart="97dp"
-                    android:layout_marginTop="403dp"
-                    android:background="#FF0000" />
-                 <!--세로라인 -->
-                <View
-                    android:id="@+id/view4_2"
-                    android:layout_width="5dp"
-                    android:layout_height="340dp"
-                    android:layout_alignParentStart="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginStart="653dp"
-                    android:layout_marginTop="62dp"
-                    android:background="#FF0000" />
-                <Button
-                    android:id="@+id/station401"
-                    android:onClick="OnStationClick"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginLeft="110dp"
-                    android:layout_marginTop="390dp"
-                    android:background="@drawable/stationbutton"
-                    android:text="401"
-                    android:textSize="15dp" />
-                <Button
-                    android:id="@+id/station402"
-                    android:onClick="OnStationClick"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginLeft="185dp"
-                    android:layout_marginTop="390dp"
-                    android:background="@drawable/stationbutton"
-                    android:text="402"
-                    android:textSize="15dp" />
-                <Button
-                    android:id="@+id/station403"
-                    android:onClick="OnStationClick"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginLeft="225dp"
-                    android:layout_marginTop="390dp"
-                    android:background="@drawable/stationbutton_trans"
-                    android:text="403"
-                    android:textSize="15dp" />
-                <Button
-                    android:id="@+id/station404"
-                    android:onClick="OnStationClick"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginLeft="270dp"
-                    android:layout_marginTop="390dp"
-                    android:background="@drawable/stationbutton"
-                    android:text="404"
-                    android:textSize="15dp" />
-                <Button
-                    android:id="@+id/station405"
-                    android:onClick="OnStationClick"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginLeft="320dp"
-                    android:layout_marginTop="390dp"
-                    android:background="@drawable/stationbutton"
-                    android:text="405"
-                    android:textSize="15dp" />
-                <Button
-                    android:id="@+id/station406"
-                    android:onClick="OnStationClick"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginLeft="370dp"
-                    android:layout_marginTop="390dp"
-                    android:background="@drawable/stationbutton_trans"
-                    android:text="406"
-                    android:textSize="15dp" />
-                <Button
-                    android:id="@+id/station407"
-                    android:onClick="OnStationClick"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginLeft="420dp"
-                    android:layout_marginTop="390dp"
-                    android:background="@drawable/stationbutton"
-                    android:text="407"
-                    android:textSize="15dp" />
-                <Button
-                    android:id="@+id/station408"
-                    android:onClick="OnStationClick"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginLeft="503dp"
-                    android:layout_marginTop="390dp"
-                    android:background="@drawable/stationbutton"
-                    android:text="408"
-                    android:textSize="15dp" />
-                <Button
-                    android:id="@+id/station409"
-                    android:onClick="OnStationClick"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginLeft="540dp"
-                    android:layout_marginTop="390dp"
-                    android:background="@drawable/stationbutton_trans"
-                    android:text="409"
-                    android:textSize="15dp" />
-                <Button
-                    android:id="@+id/station410"
-                    android:onClick="OnStationClick"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginLeft="590dp"
-                    android:layout_marginTop="390dp"
-                    android:background="@drawable/stationbutton"
-                    android:text="410"
-                    android:textSize="15dp" />
-                <Button
-                    android:id="@+id/station411"
-                    android:onClick="OnStationClick"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginLeft="640dp"
-                    android:layout_marginTop="390dp"
-                    android:background="@drawable/stationbutton"
-                    android:text="411"
-                    android:textSize="15dp" />
-                <Button
-                    android:id="@+id/station412"
-                    android:onClick="OnStationClick"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginLeft="640dp"
-                    android:layout_marginTop="340dp"
-                    android:background="@drawable/stationbutton_trans"
-                    android:text="412"
-                    android:textSize="15dp" />
-                <Button
-                    android:id="@+id/station413"
-                    android:onClick="OnStationClick"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginLeft="640dp"
-                    android:layout_marginTop="290dp"
-                    android:background="@drawable/stationbutton"
-                    android:text="413"
-                    android:textSize="15dp" />
-                <Button
-                    android:id="@+id/station414"
-                    android:onClick="OnStationClick"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginLeft="640dp"
-                    android:layout_marginTop="240dp"
-                    android:background="@drawable/stationbutton"
-                    android:text="414"
-                    android:textSize="15dp" />
-                <Button
-                    android:id="@+id/station415"
-                    android:onClick="OnStationClick"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginLeft="640dp"
-                    android:layout_marginTop="200dp"
-                    android:background="@drawable/stationbutton"
-                    android:text="415"
-                    android:textSize="15dp" />
-                <Button
-                    android:id="@+id/station416"
-                    android:onClick="OnStationClick"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginLeft="640dp"
-                    android:layout_marginTop="160dp"
-                    android:background="@drawable/stationbutton_trans"
-                    android:text="416"
-                    android:textSize="15dp" />
-                <Button
-                    android:id="@+id/station417"
-                    android:onClick="OnStationClick"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginLeft="640dp"
-                    android:layout_marginTop="80dp"
-                    android:background="@drawable/stationbutton_trans"
-                    android:text="417"
-                    android:textSize="15dp" />
+                    <View
+                        android:id="@+id/view4_1"
+                        android:layout_width="560dp"
+                        android:layout_height="5dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginStart="97dp"
+                        android:layout_marginTop="403dp"
+                        android:background="#FF0000" />
+                    <!--세로라인 -->
+                    <View
+                        android:id="@+id/view4_2"
+                        android:layout_width="5dp"
+                        android:layout_height="340dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginStart="653dp"
+                        android:layout_marginTop="62dp"
+                        android:background="#FF0000" />
 
-                <!--5호선-->
-                <Button
-                    android:id="@+id/station501"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginLeft="225dp"
-                    android:layout_marginTop="80dp"
-                    android:background="@drawable/stationbutton"
-                    android:onClick="OnStationClick"
-                    android:text="501"
-                    android:textSize="15dp" />
-                <Button
-                    android:id="@+id/station502"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginLeft="225dp"
-                    android:layout_marginTop="120dp"
-                    android:background="@drawable/stationbutton"
-                    android:onClick="OnStationClick"
-                    android:text="502"
-                    android:textSize="15dp" />
-                <Button
-                    android:id="@+id/station503"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginLeft="225dp"
-                    android:layout_marginTop="160dp"
-                    android:background="@drawable/stationbutton_trans"
-                    android:onClick="OnStationClick"
-                    android:text="503"
-                    android:textSize="15dp" />
-                <Button
-                    android:id="@+id/station504"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginLeft="225dp"
-                    android:layout_marginTop="200dp"
-                    android:background="@drawable/stationbutton"
-                    android:onClick="OnStationClick"
-                    android:text="504"
-                    android:textSize="15dp" />
-                <Button
-                    android:id="@+id/station505"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginLeft="225dp"
-                    android:layout_marginTop="300dp"
-                    android:background="@drawable/stationbutton"
-                    android:onClick="OnStationClick"
-                    android:text="505"
-                    android:textSize="15dp" />
-                <Button
-                    android:id="@+id/station506"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginLeft="225dp"
-                    android:layout_marginTop="345dp"
-                    android:background="@drawable/stationbutton"
-                    android:onClick="OnStationClick"
-                    android:text="506"
-                    android:textSize="15dp" />
-                <Button
-                    android:id="@+id/station507"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginLeft="225dp"
-                    android:layout_marginTop="425dp"
-                    android:background="@drawable/stationbutton"
-                    android:onClick="OnStationClick"
-                    android:text="507"
-                    android:textSize="15dp" />
+                    <Button
+                        android:id="@+id/station401"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="110dp"
+                        android:layout_marginTop="390dp"
+                        android:background="@drawable/stationbutton"
+                        android:onClick="OnStationClick"
+                        android:text="401"
+                        android:textSize="15dp" />
 
+                    <Button
+                        android:id="@+id/station402"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="185dp"
+                        android:layout_marginTop="390dp"
+                        android:background="@drawable/stationbutton"
+                        android:onClick="OnStationClick"
+                        android:text="402"
+                        android:textSize="15dp" />
 
-                <View
-                    android:id="@+id/view5"
-                    android:layout_width="5dp"
-                    android:layout_height="420dp"
-                    android:layout_alignParentStart="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginStart="238dp"
-                    android:layout_marginTop="50dp"
-                    android:background="#4A7EBB" />
-                <!--6호선-->
-                <View
-                    android:id="@+id/view6_1"
-                    android:layout_width="5dp"
-                    android:layout_height="250dp"
-                    android:layout_alignParentStart="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginStart="282dp"
-                    android:layout_marginTop="109dp"
-                    android:background="#FFBF00" />
+                    <Button
+                        android:id="@+id/station403"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="225dp"
+                        android:layout_marginTop="390dp"
+                        android:background="@drawable/stationbutton_trans"
+                        android:onClick="OnStationClick"
+                        android:text="403"
+                        android:textSize="15dp" />
 
-                <View
-                    android:id="@+id/view6_2"
-                    android:layout_width="460dp"
-                    android:layout_height="5dp"
-                    android:layout_alignParentStart="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginStart="282dp"
-                    android:layout_marginTop="93dp"
-                    android:background="#FFBF00" />
+                    <Button
+                        android:id="@+id/station404"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="270dp"
+                        android:layout_marginTop="390dp"
+                        android:background="@drawable/stationbutton"
+                        android:onClick="OnStationClick"
+                        android:text="404"
+                        android:textSize="15dp" />
 
-                <View
-                    android:id="@+id/view6_3"
-                    android:layout_width="5dp"
-                    android:layout_height="250dp"
-                    android:layout_alignParentStart="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginStart="733dp"
-                    android:layout_marginTop="109dp"
-                    android:background="#FFBF00" />
+                    <Button
+                        android:id="@+id/station405"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="320dp"
+                        android:layout_marginTop="390dp"
+                        android:background="@drawable/stationbutton"
+                        android:onClick="OnStationClick"
+                        android:text="405"
+                        android:textSize="15dp" />
 
-                <View
-                    android:id="@+id/view6_4"
-                    android:layout_width="460dp"
-                    android:layout_height="5dp"
-                    android:layout_alignParentStart="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginStart="282dp"
-                    android:layout_marginTop="353dp"
-                    android:background="#FFBF00" />
-                <Button
-                    android:id="@+id/station622"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginLeft="270dp"
-                    android:layout_marginTop="80dp"
-                    android:background="@drawable/stationbutton_trans"
-                    android:onClick="OnStationClick"
-                    android:text="622"
-                    android:textSize="15dp" />
-                <Button
-                    android:id="@+id/station616"
-                    android:onClick="OnStationClick"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginLeft="720dp"
-                    android:layout_marginTop="80dp"
-                    android:background="@drawable/stationbutton"
-                    android:text="616"
-                    android:textSize="15dp" />
-                <Button
-                    android:id="@+id/station615"
-                    android:onClick="OnStationClick"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginLeft="720dp"
-                    android:layout_marginTop="120dp"
-                    android:background="@drawable/stationbutton"
-                    android:text="615"
-                    android:textSize="15dp" />
-                <Button
-                    android:id="@+id/station614"
-                    android:onClick="OnStationClick"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginLeft="720dp"
-                    android:layout_marginTop="160dp"
-                    android:background="@drawable/stationbutton_trans"
-                    android:text="614"
-                    android:textSize="15dp" />
-                <Button
-                    android:id="@+id/station613"
-                    android:onClick="OnStationClick"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginLeft="720dp"
-                    android:layout_marginTop="210dp"
-                    android:background="@drawable/stationbutton"
-                    android:text="613"
-                    android:textSize="15dp" />
-                <Button
-                    android:id="@+id/station612"
-                    android:onClick="OnStationClick"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginLeft="720dp"
-                    android:layout_marginTop="260dp"
-                    android:background="@drawable/stationbutton"
-                    android:text="612"
-                    android:textSize="15dp" />
-                <Button
-                    android:id="@+id/station611"
-                    android:onClick="OnStationClick"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginLeft="720dp"
-                    android:layout_marginTop="300dp"
-                    android:background="@drawable/stationbutton"
-                    android:text="611"
-                    android:textSize="15dp" />
-                <Button
-                    android:id="@+id/station610"
-                    android:onClick="OnStationClick"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginLeft="720dp"
-                    android:layout_marginTop="340dp"
-                    android:background="@drawable/stationbutton"
-                    android:text="610"
-                    android:textSize="15dp" />
-                <Button
-                    android:id="@+id/station609"
-                    android:onClick="OnStationClick"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginLeft="590dp"
-                    android:layout_marginTop="340dp"
-                    android:background="@drawable/stationbutton"
-                    android:text="609"
-                    android:textSize="15dp" />
-                <Button
-                    android:id="@+id/station607"
-                    android:onClick="OnStationClick"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginLeft="500dp"
-                    android:layout_marginTop="340dp"
-                    android:background="@drawable/stationbutton"
-                    android:text="607"
-                    android:textSize="15dp" />
-                <Button
-                    android:id="@+id/station606"
-                    android:onClick="OnStationClick"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginLeft="420dp"
-                    android:layout_marginTop="340dp"
-                    android:background="@drawable/stationbutton"
-                    android:text="606"
-                    android:textSize="15dp" />
-                <Button
-                    android:id="@+id/station604"
-                    android:onClick="OnStationClick"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginLeft="320dp"
-                    android:layout_marginTop="340dp"
-                    android:background="@drawable/stationbutton"
-                    android:text="604"
-                    android:textSize="15dp" />
-                <Button
-                    android:id="@+id/station603"
-                    android:onClick="OnStationClick"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginLeft="270dp"
-                    android:layout_marginTop="340dp"
-                    android:background="@drawable/stationbutton"
-                    android:text="603"
-                    android:textSize="15dp" />
-                <Button
-                    android:id="@+id/station602"
-                    android:onClick="OnStationClick"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginLeft="270dp"
-                    android:layout_marginTop="200dp"
-                    android:background="@drawable/stationbutton"
-                    android:text="602"
-                    android:textSize="15dp" />
-                <!--7호선-->
-                <View
-                    android:id="@+id/view6"
-                    android:layout_width="630dp"
-                    android:layout_height="5dp"
-                    android:layout_alignParentStart="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginStart="96dp"
-                    android:layout_marginTop="173dp"
-                    android:background="#92D050" />
-                <Button
-                    android:id="@+id/station601"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginLeft="270dp"
-                    android:layout_marginTop="160dp"
-                    android:background="@drawable/stationbutton_trans"
-                    android:onClick="OnStationClick"
-                    android:text="601"
-                    android:textSize="15dp" />
-                <Button
-                    android:id="@+id/station701"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginLeft="320dp"
-                    android:layout_marginTop="160dp"
-                    android:background="@drawable/stationbutton"
-                    android:onClick="OnStationClick"
-                    android:text="701"
-                    android:textSize="15dp" />
-                <Button
-                    android:id="@+id/station702"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginLeft="370dp"
-                    android:layout_marginTop="160dp"
-                    android:background="@drawable/stationbutton_trans"
-                    android:onClick="OnStationClick"
-                    android:text="702"
-                    android:textSize="15dp" />
-                <Button
-                    android:id="@+id/station703"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginLeft="420dp"
-                    android:layout_marginTop="160dp"
-                    android:background="@drawable/stationbutton"
-                    android:onClick="OnStationClick"
-                    android:text="703"
-                    android:textSize="15dp" />
-                <Button
-                    android:id="@+id/station704"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginLeft="470dp"
-                    android:layout_marginTop="160dp"
-                    android:background="@drawable/stationbutton"
-                    android:onClick="OnStationClick"
-                    android:text="704"
-                    android:textSize="15dp" />
-                <Button
-                    android:id="@+id/station705"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginLeft="540dp"
-                    android:layout_marginTop="160dp"
-                    android:background="@drawable/stationbutton_trans"
-                    android:onClick="OnStationClick"
-                    android:text="705"
-                    android:textSize="15dp" />
-                <Button
-                    android:id="@+id/station706"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginLeft="590dp"
-                    android:layout_marginTop="160dp"
-                    android:background="@drawable/stationbutton"
-                    android:onClick="OnStationClick"
-                    android:text="706"
-                    android:textSize="15dp" />
-                <Button
-                    android:id="@+id/station707"
-                    android:onClick="OnStationClick"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginLeft="680dp"
-                    android:layout_marginTop="160dp"
-                    android:background="@drawable/stationbutton"
-                    android:text="707"
-                    android:textSize="15dp" />
+                    <Button
+                        android:id="@+id/station406"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="370dp"
+                        android:layout_marginTop="390dp"
+                        android:background="@drawable/stationbutton_trans"
+                        android:onClick="OnStationClick"
+                        android:text="406"
+                        android:textSize="15dp" />
+
+                    <Button
+                        android:id="@+id/station407"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="420dp"
+                        android:layout_marginTop="390dp"
+                        android:background="@drawable/stationbutton"
+                        android:onClick="OnStationClick"
+                        android:text="407"
+                        android:textSize="15dp" />
+
+                    <Button
+                        android:id="@+id/station408"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="503dp"
+                        android:layout_marginTop="390dp"
+                        android:background="@drawable/stationbutton"
+                        android:onClick="OnStationClick"
+                        android:text="408"
+                        android:textSize="15dp" />
+
+                    <Button
+                        android:id="@+id/station409"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="540dp"
+                        android:layout_marginTop="390dp"
+                        android:background="@drawable/stationbutton_trans"
+                        android:onClick="OnStationClick"
+                        android:text="409"
+                        android:textSize="15dp" />
+
+                    <Button
+                        android:id="@+id/station410"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="590dp"
+                        android:layout_marginTop="390dp"
+                        android:background="@drawable/stationbutton"
+                        android:onClick="OnStationClick"
+                        android:text="410"
+                        android:textSize="15dp" />
+
+                    <Button
+                        android:id="@+id/station411"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="640dp"
+                        android:layout_marginTop="390dp"
+                        android:background="@drawable/stationbutton"
+                        android:onClick="OnStationClick"
+                        android:text="411"
+                        android:textSize="15dp" />
+
+                    <Button
+                        android:id="@+id/station412"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="640dp"
+                        android:layout_marginTop="340dp"
+                        android:background="@drawable/stationbutton_trans"
+                        android:onClick="OnStationClick"
+                        android:text="412"
+                        android:textSize="15dp" />
+
+                    <Button
+                        android:id="@+id/station413"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="640dp"
+                        android:layout_marginTop="290dp"
+                        android:background="@drawable/stationbutton"
+                        android:onClick="OnStationClick"
+                        android:text="413"
+                        android:textSize="15dp" />
+
+                    <Button
+                        android:id="@+id/station414"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="640dp"
+                        android:layout_marginTop="240dp"
+                        android:background="@drawable/stationbutton"
+                        android:onClick="OnStationClick"
+                        android:text="414"
+                        android:textSize="15dp" />
+
+                    <Button
+                        android:id="@+id/station415"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="640dp"
+                        android:layout_marginTop="200dp"
+                        android:background="@drawable/stationbutton"
+                        android:onClick="OnStationClick"
+                        android:text="415"
+                        android:textSize="15dp" />
+
+                    <Button
+                        android:id="@+id/station416"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="640dp"
+                        android:layout_marginTop="160dp"
+                        android:background="@drawable/stationbutton_trans"
+                        android:onClick="OnStationClick"
+                        android:text="416"
+                        android:textSize="15dp" />
+
+                    <Button
+                        android:id="@+id/station417"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="640dp"
+                        android:layout_marginTop="80dp"
+                        android:background="@drawable/stationbutton_trans"
+                        android:onClick="OnStationClick"
+                        android:text="417"
+                        android:textSize="15dp" />
+
+                    <!--5호선-->
+                    <Button
+                        android:id="@+id/station501"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="225dp"
+                        android:layout_marginTop="80dp"
+                        android:background="@drawable/stationbutton"
+                        android:onClick="OnStationClick"
+                        android:text="501"
+                        android:textSize="15dp" />
+
+                    <Button
+                        android:id="@+id/station502"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="225dp"
+                        android:layout_marginTop="120dp"
+                        android:background="@drawable/stationbutton"
+                        android:onClick="OnStationClick"
+                        android:text="502"
+                        android:textSize="15dp" />
+
+                    <Button
+                        android:id="@+id/station503"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="225dp"
+                        android:layout_marginTop="160dp"
+                        android:background="@drawable/stationbutton_trans"
+                        android:onClick="OnStationClick"
+                        android:text="503"
+                        android:textSize="15dp" />
+
+                    <Button
+                        android:id="@+id/station504"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="225dp"
+                        android:layout_marginTop="200dp"
+                        android:background="@drawable/stationbutton"
+                        android:onClick="OnStationClick"
+                        android:text="504"
+                        android:textSize="15dp" />
+
+                    <Button
+                        android:id="@+id/station505"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="225dp"
+                        android:layout_marginTop="300dp"
+                        android:background="@drawable/stationbutton"
+                        android:onClick="OnStationClick"
+                        android:text="505"
+                        android:textSize="15dp" />
+
+                    <Button
+                        android:id="@+id/station506"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="225dp"
+                        android:layout_marginTop="345dp"
+                        android:background="@drawable/stationbutton"
+                        android:onClick="OnStationClick"
+                        android:text="506"
+                        android:textSize="15dp" />
+
+                    <Button
+                        android:id="@+id/station507"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="225dp"
+                        android:layout_marginTop="425dp"
+                        android:background="@drawable/stationbutton"
+                        android:onClick="OnStationClick"
+                        android:text="507"
+                        android:textSize="15dp" />
 
 
-                <!--8호선-->
-                <View
-                    android:id="@+id/view8_1"
-                    android:layout_width="5dp"
-                    android:layout_height="430dp"
-                    android:layout_alignParentStart="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginStart="552dp"
-                    android:layout_marginTop="60dp"
-                    android:background="#6ccad0" />
+                    <View
+                        android:id="@+id/view5"
+                        android:layout_width="5dp"
+                        android:layout_height="420dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginStart="238dp"
+                        android:layout_marginTop="50dp"
+                        android:background="#4A7EBB" />
+                    <!--6호선-->
+                    <View
+                        android:id="@+id/view6_1"
+                        android:layout_width="5dp"
+                        android:layout_height="250dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginStart="282dp"
+                        android:layout_marginTop="109dp"
+                        android:background="#FFBF00" />
 
-                <View
-                    android:id="@+id/view8_2"
-                    android:layout_width="60dp"
-                    android:layout_height="5dp"
-                    android:layout_alignParentStart="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginStart="491dp"
-                    android:layout_marginTop="484dp"
-                    android:background="#6ccad0" />
+                    <View
+                        android:id="@+id/view6_2"
+                        android:layout_width="460dp"
+                        android:layout_height="5dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginStart="282dp"
+                        android:layout_marginTop="93dp"
+                        android:background="#FFBF00" />
 
-                <Button
-                    android:id="@+id/station618"
-                    android:onClick="OnStationClick"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginLeft="540dp"
-                    android:layout_marginTop="80dp"
-                    android:background="@drawable/stationbutton_trans"
-                    android:text="618"
-                    android:textSize="15dp" />
-                <Button
-                    android:id="@+id/station619"
-                    android:onClick="OnStationClick"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginLeft="490dp"
-                    android:layout_marginTop="80dp"
-                    android:background="@drawable/stationbutton"
-                    android:text="619"
-                    android:textSize="15dp" />
-                <Button
-                    android:id="@+id/station620"
-                    android:onClick="OnStationClick"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginLeft="440dp"
-                    android:layout_marginTop="80dp"
-                    android:background="@drawable/stationbutton"
-                    android:text="620"
-                    android:textSize="15dp" />
-                <Button
-                    android:id="@+id/station617"
-                    android:onClick="OnStationClick"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginLeft="590dp"
-                    android:layout_marginTop="80dp"
-                    android:background="@drawable/stationbutton"
-                    android:text="617"
-                    android:textSize="15dp" />
-                <Button
-                    android:id="@+id/station806"
-                    android:onClick="OnStationClick"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginLeft="540dp"
-                    android:layout_marginTop="200dp"
-                    android:background="@drawable/stationbutton"
-                    android:text="806"
-                    android:textSize="15dp" />
-                <Button
-                    android:id="@+id/station805"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginLeft="540dp"
-                    android:layout_marginTop="250dp"
-                    android:background="@drawable/stationbutton"
-                    android:onClick="OnStationClick"
-                    android:text="805"
-                    android:textSize="15dp" />
-                <Button
-                    android:id="@+id/station804"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginLeft="540dp"
-                    android:layout_marginTop="300dp"
-                    android:background="@drawable/stationbutton"
-                    android:onClick="OnStationClick"
-                    android:text="804"
-                    android:textSize="15dp" />
-                <Button
-                    android:id="@+id/station608"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginLeft="540dp"
-                    android:layout_marginTop="340dp"
-                    android:background="@drawable/stationbutton_trans"
-                    android:onClick="OnStationClick"
-                    android:text="608"
-                    android:textSize="15dp" />
-                <Button
-                    android:id="@+id/station803"
-                    android:onClick="OnStationClick"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginLeft="540dp"
-                    android:layout_marginTop="430dp"
-                    android:background="@drawable/stationbutton"
-                    android:text="803"
-                    android:textSize="15dp" />
-                <Button
-                    android:id="@+id/station802"
-                    android:onClick="OnStationClick"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginLeft="540dp"
-                    android:layout_marginTop="470dp"
-                    android:background="@drawable/stationbutton"
-                    android:text="802"
-                    android:textSize="15dp" />
-                <Button
-                    android:id="@+id/station801"
-                    android:onClick="OnStationClick"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginLeft="500dp"
-                    android:layout_marginTop="470dp"
-                    android:background="@drawable/stationbutton"
-                    android:text="801"
-                    android:textSize="15dp" />
-                <!--9호선-->
-                <View
-                    android:id="@+id/view9"
-                    android:layout_width="5dp"
-                    android:layout_height="420dp"
-                    android:layout_alignParentStart="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginStart="383dp"
-                    android:layout_marginTop="49dp"
-                    android:background="#7030A0" />
-                <Button
-                    android:id="@+id/station901"
-                    android:onClick="OnStationClick"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginLeft="370dp"
-                    android:layout_marginTop="430dp"
-                    android:background="@drawable/stationbutton"
-                    android:text="901"
-                    android:textSize="15dp" />
-                <Button
-                    android:id="@+id/station605"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginLeft="370dp"
-                    android:layout_marginTop="340dp"
-                    android:background="@drawable/stationbutton_trans"
-                    android:onClick="OnStationClick"
-                    android:text="605"
-                    android:textSize="15dp" />
-                <Button
-                    android:id="@+id/station902"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginLeft="370dp"
-                    android:layout_marginTop="300dp"
-                    android:background="@drawable/stationbutton"
-                    android:onClick="OnStationClick"
-                    android:text="902"
-                    android:textSize="15dp" />
-                <Button
-                    android:id="@+id/station903"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginLeft="370dp"
-                    android:layout_marginTop="200dp"
-                    android:background="@drawable/stationbutton"
-                    android:onClick="OnStationClick"
-                    android:text="903"
-                    android:textSize="15dp" />
-                <Button
-                    android:id="@+id/station904"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginLeft="370dp"
-                    android:layout_marginTop="120dp"
-                    android:background="@drawable/stationbutton"
-                    android:onClick="OnStationClick"
-                    android:text="904"
-                    android:textSize="15dp" />
-                <Button
-                    android:id="@+id/station621"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginLeft="370dp"
-                    android:layout_marginTop="80dp"
-                    android:background="@drawable/stationbutton_trans"
-                    android:onClick="OnStationClick"
-                    android:text="621"
-                    android:textSize="15dp" />
-            </RelativeLayout>
+                    <View
+                        android:id="@+id/view6_3"
+                        android:layout_width="5dp"
+                        android:layout_height="250dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginStart="733dp"
+                        android:layout_marginTop="109dp"
+                        android:background="#FFBF00" />
+
+                    <View
+                        android:id="@+id/view6_4"
+                        android:layout_width="460dp"
+                        android:layout_height="5dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginStart="282dp"
+                        android:layout_marginTop="353dp"
+                        android:background="#FFBF00" />
+
+                    <Button
+                        android:id="@+id/station622"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="270dp"
+                        android:layout_marginTop="80dp"
+                        android:background="@drawable/stationbutton_trans"
+                        android:onClick="OnStationClick"
+                        android:text="622"
+                        android:textSize="15dp" />
+
+                    <Button
+                        android:id="@+id/station616"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="720dp"
+                        android:layout_marginTop="80dp"
+                        android:background="@drawable/stationbutton"
+                        android:onClick="OnStationClick"
+                        android:text="616"
+                        android:textSize="15dp" />
+
+                    <Button
+                        android:id="@+id/station615"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="720dp"
+                        android:layout_marginTop="120dp"
+                        android:background="@drawable/stationbutton"
+                        android:onClick="OnStationClick"
+                        android:text="615"
+                        android:textSize="15dp" />
+
+                    <Button
+                        android:id="@+id/station614"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="720dp"
+                        android:layout_marginTop="160dp"
+                        android:background="@drawable/stationbutton_trans"
+                        android:onClick="OnStationClick"
+                        android:text="614"
+                        android:textSize="15dp" />
+
+                    <Button
+                        android:id="@+id/station613"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="720dp"
+                        android:layout_marginTop="210dp"
+                        android:background="@drawable/stationbutton"
+                        android:onClick="OnStationClick"
+                        android:text="613"
+                        android:textSize="15dp" />
+
+                    <Button
+                        android:id="@+id/station612"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="720dp"
+                        android:layout_marginTop="260dp"
+                        android:background="@drawable/stationbutton"
+                        android:onClick="OnStationClick"
+                        android:text="612"
+                        android:textSize="15dp" />
+
+                    <Button
+                        android:id="@+id/station611"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="720dp"
+                        android:layout_marginTop="300dp"
+                        android:background="@drawable/stationbutton"
+                        android:onClick="OnStationClick"
+                        android:text="611"
+                        android:textSize="15dp" />
+
+                    <Button
+                        android:id="@+id/station610"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="720dp"
+                        android:layout_marginTop="340dp"
+                        android:background="@drawable/stationbutton"
+                        android:onClick="OnStationClick"
+                        android:text="610"
+                        android:textSize="15dp" />
+
+                    <Button
+                        android:id="@+id/station609"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="590dp"
+                        android:layout_marginTop="340dp"
+                        android:background="@drawable/stationbutton"
+                        android:onClick="OnStationClick"
+                        android:text="609"
+                        android:textSize="15dp" />
+
+                    <Button
+                        android:id="@+id/station607"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="500dp"
+                        android:layout_marginTop="340dp"
+                        android:background="@drawable/stationbutton"
+                        android:onClick="OnStationClick"
+                        android:text="607"
+                        android:textSize="15dp" />
+
+                    <Button
+                        android:id="@+id/station606"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="420dp"
+                        android:layout_marginTop="340dp"
+                        android:background="@drawable/stationbutton"
+                        android:onClick="OnStationClick"
+                        android:text="606"
+                        android:textSize="15dp" />
+
+                    <Button
+                        android:id="@+id/station604"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="320dp"
+                        android:layout_marginTop="340dp"
+                        android:background="@drawable/stationbutton"
+                        android:onClick="OnStationClick"
+                        android:text="604"
+                        android:textSize="15dp" />
+
+                    <Button
+                        android:id="@+id/station603"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="270dp"
+                        android:layout_marginTop="340dp"
+                        android:background="@drawable/stationbutton"
+                        android:onClick="OnStationClick"
+                        android:text="603"
+                        android:textSize="15dp" />
+
+                    <Button
+                        android:id="@+id/station602"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="270dp"
+                        android:layout_marginTop="200dp"
+                        android:background="@drawable/stationbutton"
+                        android:onClick="OnStationClick"
+                        android:text="602"
+                        android:textSize="15dp" />
+                    <!--7호선-->
+                    <View
+                        android:id="@+id/view6"
+                        android:layout_width="630dp"
+                        android:layout_height="5dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginStart="96dp"
+                        android:layout_marginTop="173dp"
+                        android:background="#92D050" />
+
+                    <Button
+                        android:id="@+id/station601"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="270dp"
+                        android:layout_marginTop="160dp"
+                        android:background="@drawable/stationbutton_trans"
+                        android:onClick="OnStationClick"
+                        android:text="601"
+                        android:textSize="15dp" />
+
+                    <Button
+                        android:id="@+id/station701"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="320dp"
+                        android:layout_marginTop="160dp"
+                        android:background="@drawable/stationbutton"
+                        android:onClick="OnStationClick"
+                        android:text="701"
+                        android:textSize="15dp" />
+
+                    <Button
+                        android:id="@+id/station702"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="370dp"
+                        android:layout_marginTop="160dp"
+                        android:background="@drawable/stationbutton_trans"
+                        android:onClick="OnStationClick"
+                        android:text="702"
+                        android:textSize="15dp" />
+
+                    <Button
+                        android:id="@+id/station703"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="420dp"
+                        android:layout_marginTop="160dp"
+                        android:background="@drawable/stationbutton"
+                        android:onClick="OnStationClick"
+                        android:text="703"
+                        android:textSize="15dp" />
+
+                    <Button
+                        android:id="@+id/station704"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="470dp"
+                        android:layout_marginTop="160dp"
+                        android:background="@drawable/stationbutton"
+                        android:onClick="OnStationClick"
+                        android:text="704"
+                        android:textSize="15dp" />
+
+                    <Button
+                        android:id="@+id/station705"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="540dp"
+                        android:layout_marginTop="160dp"
+                        android:background="@drawable/stationbutton_trans"
+                        android:onClick="OnStationClick"
+                        android:text="705"
+                        android:textSize="15dp" />
+
+                    <Button
+                        android:id="@+id/station706"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="590dp"
+                        android:layout_marginTop="160dp"
+                        android:background="@drawable/stationbutton"
+                        android:onClick="OnStationClick"
+                        android:text="706"
+                        android:textSize="15dp" />
+
+                    <Button
+                        android:id="@+id/station707"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="680dp"
+                        android:layout_marginTop="160dp"
+                        android:background="@drawable/stationbutton"
+                        android:onClick="OnStationClick"
+                        android:text="707"
+                        android:textSize="15dp" />
+
+
+                    <!--8호선-->
+                    <View
+                        android:id="@+id/view8_1"
+                        android:layout_width="5dp"
+                        android:layout_height="430dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginStart="552dp"
+                        android:layout_marginTop="60dp"
+                        android:background="#6ccad0" />
+
+                    <View
+                        android:id="@+id/view8_2"
+                        android:layout_width="60dp"
+                        android:layout_height="5dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginStart="491dp"
+                        android:layout_marginTop="484dp"
+                        android:background="#6ccad0" />
+
+                    <Button
+                        android:id="@+id/station618"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="540dp"
+                        android:layout_marginTop="80dp"
+                        android:background="@drawable/stationbutton_trans"
+                        android:onClick="OnStationClick"
+                        android:text="618"
+                        android:textSize="15dp" />
+
+                    <Button
+                        android:id="@+id/station619"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="490dp"
+                        android:layout_marginTop="80dp"
+                        android:background="@drawable/stationbutton"
+                        android:onClick="OnStationClick"
+                        android:text="619"
+                        android:textSize="15dp" />
+
+                    <Button
+                        android:id="@+id/station620"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="440dp"
+                        android:layout_marginTop="80dp"
+                        android:background="@drawable/stationbutton"
+                        android:onClick="OnStationClick"
+                        android:text="620"
+                        android:textSize="15dp" />
+
+                    <Button
+                        android:id="@+id/station617"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="590dp"
+                        android:layout_marginTop="80dp"
+                        android:background="@drawable/stationbutton"
+                        android:onClick="OnStationClick"
+                        android:text="617"
+                        android:textSize="15dp" />
+
+                    <Button
+                        android:id="@+id/station806"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="540dp"
+                        android:layout_marginTop="200dp"
+                        android:background="@drawable/stationbutton"
+                        android:onClick="OnStationClick"
+                        android:text="806"
+                        android:textSize="15dp" />
+
+                    <Button
+                        android:id="@+id/station805"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="540dp"
+                        android:layout_marginTop="250dp"
+                        android:background="@drawable/stationbutton"
+                        android:onClick="OnStationClick"
+                        android:text="805"
+                        android:textSize="15dp" />
+
+                    <Button
+                        android:id="@+id/station804"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="540dp"
+                        android:layout_marginTop="300dp"
+                        android:background="@drawable/stationbutton"
+                        android:onClick="OnStationClick"
+                        android:text="804"
+                        android:textSize="15dp" />
+
+                    <Button
+                        android:id="@+id/station608"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="540dp"
+                        android:layout_marginTop="340dp"
+                        android:background="@drawable/stationbutton_trans"
+                        android:onClick="OnStationClick"
+                        android:text="608"
+                        android:textSize="15dp" />
+
+                    <Button
+                        android:id="@+id/station803"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="540dp"
+                        android:layout_marginTop="430dp"
+                        android:background="@drawable/stationbutton"
+                        android:onClick="OnStationClick"
+                        android:text="803"
+                        android:textSize="15dp" />
+
+                    <Button
+                        android:id="@+id/station802"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="540dp"
+                        android:layout_marginTop="470dp"
+                        android:background="@drawable/stationbutton"
+                        android:onClick="OnStationClick"
+                        android:text="802"
+                        android:textSize="15dp" />
+
+                    <Button
+                        android:id="@+id/station801"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="500dp"
+                        android:layout_marginTop="470dp"
+                        android:background="@drawable/stationbutton"
+                        android:onClick="OnStationClick"
+                        android:text="801"
+                        android:textSize="15dp" />
+                    <!--9호선-->
+                    <View
+                        android:id="@+id/view9"
+                        android:layout_width="5dp"
+                        android:layout_height="420dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginStart="383dp"
+                        android:layout_marginTop="49dp"
+                        android:background="#7030A0" />
+
+                    <Button
+                        android:id="@+id/station901"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="370dp"
+                        android:layout_marginTop="430dp"
+                        android:background="@drawable/stationbutton"
+                        android:onClick="OnStationClick"
+                        android:text="901"
+                        android:textSize="15dp" />
+
+                    <Button
+                        android:id="@+id/station605"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="370dp"
+                        android:layout_marginTop="340dp"
+                        android:background="@drawable/stationbutton_trans"
+                        android:onClick="OnStationClick"
+                        android:text="605"
+                        android:textSize="15dp" />
+
+                    <Button
+                        android:id="@+id/station902"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="370dp"
+                        android:layout_marginTop="300dp"
+                        android:background="@drawable/stationbutton"
+                        android:onClick="OnStationClick"
+                        android:text="902"
+                        android:textSize="15dp" />
+
+                    <Button
+                        android:id="@+id/station903"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="370dp"
+                        android:layout_marginTop="200dp"
+                        android:background="@drawable/stationbutton"
+                        android:onClick="OnStationClick"
+                        android:text="903"
+                        android:textSize="15dp" />
+
+                    <Button
+                        android:id="@+id/station904"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="370dp"
+                        android:layout_marginTop="120dp"
+                        android:background="@drawable/stationbutton"
+                        android:onClick="OnStationClick"
+                        android:text="904"
+                        android:textSize="15dp" />
+
+                    <Button
+                        android:id="@+id/station621"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="370dp"
+                        android:layout_marginTop="80dp"
+                        android:background="@drawable/stationbutton_trans"
+                        android:onClick="OnStationClick"
+                        android:text="621"
+                        android:textSize="15dp" />
+                </RelativeLayout>
             </ScrollView>
         </HorizontalScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="141dp"
+            android:background="@color/colorBlack" />
     </RelativeLayout>
 
     <include layout="@layout/activity_drawer"/>

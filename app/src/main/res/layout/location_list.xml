@@ -13,6 +13,7 @@
         <TextView
             android:id="@+id/list_line"
             android:layout_width="80dp"
+            android:textColor="#000"
             android:layout_height="70dp"
             android:gravity="center"
             android:textSize="18dp" />

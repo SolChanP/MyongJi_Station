@@ -4,7 +4,7 @@
     android:layout_width="280dp"
     android:layout_height="match_parent"
     android:layout_gravity="start"
-    android:background="#B1B4F3"
+    android:background="@color/colorGray"
     android:orientation="vertical"
     android:onClick="OnClick">
     <!--OnClick넣은 이유는 전체 레이아웃에 클릭 이벤트를 넣어야
@@ -28,6 +28,7 @@
             android:layout_marginTop="75dp"
             android:text="명지대역"
             android:textSize="30dp"
+            android:textColor="#000"
             android:textStyle="bold" />
 
     <RelativeLayout
@@ -36,16 +37,23 @@
         android:layout_height="70dp"
         android:layout_alignParentTop="true"
         android:layout_marginTop="180dp"
-        android:gravity="center"
+        android:gravity="center_vertical"
         android:onClick="OnClick">
+        <ImageView
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="2dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/station"/>
 
         <TextView
             android:id="@+id/nav_map"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="30dp"
             android:onClick="OnClick"
+            android:layout_marginLeft="80dp"
             android:text="지하철 노선도"
-            android:textColor="#ffffff"
+            android:textColor="#000000"
             android:textSize="25dp" />
     </RelativeLayout>
 
@@ -56,17 +64,23 @@
         android:layout_height="70dp"
         android:layout_alignParentTop="true"
         android:layout_marginTop="250dp"
-        android:gravity="center"
+        android:gravity="center_vertical"
         android:onClick="OnClick">
+        <ImageView
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="2dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/location"/>
 
         <TextView
             android:id="@+id/nav_location"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-
+            android:layout_marginLeft="80dp"
             android:onClick="OnClick"
             android:text="실시간 열차 위치"
-            android:textColor="#ffffff"
+            android:textColor="#000000"
             android:textSize="25dp" />
 
     </RelativeLayout>
@@ -76,17 +90,23 @@
         android:layout_height="70dp"
         android:layout_alignParentTop="true"
         android:layout_marginTop="320dp"
-        android:gravity="center"
+        android:gravity="center_vertical"
         android:onClick="OnClick">
+        <ImageView
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="2dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/live"/>
 
         <TextView
             android:id="@+id/nav_live"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-
+            android:layout_marginLeft="80dp"
             android:onClick="OnClick"
             android:text="실시간 게시판"
-            android:textColor="#ffffff"
+            android:textColor="#000000"
             android:textSize="25dp" />
 
     </RelativeLayout>
@@ -96,19 +116,24 @@
         android:layout_width="match_parent"
         android:layout_height="70dp"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="5dp"
         android:layout_marginTop="390dp"
-        android:gravity="center"
+        android:gravity="center_vertical"
         android:onClick="OnClick">
+        <ImageView
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="2dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/favorite"/>
 
         <TextView
             android:id="@+id/nav_fa"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-
+            android:layout_marginLeft="80dp"
             android:onClick="OnClick"
             android:text="즐겨찾기"
-            android:textColor="#ffffff"
+            android:textColor="#000000"
             android:textSize="25dp" />
 
     </RelativeLayout>
@@ -119,38 +144,23 @@
         android:layout_height="70dp"
         android:layout_alignParentTop="true"
         android:layout_marginTop="460dp"
-        android:gravity="center"
+        android:gravity="center_vertical"
         android:onClick="OnClick">
-
+        <ImageView
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="2dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/help"/>
         <TextView
             android:id="@+id/nav_help"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-
+            android:layout_marginLeft="80dp"
             android:onClick="OnClick"
-            android:text="고객센터"
-            android:textColor="#ffffff"
+            android:text="민원넣기"
+            android:textColor="#000000"
             android:textSize="25dp" />
 
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:id="@+id/nav_setting_layout"
-        android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="530dp"
-        android:gravity="center"
-        android:onClick="OnClick">
-
-        <TextView
-            android:id="@+id/nav_setting"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-
-            android:onClick="OnClick"
-            android:text="설정"
-            android:textColor="#ffffff"
-            android:textSize="25dp" />
     </RelativeLayout>
 </RelativeLayout>

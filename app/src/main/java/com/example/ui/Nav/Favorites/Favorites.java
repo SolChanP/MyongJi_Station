@@ -34,7 +34,7 @@ public class Favorites extends AppCompatActivity implements AdapterView.OnItemCl
 
 
     // 추가될 아이템 내용을 입력받는 EditText
-    private EditText nickName;//즐겨찾기 명칭
+    private EditText nickName;//즐겨찾기 이름
     private EditText start;//출발역
     private EditText des;//도착지
     private EditText value;//탐색 옵션
@@ -126,7 +126,7 @@ public class Favorites extends AppCompatActivity implements AdapterView.OnItemCl
         // 리스트에서 데이터를 받아온다.
         FavoritesData data = (FavoritesData) adapter.getItem(position);
         String message = "길찾기 클릭시 해당 경로로 탐색을 시작합니다.<br />" +
-                "별명? : " + data.getNickname() + "<br />" +
+                "이름 : " + data.getNickname() + "<br />" +
                 "출발역 : " + data.getStart() + "<br />" +
                 "도착역 : " + data.getEnd() + "<br />" +
                 "탐색옵션 : " + data.getValue() + "<br />";

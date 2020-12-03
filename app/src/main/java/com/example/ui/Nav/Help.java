@@ -15,27 +15,9 @@ public class Help extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_help);
     }
-    //고객센터 메뉴 리스너-------------------------------------------------------
+    //민원넣기 메뉴 리스너-------------------------------------------------------
     public void OnClick(View v){
-        Intent intent;
-        switch (v.getId()){
-            case R.id.help_notice :
-                //intent = new Intent(getBaseContext(), Map.class);
-                //startActivity(intent);
-                break;
-            case R.id.nav_location :
-                //intent = new Intent(getBaseContext(), Map.class);
-                //startActivity(intent);
-                break;
-            case R.id.nav_fa :
-                //intent = new Intent(getBaseContext(), Map.class);
-                //startActivity(intent);
-                break;
-            case R.id.nav_help :
-                //intent = new Intent(getBaseContext(), Map.class);
-                //startActivity(intent);
-                break;
-        }
+        
     }
     //---------------------------------------------------------------------------
 }
