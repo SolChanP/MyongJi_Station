@@ -20,14 +20,14 @@
 
     <Button
         android:id="@+id/live_add"
-        android:layout_width="60dp"
-        android:layout_height="40dp"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_marginTop="60dp"
-        android:layout_marginEnd="7dp"
+        android:layout_marginEnd="10dp"
         android:onClick="OnClick"
-        android:text="등록" />
+        android:background="@drawable/plus"/>
 
     <TextView
         android:id="@+id/live_cur"
