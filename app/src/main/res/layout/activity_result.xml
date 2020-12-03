@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F3F3FC"
+    android:background="@color/colorGray"
     tools:context="Result">
 
     <TextView
@@ -14,6 +14,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="30dp"
         android:text="길찾기"
+        android:textColor="#000"
         android:textSize="35dp"
         android:textStyle="bold" />
 
@@ -97,12 +98,12 @@
             android:onClick="onClick"
             android:id="@+id/result_locate"
             android:layout_width="105dp"
-            android:layout_height="30dp"
+            android:layout_height="40dp"
             android:layout_alignParentTop="true"
-            android:layout_marginLeft="260dp"
-            android:layout_marginTop="180dp"
+            android:layout_marginLeft="210dp"
+            android:layout_marginTop="175dp"
             android:text="열차 위치 보기"
-            android:textSize="10dp" />
+            android:textSize="17dp" />
     </RelativeLayout>
 
     <LinearLayout

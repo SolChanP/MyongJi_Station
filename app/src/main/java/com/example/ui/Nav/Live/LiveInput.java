@@ -13,6 +13,7 @@ import com.example.ui.R;
 import java.io.Serializable;
 
 public class LiveInput extends AppCompatActivity implements Serializable {
+    private LiveData result;
     private TextView line;
     private EditText dir, data, title;
 
@@ -25,10 +26,18 @@ public class LiveInput extends AppCompatActivity implements Serializable {
         title = (EditText) findViewById(R.id.live_title);
         dir = (EditText) findViewById(R.id.live_dir);
         data = (EditText) findViewById(R.id.live_data);
-    }
 
-    public void OnClick(View v) {
-        if (v.getId() == R.id.live_line_add) {
+
+        Intent intent = getIntent();
+//        result = (LiveData) intent.getSerializableExtra("result");
+
+        this.setData(result);
+    }
+    public void OnClick(View v){
+        if(v.getId() == R.id.live_line_add){
+           /* if(data.getText().toString().equals("")) {
+                Toast.makeText(getApplicationContext(), "내용을 입력하세요!", Toast.LENGTH_SHORT).show();
+            }else{*/
             LiveData temp = new LiveData(dir.getText().toString(), data.getText().toString(), title.getText().toString());
             Intent intent = new Intent(
                     getApplicationContext(), // 현재화면의 제어권자
@@ -40,5 +49,9 @@ public class LiveInput extends AppCompatActivity implements Serializable {
             finish();
             //  }
         }
+    }
+    public void setData(LiveData result){
+
+        // line.setText(result.getLine().toString() + "호선 게시글");
     }
 }
