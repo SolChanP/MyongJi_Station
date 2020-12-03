@@ -246,7 +246,7 @@ public class Live extends AppCompatActivity implements AdapterView.OnItemClickLi
             super.onPostExecute(result);
 
             progressDialog.dismiss();
-            Toast.makeText(getApplicationContext(), "데이터 삽입 완료^^", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), "성공^^", Toast.LENGTH_SHORT).show();
             Log.d(TAG, "POST response  - " + result);
         }
         @Override

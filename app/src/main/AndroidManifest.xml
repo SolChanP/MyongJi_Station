@@ -12,6 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
+        <activity android:name=".Nav.Claim"></activity>
         <activity android:name=".Result" />
         <activity android:name=".Nav.Location.TrainMap.Line1" />
         <activity android:name=".Nav.Location.TrainMap.Line2" />
@@ -23,9 +24,8 @@
         <activity android:name=".Nav.Location.TrainMap.Line8" />
         <activity android:name=".Nav.Location.TrainMap.Line9" />
         <activity android:name=".Nav.Live.Live" />
-        <activity android:name=".Nav.Live.LiveResult"/>
+        <activity android:name=".Nav.Live.LiveResult" />
         <activity android:name=".Nav.Live.LiveInput" />
-        <activity android:name=".Nav.Help" />
         <activity android:name=".Nav.Favorites.Favorites" />
         <activity android:name=".Nav.Location.Location" />
         <activity
@@ -41,7 +41,6 @@
         <activity android:name=".Nav.Map" />
         <activity android:name=".SearchAdapter" />
         <activity android:name=".SearchStation" />
-
     </application>
 
 </manifest>

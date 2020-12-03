@@ -72,6 +72,8 @@
             android:layout_width="fill_parent"
             android:layout_height="380dp">
             <EditText
+                android:paddingTop="10dp"
+                android:paddingLeft="10dp"
                 android:id="@+id/live_data"
                 android:layout_width="350dp"
                 android:layout_height="300dp"

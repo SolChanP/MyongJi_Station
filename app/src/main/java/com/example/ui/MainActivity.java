@@ -15,8 +15,8 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.ui.Nav.Claim;
 import com.example.ui.Nav.Favorites.Favorites;
-import com.example.ui.Nav.Help;
 import com.example.ui.Nav.Live.Live;
 import com.example.ui.Nav.Location.Location;
 import com.example.ui.Nav.Map;
@@ -172,9 +172,9 @@ public class MainActivity extends Activity {
                 intent = new Intent(getBaseContext(), Live.class);
                 startActivity(intent);
                 break;
-            case R.id.nav_help :
-            case R.id.nav_help_layout :
-                intent = new Intent(getBaseContext(), Help.class);
+            case R.id.nav_claim :
+            case R.id.nav_claim_layout :
+                intent = new Intent(getBaseContext(), Claim.class);
                 startActivity(intent);
                 break;
             case R.id.main_change :

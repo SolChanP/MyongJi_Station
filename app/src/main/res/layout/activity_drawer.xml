@@ -139,7 +139,7 @@
     </RelativeLayout>
 
     <RelativeLayout
-        android:id="@+id/nav_help_layout"
+        android:id="@+id/nav_claim_layout"
         android:layout_width="match_parent"
         android:layout_height="70dp"
         android:layout_alignParentTop="true"
@@ -153,7 +153,7 @@
             android:layout_height="30dp"
             android:src="@drawable/help"/>
         <TextView
-            android:id="@+id/nav_help"
+            android:id="@+id/nav_claim"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="80dp"
