@@ -1,9 +1,9 @@
 <?php
 
-    $host = 'www.travelit.me';
-    $username = 'mjstation'; # MySQL 계정 아이디
-    $password = 'mjstation'; # MySQL 계정 패스워드
-    $dbname = 'MJ';  # DATABASE 이름
+    $host = 'www.solac.shop';
+    $username = 'qkrthfcks'; # MySQL 계정 아이디
+    $password = 'psc487900!'; # MySQL 계정 패스워드
+    $dbname = 'qkrthfcks';  # DATABASE 이름
 
 
     $options = array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8');

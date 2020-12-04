@@ -1,7 +1,7 @@
-<?php
+<?php 
 
-    error_reporting(E_ALL);
-    ini_set('display_errors',1);
+    error_reporting(E_ALL); 
+    ini_set('display_errors',1); 
 
     include('dbcon.php');
 
@@ -18,16 +18,17 @@
         $train=$_POST['train'];
 $data=$_POST['data'];
 $title=$_POST['title'];
-
+ 
         if(!isset($errMSG)) // 모두 입력 되었다ㅕㄴ
         {
             try{
+                // SQL문을 실행하여 데이터를 MySQL 서버의 person 테이블에 저장합니다. 
                 $stmt = $con->prepare('INSERT INTO board(line, train, data, title) VALUES(:line, :train, :data, :title)');
                 $stmt->bindParam(':line', $line);
                 $stmt->bindParam(':train', $train);
 $stmt->bindParam(':data', $data);
 $stmt->bindParam(':title', $title);
-
+	
 
                 if($stmt->execute())
                 {
@@ -39,7 +40,7 @@ $stmt->bindParam(':title', $title);
                 }
 
             } catch(PDOException $e) {
-                die("Database error: " . $e->getMessage());
+                die("Database error: " . $e->getMessage()); 
             }
         }
 
