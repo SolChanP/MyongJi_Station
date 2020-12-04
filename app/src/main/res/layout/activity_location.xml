@@ -16,6 +16,17 @@
         android:textStyle="bold"
         android:text="실시간 열차 위치"
         android:textSize="35dp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="90dp"
+        android:layout_centerHorizontal="true"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        android:hint="해당 열차 클릭시 상세 정보로 넘어감니다."
+        android:textSize="15dp" />
+
 
     <LinearLayout
         android:layout_width="match_parent"
