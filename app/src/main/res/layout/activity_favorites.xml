@@ -18,17 +18,6 @@
         android:textColor="#000"
         android:textSize="35dp" />
 
-    <Button
-        android:id="@+id/btnInsert"
-        android:layout_width="38dp"
-        android:layout_height="38dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginTop="121dp"
-        android:layout_marginRight="14dp"
-        android:background="@drawable/plus"
-        android:onClick="OnClick" />
-
     <LinearLayout
         android:layout_alignParentTop="true"
         android:layout_marginTop="100dp"
@@ -78,6 +67,14 @@
             android:gravity="center"
             android:background="@drawable/edittext"
             android:hint="도착역"/>
+        <Button
+            android:id="@+id/btnInsert"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/plus"
+            android:onClick="OnClick" />
     </LinearLayout>
 
     <LinearLayout

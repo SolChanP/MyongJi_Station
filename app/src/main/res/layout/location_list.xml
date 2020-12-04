@@ -5,7 +5,7 @@
     android:orientation="horizontal"
     android:layout_margin="3dp"
     android:padding="3dp">
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:background="#FDFDFD"
@@ -23,21 +23,24 @@
             android:layout_height="70dp"
             android:textSize="18dp"
             android:gravity="center"
-            android:layout_marginLeft="20dp" />
+            android:layout_marginLeft="100dp" />
         <TextView
             android:id="@+id/list_next_station"
             android:layout_width="80dp"
             android:layout_height="70dp"
             android:textSize="18dp"
             android:gravity="center"
-            android:layout_marginLeft="20dp" />
+            android:layout_marginLeft="180dp" />
         <TextView
             android:id="@+id/list_rem_time"
             android:layout_width="100dp"
             android:layout_height="70dp"
             android:textSize="18dp"
-            android:layout_marginLeft="20dp" />
-    </LinearLayout>
+            android:gravity="center"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"/>
+    </RelativeLayout
+     >
 
 
 </LinearLayout>
