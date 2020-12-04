@@ -24,7 +24,7 @@
         android:layout_centerHorizontal="true"
         android:textColor="#000000"
         android:textStyle="bold"
-        android:hint="해당 열차 클릭시 상세 정보로 넘어감니다."
+        android:hint="해당 열차 클릭시 상세 정보로 넘어갑니다."
         android:textSize="15dp" />
 
 

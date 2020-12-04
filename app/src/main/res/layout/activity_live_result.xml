@@ -76,13 +76,13 @@
                 android:text="내용"/>
         </RelativeLayout>
     </ScrollView>
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginTop="450dp">
         <EditText
             android:id="@+id/live_cmt_data"
-            android:layout_width="260dp"
+            android:layout_width="200dp"
             android:layout_height="50dp"
             android:layout_marginLeft="5dp"
             android:hint="댓글을 입력하세요"
@@ -92,18 +92,20 @@
             android:id="@+id/live_add"
             android:layout_width="60dp"
             android:layout_height="40dp"
-            android:layout_marginLeft="1dp"
+            android:layout_marginLeft="210dp"
             android:text="등록"
             />
+
         <Button
-            android:onClick="OnClick"
             android:id="@+id/live_cmt_show"
             android:layout_width="80dp"
             android:layout_height="40dp"
-            android:text="댓글보기"
-            />
+            android:layout_marginStart="10dp"
+            android:layout_toEndOf="@+id/live_add"
+            android:onClick="OnClick"
+            android:text="댓글보기" />
 
-    </LinearLayout>
+    </RelativeLayout>
     <LinearLayout
         android:layout_alignParentTop="true"
         android:layout_marginTop="500dp"

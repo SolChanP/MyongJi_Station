@@ -24,7 +24,7 @@
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="#FDFDFD"/>
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="100dp"
@@ -45,7 +45,7 @@
             android:layout_width="80dp"
             android:layout_height="40dp"
             android:layout_marginTop="20dp"
-            android:layout_marginLeft="5dp"
+            android:layout_marginLeft="90dp"
             android:background="@drawable/edittext"
             android:gravity="center"
             android:hint="탐색옵션"/>
@@ -54,7 +54,7 @@
             android:layout_width="80dp"
             android:layout_height="40dp"
             android:layout_marginTop="20dp"
-            android:layout_marginLeft="5dp"
+            android:layout_marginLeft="175dp"
             android:gravity="center"
             android:background="@drawable/edittext"
             android:hint="출발역"/>
@@ -63,19 +63,25 @@
             android:layout_width="80dp"
             android:layout_height="40dp"
             android:layout_marginTop="20dp"
-            android:layout_marginLeft="5dp"
+            android:layout_marginLeft="260dp"
             android:gravity="center"
             android:background="@drawable/edittext"
             android:hint="도착역"/>
+
         <Button
             android:id="@+id/btnInsert"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginLeft="10dp"
+            android:layout_alignParentRight="true"
+
+            android:layout_marginStart="31dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_toEndOf="@+id/fa_des"
             android:background="@drawable/plus"
             android:onClick="OnClick" />
-    </LinearLayout>
+    </RelativeLayout>
 
     <LinearLayout
         android:layout_alignParentTop="true"

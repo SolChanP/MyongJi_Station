@@ -30,7 +30,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginTop="170dp"
         android:background="#FDFDFD" />
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:orientation="horizontal"
         android:layout_height="50dp"
@@ -48,21 +48,22 @@
         <TextView
             android:layout_width="80dp"
             android:layout_height="50dp"
-            android:text="다음역"
             android:textColor="#000"
+            android:text="다음역"
             android:textSize="20dp"
-            android:layout_marginLeft="55dp"
+            android:layout_marginLeft="150dp"
             android:layout_marginTop="15dp"/>
         <TextView
             android:layout_width="80dp"
             android:layout_height="50dp"
             android:text="남은시간"
-            android:textSize="20dp"
             android:textColor="#000"
-            android:layout_marginLeft="50dp"
+            android:textSize="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="30dp"
             android:layout_marginTop="15dp"/>
-    </LinearLayout>
-    <LinearLayout
+    </RelativeLayout>
+    <RelativeLayout
         android:layout_width="match_parent"
         android:orientation="horizontal"
         android:layout_height="50dp"
@@ -81,16 +82,17 @@
             android:layout_width="80dp"
             android:layout_height="50dp"
             android:textSize="20dp"
-            android:layout_marginLeft="50dp"
+            android:layout_marginLeft="150dp"
             android:layout_marginTop="15dp"/>
         <TextView
             android:id="@+id/line2_rem"
             android:layout_width="120dp"
             android:layout_height="50dp"
             android:textSize="20dp"
-            android:layout_marginLeft="45dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
             android:layout_marginTop="15dp"/>
-    </LinearLayout>
+    </RelativeLayout>
 
 
     <!--수정할 곳!!!!!!-->
