@@ -151,7 +151,6 @@ public class Live extends AppCompatActivity implements AdapterView.OnItemClickLi
     @Override
     protected void onResume() {
         super.onResume();
-        adapterT.reverse();
         listView.setAdapter(adapterT);
         // ArrayList에 더미 데이터 입력
         defaultData();

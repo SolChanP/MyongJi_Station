@@ -59,7 +59,8 @@ public class LiveCmtAdapter extends BaseAdapter {
         return convertView;
     }
     public void addItem(String result) {
-        list.add(result);
+        //리스트 맨 앞에 데이터 추가
+        list.add(0, result);
         System.out.println(result);
     }
 

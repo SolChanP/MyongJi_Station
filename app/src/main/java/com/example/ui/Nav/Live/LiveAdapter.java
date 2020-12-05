@@ -61,7 +61,8 @@ public class LiveAdapter extends BaseAdapter {
         return convertView;
     }
     public void addItem(LiveData result) {
-        list.add(result);
+        //리스트 맨 앞에 데이터 추가
+        list.add(0, result);
     }
 
     public void clearItem(){

@@ -78,7 +78,6 @@ public class LiveResult extends AppCompatActivity implements AdapterView.OnItemC
     @Override
     protected void onResume() {
         super.onResume();
-        adapter.reverse();
         listView.setAdapter(adapter);
 
     }
