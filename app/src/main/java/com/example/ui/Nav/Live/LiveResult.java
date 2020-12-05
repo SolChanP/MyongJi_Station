@@ -67,8 +67,11 @@ public class LiveResult extends AppCompatActivity implements AdapterView.OnItemC
         listView.setAdapter(adapter);
         // 리스트뷰에 아이템클릭리스너를 등록한다.
         listView.setOnItemClickListener(this);
+        //초기 댓글 가져오기
+        updateCmt();
 
         this.setData(result);
+
         //키보드 올라올 때 EditText 가림 해결
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN);
     }
@@ -77,19 +80,21 @@ public class LiveResult extends AppCompatActivity implements AdapterView.OnItemC
         super.onResume();
         adapter.reverse();
         listView.setAdapter(adapter);
+
     }
     public void OnClick(View v){
         if(v.getId() == R.id.live_add){
 
             InsertData task = new InsertData();
             task.execute("http://" + IP_ADDRESS + "/insertcmt.php", result.getNum(), cmtData.getText().toString());
-            //php바꾸고 만들어서 테스트하기
+            this.updateCmt();
         }
-        if(v.getId() == R.id.live_cmt_show){
-            GetData task = new GetData();
-            task.execute("http://" + IP_ADDRESS + "/getCmt.php", result.getNum());
-            adapter.notifyDataSetChanged();
-        }
+    }
+    public void updateCmt(){
+        //adapter.notifyDataSetChanged();
+        GetData task = new GetData();
+        task.execute("http://" + IP_ADDRESS + "/getCmt.php", result.getNum());
+
     }
     public void setData(LiveData result){
 

@@ -146,8 +146,6 @@ public class Live extends AppCompatActivity implements AdapterView.OnItemClickLi
                 InsertData task = new InsertData();
                 task.execute("http://" + IP_ADDRESS + "/insert.php", line, train, data, title);
 
-
-
             }
     }
     @Override
@@ -171,7 +169,6 @@ public class Live extends AppCompatActivity implements AdapterView.OnItemClickLi
         intent.putExtra("result", data);
         startActivity(intent);
         this.onResume();
-
     }
     //어댑터 생성 메서드
     public void makeAdapter(){
