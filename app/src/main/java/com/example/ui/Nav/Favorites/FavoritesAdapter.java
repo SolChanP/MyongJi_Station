@@ -49,7 +49,8 @@ public class FavoritesAdapter extends BaseAdapter {
         return convertView;
     }
     public void addItem(FavoritesData result) {
-        list.add(result);
+        //리스트 앞으로 데이터 추가
+        list.add(0, result);
     }
 
     public void clearItem(){
