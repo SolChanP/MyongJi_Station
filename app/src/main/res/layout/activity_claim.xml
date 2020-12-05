@@ -72,7 +72,6 @@
             android:layout_width="350dp"
             android:layout_height="300dp"
             android:background="@drawable/edittext"
-            android:gravity="center"
             android:paddingLeft="10dp"
             android:paddingTop="10dp"
             android:hint="민원내용을 작성하세요\n주의사항!\n - 위 열차정보를 정확하게 입력해주세요.\n - 연락처를 남겨주시면 민원처리 결과를 알려\n   드립니다. 필수X" />

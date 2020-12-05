@@ -91,7 +91,6 @@ public class LiveResult extends AppCompatActivity implements AdapterView.OnItemC
         }
     }
     public void updateCmt(){
-        //adapter.notifyDataSetChanged();
         GetData task = new GetData();
         task.execute("http://" + IP_ADDRESS + "/getCmt.php", result.getNum());
 
