@@ -1,28 +1,29 @@
-<?php 
+<?php
 
-    error_reporting(E_ALL); 
-    ini_set('display_errors',1); 
+    error_reporting(E_ALL);
+    ini_set('display_errors',1);
 
     include('dbcon.php');
-        
+
 
     $stmt = $con->prepare('select * from board where line = 3');
     $stmt->execute();
 
     if ($stmt->rowCount() > 0)
     {
-        $sub = array(); 
+        $sub = array();
 
         while($row=$stmt->fetch(PDO::FETCH_ASSOC))
         {
             extract($row);
-    
-            array_push($sub, 
+
+            array_push($sub,
                 array('line'=>$line,
                 'train'=>$train,
                 'data'=>$data,
 	    'num'=>$num,
-	    'title'=>$title
+	    'title'=>$title,
+	    'time'=>$time
             ));
         }
 

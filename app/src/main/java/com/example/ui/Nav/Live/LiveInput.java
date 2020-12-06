@@ -11,11 +11,14 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.ui.R;
 
 import java.io.Serializable;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class LiveInput extends AppCompatActivity implements Serializable {
     private LiveData result;
     private TextView line;
     private EditText dir, data, title;
+    private String formatDate;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +30,14 @@ public class LiveInput extends AppCompatActivity implements Serializable {
         dir = (EditText) findViewById(R.id.live_dir);
         data = (EditText) findViewById(R.id.live_data);
 
+        // 현재시간을 msec 으로 구한다.
+        long now = System.currentTimeMillis();
+        // 현재시간을 date 변수에 저장한다.
+        Date date = new Date(now);
+        // 시간을 나타냇 포맷을 정한다 ( yyyy/MM/dd 같은 형태로 변형 가능 )
+        SimpleDateFormat sdfNow = new SimpleDateFormat("MM/dd HH:mm");
+        // nowDate 변수에 값을 저장한다.
+        formatDate = sdfNow.format(date);
 
         Intent intent = getIntent();
 //        result = (LiveData) intent.getSerializableExtra("result");
@@ -38,7 +49,7 @@ public class LiveInput extends AppCompatActivity implements Serializable {
            /* if(data.getText().toString().equals("")) {
                 Toast.makeText(getApplicationContext(), "내용을 입력하세요!", Toast.LENGTH_SHORT).show();
             }else{*/
-            LiveData temp = new LiveData(dir.getText().toString(), data.getText().toString(), title.getText().toString());
+            LiveData temp = new LiveData(dir.getText().toString(), data.getText().toString(), title.getText().toString(), formatDate);
             Intent intent = new Intent(
                     getApplicationContext(), // 현재화면의 제어권자
                     Live.class); // 다음넘어갈 화면

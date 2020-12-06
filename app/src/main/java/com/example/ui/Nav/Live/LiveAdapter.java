@@ -54,10 +54,12 @@ public class LiveAdapter extends BaseAdapter {
 
         // 화면에 표시될 View(Layout이 inflate된)으로부터 위젯에 대한 참조 획득
         TextView textView1 = (TextView) convertView.findViewById(R.id.title);
+        TextView textView2 = (TextView) convertView.findViewById(R.id.time);
         // Data Set(filteredItemList)에서 position에 위치한 데이터 참조 획득
         LiveData result = list.get(position);
 
         textView1.setText(result.getTitle());
+        textView2.setText(result.getTime());
         return convertView;
     }
     public void addItem(LiveData result) {

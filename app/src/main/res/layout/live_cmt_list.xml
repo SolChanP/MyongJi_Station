@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:background="@color/colorGray">
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginBottom="5dp"
@@ -12,13 +12,25 @@
 
         <TextView
             android:id="@+id/live_comment"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="50dp"
             android:gravity="center_vertical"
-            android:paddingLeft="20dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dp"
             android:text="Comment"
             android:textSize="20dp"
             android:background="@color/colorGray"/>
-    </LinearLayout>
+        <TextView
+            android:id="@+id/live_cmt_time"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="20dp"
+            android:text="time"
+            android:textSize="10dp"
+            android:background="@color/colorGray"/>
+    </RelativeLayout>
 
 </LinearLayout>

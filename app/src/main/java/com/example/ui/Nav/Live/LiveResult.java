@@ -28,11 +28,14 @@ import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class LiveResult extends AppCompatActivity implements AdapterView.OnItemClickListener {
     private LiveData result;
-    private TextView line, title, dir, data;
+    private TextView line, title, dir, data, time;
     private EditText cmtData;
+    private String formatDate;
 
     // 리스트뷰
     private ListView listView;
@@ -49,11 +52,21 @@ public class LiveResult extends AppCompatActivity implements AdapterView.OnItemC
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_live_result);
 
+        // 현재시간을 msec 으로 구한다.
+        long now = System.currentTimeMillis();
+        // 현재시간을 date 변수에 저장한다.
+        Date date = new Date(now);
+        // 시간을 나타냇 포맷을 정한다 ( yyyy/MM/dd 같은 형태로 변형 가능 )
+        SimpleDateFormat sdfNow = new SimpleDateFormat("MM/dd HH:mm");
+        // nowDate 변수에 값을 저장한다.
+        formatDate = sdfNow.format(date);
+
         line = (TextView) findViewById(R.id.live_line);
         title = (TextView) findViewById(R.id.live_title);
         dir = (TextView) findViewById(R.id.live_dir);
         data = (TextView) findViewById(R.id.live_data);
         cmtData = (EditText) findViewById(R.id.live_cmt_data);
+        time = (TextView) findViewById((R.id.live_time));
 
         listView = (ListView) findViewById(R.id.live_cmt_list);
         listView.setDescendantFocusability(ViewGroup.FOCUS_AFTER_DESCENDANTS);
@@ -85,7 +98,7 @@ public class LiveResult extends AppCompatActivity implements AdapterView.OnItemC
         if(v.getId() == R.id.live_add){
 
             InsertData task = new InsertData();
-            task.execute("http://" + IP_ADDRESS + "/insertcmt.php", result.getNum(), cmtData.getText().toString());
+            task.execute("http://" + IP_ADDRESS + "/insertcmt.php", result.getNum(), cmtData.getText().toString(), formatDate);
             this.updateCmt();
         }
     }
@@ -100,6 +113,7 @@ public class LiveResult extends AppCompatActivity implements AdapterView.OnItemC
         title.setText(result.getTitle());
         dir.setText("열차정보 : " + result.getDir());
         data.setText(result.getData());
+        time.setText(result.getTime());
 
     }
 
@@ -129,9 +143,10 @@ public class LiveResult extends AppCompatActivity implements AdapterView.OnItemC
 
             String num = (String)params[1];
             String cmtData = (String)params[2];
+            String time = (String)params[3];
 
             String serverURL = (String)params[0];
-            String postParameters = "num=" + num + "&cmtData=" + cmtData;
+            String postParameters = "num=" + num + "&cmtData=" + cmtData + "&time=" + time;
             try {
 
                 URL url = new URL(serverURL);
@@ -264,6 +279,7 @@ public class LiveResult extends AppCompatActivity implements AdapterView.OnItemC
 
         String TAG_JSON = "실시간데이터";
         String TAG_cmtData = "cmtData";
+        String TAG_time = "time";
 
 
         try {
@@ -274,7 +290,9 @@ public class LiveResult extends AppCompatActivity implements AdapterView.OnItemC
 
                 JSONObject item = jsonArray.getJSONObject(i);
 
-                String cmtData = item.getString(TAG_cmtData);
+                String data = item.getString(TAG_cmtData);
+                String time = item.getString(TAG_time);
+                LiveCmtData cmtData = new LiveCmtData(data, time);
                 adapter.addItem(cmtData);
             }
         } catch (JSONException e) {

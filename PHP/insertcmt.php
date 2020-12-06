@@ -16,13 +16,15 @@
 
         $num=$_POST['num'];
         $cmtData=$_POST['cmtData'];
+        $time=$_POST['time'];
 
-        if(!isset($errMSG)) // 모두 입력 되었다ㅕㄴ
+        if(!isset($errMSG)) // 모두 입력 되었다면
         {
             try{
-                $stmt = $con->prepare('INSERT INTO comment(num, cmtData) VALUES(:num, :cmtData)');
+                $stmt = $con->prepare('INSERT INTO comment(num, cmtData, time) VALUES(:num, :cmtData, :time)');
                 $stmt->bindParam(':num', $num);
                 $stmt->bindParam(':cmtData', $cmtData);
+                $stmt->bindParam(':time', $time);
 
 
                 if($stmt->execute())

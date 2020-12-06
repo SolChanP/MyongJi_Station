@@ -18,7 +18,7 @@
         $data=$_POST['data'];
         $phone=$_POST['phone'];
 
-        if(!isset($errMSG)) // 모두 입력 되었다ㅕㄴ
+        if(!isset($errMSG)) // 모두 입력 되었다면
         {
             try{
                 $stmt = $con->prepare('INSERT INTO claim(train, data, phone) VALUES(:train, :data, :phone)');

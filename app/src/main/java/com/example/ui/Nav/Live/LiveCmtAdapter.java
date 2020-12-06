@@ -13,8 +13,9 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 public class LiveCmtAdapter extends BaseAdapter {
-    public ArrayList<String> list = new ArrayList<String>();//댓글 저장
+    public ArrayList<LiveCmtData> list = new ArrayList<LiveCmtData>();//댓글 저장
     private String num;//해당 게시글 번호
+    private String time;//댓글 시간
 
     public LiveCmtAdapter(String num){
         this.num = num;
@@ -53,12 +54,14 @@ public class LiveCmtAdapter extends BaseAdapter {
 
         // 화면에 표시될 View(Layout이 inflate된)으로부터 위젯에 대한 참조 획득
         TextView textView1 = (TextView) convertView.findViewById(R.id.live_comment);
+        TextView textView2 = (TextView) convertView.findViewById(R.id.live_cmt_time);
         // Data Set(filteredItemList)에서 position에 위치한 데이터 참조 획득
-        String result = list.get(position);
-        textView1.setText(result);
+        LiveCmtData result = list.get(position);
+        textView1.setText(result.getData());
+        textView2.setText(result.getTime());
         return convertView;
     }
-    public void addItem(String result) {
+    public void addItem(LiveCmtData result) {
         //리스트 맨 앞에 데이터 추가
         list.add(0, result);
         System.out.println(result);

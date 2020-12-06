@@ -137,14 +137,15 @@ public class Live extends AppCompatActivity implements AdapterView.OnItemClickLi
         if (requestCode == REQUEST_DATA)
             if (resultCode == RESULT_OK) {
                 LiveData temp = (LiveData) dAta.getSerializableExtra("data");
-                System.out.println(adapterT.getLine()+ " " + temp.getDir() + " " + temp.getData() + " " + temp.getTitle());
+                System.out.println(adapterT.getLine()+ " " + temp.getDir() + " " + temp.getData() + " " + temp.getTitle() + " "+ temp.getTime());
                 String line = adapterT.getLine();
                 String train = temp.getDir();
                 String data = temp.getData();
                 String title = temp.getTitle();
+                String time = temp.getTime();
 
                 InsertData task = new InsertData();
-                task.execute("http://" + IP_ADDRESS + "/insert.php", line, train, data, title);
+                task.execute("http://" + IP_ADDRESS + "/insert.php", line, train, data, title, time);
 
             }
     }
@@ -252,10 +253,11 @@ public class Live extends AppCompatActivity implements AdapterView.OnItemClickLi
             String train = (String)params[2];
             String data = (String)params[3];
             String title = (String)params[4];
+            String time = (String)params[5];
 
 
             String serverURL = (String)params[0];
-            String postParameters = "line=" + line + "&train=" + train + "&data=" + data + "&title=" + title ;
+            String postParameters = "line=" + line + "&train=" + train + "&data=" + data + "&title=" + title + "&time=" + time;
             try {
 
                 URL url = new URL(serverURL);
@@ -390,6 +392,7 @@ public class Live extends AppCompatActivity implements AdapterView.OnItemClickLi
         String TAG_data = "data";
         String TAG_title = "title";
         String TAG_num = "num";
+        String TAG_time = "time";
 
 
         try {
@@ -405,8 +408,9 @@ public class Live extends AppCompatActivity implements AdapterView.OnItemClickLi
                 String data = item.getString(TAG_data);
                 String title = item.getString(TAG_title);
                 String num = item.getString(TAG_num);
+                String time = item.getString(TAG_time);
 
-                LiveData personalData = new LiveData(line, train, data, title, num);
+                LiveData personalData = new LiveData(line, train, data, title, num, time);
 
                 adapterT.addItem(personalData);
             }
