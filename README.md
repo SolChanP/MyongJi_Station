@@ -6,13 +6,16 @@
 >역할 및 참여자
 
 >>조장: 박솔찬   
->>>개발총괄 및 검수   
+>>>개발총괄  
 
 >>UI : 한상진, 신중근, 김보현, 최병윤
 >>>UI디자인 적용 및 구현   
 
 - 추가하고 싶은 기능이 있을시 Master가 아닌 branch 생성하고 적용
 - Android plaform-29 (android 10.0)Q
+
+
+- 프로젝트 발표 영상 - https://youtu.be/LWYUljl-Nl4
 <hr/>
 
 
